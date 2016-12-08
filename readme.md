@@ -5,23 +5,27 @@ The course is for system developers who will be working with Microsoft BizTalk S
 
 The course is divided into thirteen modules:
 
-### Day 1
+### Day 1 
 1. Building your first BizTalk solution
 2. Working with Schemas
-3. Working with Maps
-### Day 2
+3. Working with Maps 
+
+### Day 2 
 4. UnitTest and Deployment
 5. Working with Pipelines
-6. Content based routing
-### Day 3
+6. Content based routing 
+
+### Day 3 
 7. Integration with Azure Logic Apps
 8. Using the WCF Adapters in BizTalk Server 2016
-9. Creating BizTalk Server orchestrations
-### Day 4
+9. Creating BizTalk Server orchestrations 
+
+### Day 4 
 10. Implementing Transactions
 11. Enabling Business Activity Monitoring
-12. Integrating Business Rules
-### Day 5
+12. Integrating Business Rules 
+
+### Day 5 
 13. Deployment and Management
 14. Extra modules
 
