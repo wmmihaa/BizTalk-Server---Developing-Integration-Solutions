@@ -34,3 +34,5 @@ Extra modules:
 * Installing and Configuring
 * "The Course Evaluation lab"
 
+# For instructor-led training in Sweden
+Please contact [AddSkills/Cornerstone](http://www.addskills.se/utbildningar/microsoft/biztalk/biztalk-2013-for-utvecklare).
