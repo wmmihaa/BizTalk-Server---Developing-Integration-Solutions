@@ -1,0 +1,32 @@
+<ns0:CustomerOrder xmlns:ns0="http://Management.CustomerOrder">
+  <Title>Mr.</Title>
+  <FirstName>Rob</FirstName>
+  <LastName>Callaway</LastName>
+  <CustomerContact>333-555-7435</CustomerContact>
+  <CustomerPONumber>2458</CustomerPONumber>
+  <Priority>1</Priority>
+  <QuoteReferenceID>18769</QuoteReferenceID>
+  <SalesOrderReferenceID>Q3-H92</SalesOrderReferenceID>
+  <CreatedDate>10/11/2005</CreatedDate>
+  <FreightAmount>5.20</FreightAmount>
+  <MiscCharges>0.00</MiscCharges>
+  <SubTotal>SubTotal_0</SubTotal>
+  <TotalOrderAmount>10</TotalOrderAmount>
+  <Address>
+    <Street>6895 Evergreen Terrace</Street>
+    <City>Redmond</City>
+    <State>WA</State>
+    <Zip>98052</Zip>
+  </Address>
+  <Lines>
+    <SalesOrderLine>
+      <LineNumber>1</LineNumber>
+      <UnitPrice>25.00</UnitPrice>
+      <Quantity>3</Quantity>
+      <ItemID>1024</ItemID>
+    </SalesOrderLine>
+  </Lines>
+  <Status>1</Status>
+  <Comments>Please hurry! My goat is very hungry.</Comments>
+  <UnitPrice>25.00</UnitPrice>
+</ns0:CustomerOrder>

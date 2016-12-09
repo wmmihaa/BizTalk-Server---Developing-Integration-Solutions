@@ -1,0 +1,2 @@
+ErrorReportMessage = FailedMessage;
+xpath(ErrorReportMessage, "/*[local-name()='ExpenseReport' and namespace-uri()='http://ExpenseReports.ExpenseReport']/*[local-name()='Errors' and namespace-uri()='http://ExpenseReports.ExpenseReport']") = XMLDoc.FirstChild.ChildNodes;

@@ -1,0 +1,263 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="bf38cd01-e967-4a22-8367-5a163dac134d" LowerBound="1.1" HigherBound="61.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="ErrorHandling" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="f3ce158c-6171-4c52-8d67-e62145077a77" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="GetFailedMessagesType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="e4e4ba72-7a35-4341-9a76-d776dc0b9de1" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="fd33572b-e212-4260-9f0d-395a214c3b6c" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.35">
+                    <om:Property Name="Ref" Value="System.Xml.XmlDocument" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="30676e65-f2f0-4b34-a7e1-4f20065a6040" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ErrorReportSendType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="cef24620-80f1-49c0-9205-516b48acc7a8" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="3cdc75c4-73da-47b0-9c6c-05024f661753" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.35">
+                    <om:Property Name="Ref" Value="System.Xml.XmlDocument" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="fa00f96b-a1a7-47d5-b076-94edf17af3b7" ParentLink="Module_ServiceDeclaration" LowerBound="18.1" HigherBound="60.1">
+            <om:Property Name="InitializedTransactionType" Value="True" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ErrorHandler" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="LongRunningTransaction" OID="07baf6cc-51d3-44be-b51f-c28d2c094f04" ParentLink="ServiceDeclaration_Transaction" LowerBound="19.21" HigherBound="19.58">
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Transaction_1" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="22506079-cc1e-45a4-b7dc-dc656da223ee" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="FailedMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="3e2a5d41-47b4-4b57-875a-e998bfbaad49" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ErrorReportMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="00bd8f58-f7b1-4e13-a2d0-de4b8fc66ad3" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="68d5ef4a-7500-4edc-aca8-6996e2b0a4f2" ParentLink="ServiceBody_Statement" LowerBound="29.1" HigherBound="31.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="GetFailedMessages" />
+                    <om:Property Name="MessageName" Value="FailedMessage" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Failed Message IN" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DNFPredicate" OID="a7ad0e87-ceec-4e91-a693-043949281c89" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="ErrorReport.ErrorType" />
+                        <om:Property Name="RHS" Value="&quot;FailedMessage&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="DNFPredicate" OID="6aa7f1ea-b1f9-4fba-a929-90d91c2e3084" ParentLink="Receive_DNFPredicate">
+                        <om:Property Name="LHS" Value="ErrorReport.ReceivePortName" />
+                        <om:Property Name="RHS" Value="&quot;RcvExpenses&quot;" />
+                        <om:Property Name="Grouping" Value="AND" />
+                        <om:Property Name="Operator" Value="Equals" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Scope" OID="142fc80d-6738-484d-bfd0-e5fbb8041720" ParentLink="ServiceBody_Statement" LowerBound="31.1" HigherBound="56.1">
+                    <om:Property Name="InitializedTransactionType" Value="True" />
+                    <om:Property Name="IsSynchronized" Value="False" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct ErrorReport" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="VariableAssignment" OID="410ae36b-6244-4a6e-8e07-e4cf0c9b0fb8" ParentLink="ComplexStatement_Statement" LowerBound="41.1" HigherBound="47.1">
+                        <om:Property Name="Expression" Value="markup = &quot;&lt;errorDetails&gt;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;strong&gt;Error code:&lt;/strong&gt; &quot; + FailedMessage(ErrorReport.FailureCode) + &quot;&lt;/div&gt;&quot; +&#xD;&#xA;         &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;strong&gt;Description:&lt;/strong&gt; &quot; + FailedMessage(ErrorReport.Description) + &quot;&lt;/div&gt;&quot; +&#xD;&#xA;         &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;strong&gt;Receive port:&lt;/strong&gt; &quot; + FailedMessage(ErrorReport.ReceivePortName) + &quot;&lt;/div&gt;&quot; + &#xD;&#xA;         &quot;&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;strong&gt;Receive location URI:&lt;/strong&gt; &quot; + FailedMessage(ErrorReport.InboundTransportLocation) + &quot;&lt;/div&gt;&lt;/errorDetails&gt;&quot;; &#xD;&#xA;XMLDoc.LoadXml(markup);" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Set Error Details" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="Construct" OID="930a5828-c136-444d-9378-1a6b8dca3fb1" ParentLink="ComplexStatement_Statement" LowerBound="47.1" HigherBound="54.1">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Construct ErrorReportMessage" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessageAssignment" OID="f38effa1-0ae9-462a-bd74-5547cdb5232b" ParentLink="ComplexStatement_Statement" LowerBound="50.1" HigherBound="53.1">
+                            <om:Property Name="Expression" Value="ErrorReportMessage = FailedMessage;&#xD;&#xA;xpath(ErrorReportMessage, &quot;/*[local-name()='ExpenseReport' and namespace-uri()='http://ExpenseReports.ExpenseReport']/*[local-name()='Errors' and namespace-uri()='http://ExpenseReports.ExpenseReport']&quot;) = XMLDoc.FirstChild.ChildNodes;&#xD;&#xA;" />
+                            <om:Property Name="ReportToAnalyst" Value="False" />
+                            <om:Property Name="Name" Value="Add Error Details" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessageRef" OID="ee524d69-10dc-4f58-a2b6-1e7c453a63b4" ParentLink="Construct_MessageRef" LowerBound="48.31" HigherBound="48.49">
+                            <om:Property Name="Ref" Value="ErrorReportMessage" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="VariableDeclaration" OID="5083b312-e696-4277-b181-423cbfa0bbc5" ParentLink="Scope_VariableDeclaration" LowerBound="35.1" HigherBound="36.1">
+                        <om:Property Name="UseDefaultConstructor" Value="False" />
+                        <om:Property Name="Type" Value="System.String" />
+                        <om:Property Name="ParamDirection" Value="In" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="markup" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="VariableDeclaration" OID="24fdd408-74e0-4af4-9538-5b828471c492" ParentLink="Scope_VariableDeclaration" LowerBound="36.1" HigherBound="37.1">
+                        <om:Property Name="UseDefaultConstructor" Value="True" />
+                        <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                        <om:Property Name="ParamDirection" Value="In" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="XMLDoc" />
+                        <om:Property Name="Signal" Value="True" />
+                    </om:Element>
+                    <om:Element Type="AtomicTransaction" OID="403ebfe4-d88f-4f79-a421-3512ea59281b" ParentLink="Scope_Transaction" LowerBound="33.18" HigherBound="33.51">
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Transaction_2" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="TransactionAttribute" OID="1c066867-9bf4-4fa7-bc71-a3aa2a0bc050" ParentLink="Statement_CLRAttribute" LowerBound="32.1" HigherBound="33.1">
+                        <om:Property Name="Batch" Value="True" />
+                        <om:Property Name="Retry" Value="True" />
+                        <om:Property Name="Timeout" Value="60" />
+                        <om:Property Name="Isolation" Value="Serializable" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="a5ed8e74-dc72-4075-a89b-0bf5c6a4202b" ParentLink="ServiceBody_Statement" LowerBound="56.1" HigherBound="58.1">
+                    <om:Property Name="PortName" Value="ErrorReportSend" />
+                    <om:Property Name="MessageName" Value="ErrorReportMessage" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ErrorReport OUT" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="0cf3c53b-ae8d-4dd4-b623-88de8232d254" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="21.1" HigherBound="23.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="ErrorHandling.GetFailedMessagesType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="GetFailedMessages" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="DirectBindingAttribute" OID="de7811fd-87ec-4669-9061-d01a2aa79ba9" ParentLink="PortDeclaration_CLRAttribute" LowerBound="21.1" HigherBound="22.1">
+                    <om:Property Name="DirectBindingType" Value="MessageBox" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="61e123a5-9898-4703-9aaa-0976ab5e19d5" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="23.1" HigherBound="25.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="21" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="ErrorHandling.ErrorReportSendType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ErrorReportSend" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="402602e0-a238-489c-8b43-cb4eaa8cd16d" ParentLink="PortDeclaration_CLRAttribute" LowerBound="23.1" HigherBound="24.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module ErrorHandling
+{
+    internal porttype GetFailedMessagesType
+    {
+        oneway Operation_1
+        {
+            System.Xml.XmlDocument
+        };
+    };
+    internal porttype ErrorReportSendType
+    {
+        oneway Operation_1
+        {
+            System.Xml.XmlDocument
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service longrunning transaction ErrorHandler
+    {
+        [Microsoft.XLANGs.BaseTypes.DirectBinding()]
+        port implements GetFailedMessagesType GetFailedMessages;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses ErrorReportSendType ErrorReportSend;
+        message System.Xml.XmlDocument FailedMessage;
+        message System.Xml.XmlDocument ErrorReportMessage;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("68d5ef4a-7500-4edc-aca8-6996e2b0a4f2")]
+            activate ((ErrorReport.ErrorType == "FailedMessage") && (ErrorReport.ReceivePortName == "RcvExpenses"))receive (GetFailedMessages.Operation_1, FailedMessage);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("142fc80d-6738-484d-bfd0-e5fbb8041720")]
+            [Microsoft.XLANGs.BaseTypes.Transaction(Retry=true,Batch=true,Timeout=60,TranIsolationLevel=System.Data.IsolationLevel.Serializable)]
+            scope atomic transaction Transaction_2
+            {
+                System.String markup;
+                System.Xml.XmlDocument XMLDoc;
+                body
+                {
+                    markup = "";
+                    XMLDoc = new System.Xml.XmlDocument();
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("410ae36b-6244-4a6e-8e07-e4cf0c9b0fb8")]
+                    markup = "<errorDetails><div xmlns=\"http://www.w3.org/1999/xhtml\"><strong>Error code:</strong> " + FailedMessage(ErrorReport.FailureCode) + "</div>" +
+                             "<div xmlns=\"http://www.w3.org/1999/xhtml\"><strong>Description:</strong> " + FailedMessage(ErrorReport.Description) + "</div>" +
+                             "<div xmlns=\"http://www.w3.org/1999/xhtml\"><strong>Receive port:</strong> " + FailedMessage(ErrorReport.ReceivePortName) + "</div>" + 
+                             "<div xmlns=\"http://www.w3.org/1999/xhtml\"><strong>Receive location URI:</strong> " + FailedMessage(ErrorReport.InboundTransportLocation) + "</div></errorDetails>"; 
+                    XMLDoc.LoadXml(markup);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("930a5828-c136-444d-9378-1a6b8dca3fb1")]
+                    construct ErrorReportMessage
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("f38effa1-0ae9-462a-bd74-5547cdb5232b")]
+                        ErrorReportMessage = FailedMessage;
+                        xpath(ErrorReportMessage, "/*[local-name()='ExpenseReport' and namespace-uri()='http://ExpenseReports.ExpenseReport']/*[local-name()='Errors' and namespace-uri()='http://ExpenseReports.ExpenseReport']") = XMLDoc.FirstChild.ChildNodes;
+                    }
+                }
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("a5ed8e74-dc72-4075-a89b-0bf5c6a4202b")]
+            send (ErrorReportSend.Operation_1, ErrorReportMessage);
+        }
+    }
+}
+

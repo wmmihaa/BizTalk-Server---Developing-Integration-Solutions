@@ -1,0 +1,6 @@
+<ns0:Address xmlns:ns0="http://Mod9.Address">
+  <CustomerRefID>CustomerRefID_0</CustomerRefID>
+	<Street>MyUSStreet</Street>
+	<PostalAdress>MyPostal</PostalAdress>
+	<Country>USA</Country>
+</ns0:Address>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Assembly="Microsoft.BizTalk.Adapter.Wcf.Consuming, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Version="3.5.1.0">
+  <Timestamp>2010-01-21T03:49:31.2296976-08:00</Timestamp>
+  <SendPortCollection>
+    <SendPort Name="WcfSendPort_DistributorService_WSHttpBinding_IDistributorService_Custom" IsStatic="true" IsTwoWay="true" BindingOption="0">
+      <Description>service "DistributorService" port "WSHttpBinding_IDistributorService"</Description>
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" />
+      <PrimaryTransport>
+        <Address>http://localhost:8091/DistributorService</Address>
+        <TransportType Name="WCF-Custom" Capabilities="907" ConfigurationClsid="af081f69-38ca-4d5b-87df-f0344b12557a" />
+        <TransportTypeData>&lt;CustomProps&gt;
+  &lt;BindingType vt="8"&gt;wsHttpBinding&lt;/BindingType&gt;
+  &lt;BindingConfiguration vt="8"&gt;&amp;lt;binding name="WSHttpBinding_IDistributorService" closeTimeout="00:01:00" openTimeout="00:01:00" receiveTimeout="00:10:00" sendTimeout="00:01:00" bypassProxyOnLocal="false" transactionFlow="false" hostNameComparisonMode="StrongWildcard" maxBufferPoolSize="524288" maxReceivedMessageSize="65536" messageEncoding="Text" textEncoding="utf-8" useDefaultWebProxy="true" allowCookies="false"&amp;gt;&amp;lt;readerQuotas maxDepth="32" maxStringContentLength="8192" maxArrayLength="16384" maxBytesPerRead="4096" maxNameTableCharCount="16384" /&amp;gt;&amp;lt;reliableSession ordered="true" inactivityTimeout="00:10:00" enabled="false" /&amp;gt;&amp;lt;security mode="Message"&amp;gt;&amp;lt;transport clientCredentialType="Windows" proxyCredentialType="None" realm="" /&amp;gt;&amp;lt;message clientCredentialType="Windows" negotiateServiceCredential="true" algorithmSuite="Default" establishSecurityContext="true" /&amp;gt;&amp;lt;/security&amp;gt;&amp;lt;/binding&amp;gt;&lt;/BindingConfiguration&gt;
+  &lt;StaticAction vt="8"&gt;&amp;lt;BtsActionMapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&amp;gt;
+  &amp;lt;Operation Name="ReserveDistributor" Action="http://northwind.com/services/DistributorService/IDistributorService/ReserveDistributor" /&amp;gt;
+&amp;lt;/BtsActionMapping&amp;gt;&lt;/StaticAction&gt;
+  &lt;UseSSO vt="11"&gt;0&lt;/UseSSO&gt;
+  &lt;InboundBodyLocation vt="8"&gt;UseBodyElement&lt;/InboundBodyLocation&gt;
+  &lt;InboundNodeEncoding vt="8"&gt;Xml&lt;/InboundNodeEncoding&gt;
+  &lt;OutboundBodyLocation vt="8"&gt;UseBodyElement&lt;/OutboundBodyLocation&gt;
+  &lt;OutboundXmlTemplate vt="8"&gt;&amp;lt;bts-msg-body xmlns="http://www.microsoft.com/schemas/bts2007" encoding="xml"/&amp;gt;&lt;/OutboundXmlTemplate&gt;
+  &lt;PropagateFaultMessage vt="11"&gt;-1&lt;/PropagateFaultMessage&gt;
+  &lt;EnableTransaction vt="11"&gt;0&lt;/EnableTransaction&gt;
+  &lt;IsolationLevel vt="8"&gt;Serializable&lt;/IsolationLevel&gt;
+  &lt;Identity vt="8"&gt;&amp;lt;identity&amp;gt;
+  &amp;lt;userPrincipalName value="WS03_OFFICE07\Administrator" /&amp;gt;
+&amp;lt;/identity&amp;gt;&lt;/Identity&gt;
+&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T00:00:00</FromTime>
+        <ToTime>2000-01-01T23:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </PrimaryTransport>
+      <ReceivePipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLReceive" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLReceive, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="1" />
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName xsi:nil="true" />
+    </SendPort>
+  </SendPortCollection>
+</BindingInfo>

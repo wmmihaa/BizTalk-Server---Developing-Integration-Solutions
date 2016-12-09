@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindingInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Assembly="Microsoft.BizTalk.Deployment, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Version="3.5.1.0" BindingStatus="NoBindings" BoundEndpoints="0" TotalEndpoints="0">
+  <Timestamp>2016-08-02T16:16:00.9610535+02:00</Timestamp>
+  <ModuleRefCollection />
+  <SendPortCollection>
+    <SendPort Name="WcfSendPort_SqlAdapterBinding_TableOp_dbo_Tweets_Custom" IsStatic="true" IsTwoWay="true" BindingOption="0">
+      <Description>SendPort for SqlAdapterBinding.</Description>
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="None" Description="" />
+      <PrimaryTransport>
+        <Address>mssql://.//DemoDB?</Address>
+        <TransportType Name="WCF-Custom" Capabilities="907" ConfigurationClsid="af081f69-38ca-4d5b-87df-f0344b12557a" />
+        <TransportTypeData>&lt;CustomProps&gt;
+  &lt;BindingType vt="8"&gt;sqlBinding&lt;/BindingType&gt;
+  &lt;BindingConfiguration vt="8"&gt;&amp;lt;binding name="SqlAdapterBinding" maxConnectionPoolSize="100" encrypt="false" workstationId="" useAmbientTransaction="true" batchSize="20" ApplicationIntent="ReadWrite" MultiSubnetFailover="true" polledDataAvailableStatement="" pollingStatement="" pollingIntervalInSeconds="30" pollWhileDataFound="false" notificationStatement="" notifyOnListenerStart="true" enableBizTalkCompatibilityMode="true" chunkSize="4194304" inboundOperationType="Polling" useDatabaseNameInXsdNamespace="false" allowIdentityInsert="false" acceptCredentialsInUri="false" enablePerformanceCounters="false" xmlStoredProcedureRootNodeName="" xmlStoredProcedureRootNodeNamespace="" /&amp;gt;&lt;/BindingConfiguration&gt;
+  &lt;StaticAction vt="8"&gt;&amp;lt;BtsActionMapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&amp;gt;
+  &amp;lt;Operation Name="Insert" Action="TableOp/Insert/dbo/Tweets" /&amp;gt;
+&amp;lt;/BtsActionMapping&amp;gt;&lt;/StaticAction&gt;
+  &lt;UseSSO vt="11"&gt;0&lt;/UseSSO&gt;
+  &lt;InboundBodyLocation vt="8"&gt;UseBodyElement&lt;/InboundBodyLocation&gt;
+  &lt;InboundNodeEncoding vt="8"&gt;Xml&lt;/InboundNodeEncoding&gt;
+  &lt;OutboundBodyLocation vt="8"&gt;UseBodyElement&lt;/OutboundBodyLocation&gt;
+  &lt;OutboundXmlTemplate vt="8"&gt;&amp;lt;bts-msg-body xmlns="http://www.microsoft.com/schemas/bts2007" encoding="xml"/&amp;gt;&lt;/OutboundXmlTemplate&gt;
+  &lt;PropagateFaultMessage vt="11"&gt;-1&lt;/PropagateFaultMessage&gt;
+  &lt;EnableTransaction vt="11"&gt;-1&lt;/EnableTransaction&gt;
+  &lt;IsolationLevel vt="8"&gt;Serializable&lt;/IsolationLevel&gt;
+  &lt;Identity vt="8" /&gt;
+&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T00:00:00</FromTime>
+        <ToTime>2000-01-01T23:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>0</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <TransportTypeData />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T00:00:00</FromTime>
+        <ToTime>2000-01-01T23:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>0</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLReceive" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLReceive, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="1" TrackingOption="None" Description="" />
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName xsi:nil="true" />
+    </SendPort>
+  </SendPortCollection>
+  <DistributionListCollection />
+  <ReceivePortCollection />
+  <PartyCollection xsi:nil="true" />
+</BindingInfo>

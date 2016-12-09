@@ -1,0 +1,44 @@
+ 
+Jag har vidare undersökt möjligheterna för att införskaffa en AddSkills subscription för Azure, 
+men tyvärr utan framgång. Vi kommer därför att använda Johans subscription tillsvidare. 
+För att detta ska funka måste Johan lägga till Gustavs LiveId som admin. Då denna subscription är 
+Johans privata så är det också viktigt att man genererar nya lösenord för service kontot som eleverna 
+använder vid varje kurstillfälle! 
+ 
+Då vi använder både WABS och ServiceBus så måste denna ändring göras i båda ACS’erna:
+	https://a372wabs-sb.accesscontrol.windows.net/  (ServiceBus)
+	https://a372wabs.accesscontrol.windows.net/  (WABS)
+
+1.      Gå till Service Identities
+2.      Klicka på serviceaccount
+3.      Klicka Symmetric Keys
+4.      Klicka Show Key och Generate
+5.      Kopiera nyckeln, gå tillbaka och använd samma nyckel för password
+6.      Genomför samma ändring för det andra namespacet, med samma nyckel så att det är samma password 
+        och nyckel för serviceaccount på båda namespecen.
+ 
+Installation:
+1.		Installera a372wabs.biztalk.windows.net.pfx certet i trusted root
+2.      Ladda ner och installera Windows Azure BizTalk Services Preview SDK från 
+	    http://www.microsoft.com/en-us/download/details.aspx?id=39087
+3.		Installera:
+		* WindowsAzureBizTalkServicesSDK-x64.exe
+		* BizTalkAdapterService-x64.exe
+4.      Använd Administrator\pass@word1 för service konto och apppool
+5.      Använd inte SSL
+6.      Öppna VS och gå till Server Explorer
+7.      Högerklicka på BizTalk Adapter Services och välj Add Adapter Service.
+8.      Sätt URI’n till http://localhost:8080/BAService/ManagementService.svc/ 
+9.      I TFS rooten för projectet ($/A372/A372 20130717/HOL WABS) finner ni två certificat, 
+		installera/importera båda. Jag tror att pfx (privat nyckel) måste finnas i Trusted Root Certificates (men jag är inte säker)
+ 
+
+
+Connection string:
+Endpoint=sb://a372wabs.servicebus.windows.net/;SharedSecretIssuer=owner;SharedSecretValue=cnDL8xFeQBIhJCgMbz9elTh93PieD4N4ybQZxvkiEGg=
+
+Default Issuer
+owner
+
+Default Key
+cnDL8xFeQBIhJCgMbz9elTh93PieD4N4ybQZxvkiEGg=

@@ -1,0 +1,10 @@
+<ns0:Order xmlns:ns0="http://Lab12.Order">
+  <OrderId>1</OrderId>
+  <CustomerName>Fabrikam</CustomerName>
+  <OrderDate>2010-02-01T13:20:00.000-05:00</OrderDate>
+  <ShippingDate>2010-04-01T13:20:00.000-05:00</ShippingDate>
+  <ItemData>I am ordering some stuff!</ItemData>
+  <TotalSum>500</TotalSum>
+  <Approved>true</Approved>
+  <DeliveryNotes>Deliver to my home</DeliveryNotes>
+</ns0:Order>

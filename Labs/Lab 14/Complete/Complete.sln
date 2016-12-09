@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Complete", "Complete.csproj", "{59BEE43D-25A6-4282-A82B-97C1A48422C6}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://blogical.visualstudio.com/defaultcollection
+		SccProjectUniqueName0 = Complete.csproj
+		SccLocalPath0 = .
+		SccLocalPath1 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59BEE43D-25A6-4282-A82B-97C1A48422C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59BEE43D-25A6-4282-A82B-97C1A48422C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59BEE43D-25A6-4282-A82B-97C1A48422C6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{59BEE43D-25A6-4282-A82B-97C1A48422C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59BEE43D-25A6-4282-A82B-97C1A48422C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59BEE43D-25A6-4282-A82B-97C1A48422C6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

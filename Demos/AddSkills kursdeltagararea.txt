@@ -1,0 +1,2 @@
+\\tegner\kurs\kursdeltagararea
+user/passwd = kurs\student / kurs

@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory />
+    <InstallUrlHistory />
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{EF7E3281-CD33-11D4-8326-00C04FA0CE8D}">
+        <Files>
+		<File Path="FlightBookingService_schemas_datacontract_org_2004_07_FlightBookingService.xsd">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+		<File Path="FlightBookingService_schemas_microsoft_com_2003_10_Serialization.xsd">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+		<File Path="FlightBookingService_tempuri_org.xsd">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+		<File Path="FlightResponse_to_TravelResponse.btm">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+		<File Path="HotelBookingService_schemas_datacontract_org_2004_07_HotelBookingService.xsd">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+		<File Path="HotelBookingService_schemas_microsoft_com_2003_10_Serialization.xsd">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+		<File Path="HotelBookingService_tempuri_org.xsd">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+		<File Path="Transform_2.btm">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+		<File Path="TravelRequest.xsd">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+		<File Path="TravelRequest_to_FlightRequest.btm">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+		<File Path="TravelRequest_to_HotelBookingRequest.btm">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+		<File Path="TravelResponse.xsd">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+	</Files>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,1 @@
+The address of this service will be http://localhost:8990/ExchangeRateServiceApplication/ExchangeRateService/

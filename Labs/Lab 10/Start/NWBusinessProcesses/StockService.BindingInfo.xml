@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BindingInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Assembly="Microsoft.BizTalk.Adapter.Wcf.Consuming, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Version="3.5.1.0">
+  <Timestamp>2010-01-21T03:49:05.1622144-08:00</Timestamp>
+  <SendPortCollection>
+    <SendPort Name="WcfSendPort_StockService_WSHttpBinding_IStockService" IsStatic="true" IsTwoWay="true" BindingOption="0">
+      <Description>service "StockService" port "WSHttpBinding_IStockService"</Description>
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" />
+      <PrimaryTransport>
+        <Address>http://localhost:8090/StockService</Address>
+        <TransportType Name="WCF-WSHttp" Capabilities="899" ConfigurationClsid="2b219014-ba04-4b70-a66b-a8c418b109fd" />
+        <TransportTypeData>&lt;CustomProps&gt;
+  &lt;MaxReceivedMessageSize vt="3"&gt;65536&lt;/MaxReceivedMessageSize&gt;
+  &lt;MessageEncoding vt="8"&gt;Text&lt;/MessageEncoding&gt;
+  &lt;TextEncoding vt="8"&gt;utf-8&lt;/TextEncoding&gt;
+  &lt;EnableTransaction vt="11"&gt;0&lt;/EnableTransaction&gt;
+  &lt;SecurityMode vt="8"&gt;Message&lt;/SecurityMode&gt;
+  &lt;MessageClientCredentialType vt="8"&gt;Windows&lt;/MessageClientCredentialType&gt;
+  &lt;AlgorithmSuite vt="8"&gt;Basic256&lt;/AlgorithmSuite&gt;
+  &lt;NegotiateServiceCredential vt="11"&gt;-1&lt;/NegotiateServiceCredential&gt;
+  &lt;EstablishSecurityContext vt="11"&gt;-1&lt;/EstablishSecurityContext&gt;
+  &lt;TransportClientCredentialType vt="8"&gt;Windows&lt;/TransportClientCredentialType&gt;
+  &lt;UseSSO vt="11"&gt;0&lt;/UseSSO&gt;
+  &lt;ProxyToUse vt="8"&gt;Default&lt;/ProxyToUse&gt;
+  &lt;StaticAction vt="8"&gt;&amp;lt;BtsActionMapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&amp;gt;
+  &amp;lt;Operation Name="ReserveStock" Action="http://northwind.com/services/StockService/IStockService/ReserveStock" /&amp;gt;
+&amp;lt;/BtsActionMapping&amp;gt;&lt;/StaticAction&gt;
+  &lt;InboundBodyLocation vt="8"&gt;UseBodyElement&lt;/InboundBodyLocation&gt;
+  &lt;InboundNodeEncoding vt="8"&gt;Xml&lt;/InboundNodeEncoding&gt;
+  &lt;OutboundBodyLocation vt="8"&gt;UseBodyElement&lt;/OutboundBodyLocation&gt;
+  &lt;OutboundXmlTemplate vt="8"&gt;&amp;lt;bts-msg-body xmlns="http://www.microsoft.com/schemas/bts2007" encoding="xml"/&amp;gt;&lt;/OutboundXmlTemplate&gt;
+  &lt;PropagateFaultMessage vt="11"&gt;-1&lt;/PropagateFaultMessage&gt;
+  &lt;OpenTimeout vt="8"&gt;00:01:00&lt;/OpenTimeout&gt;
+  &lt;SendTimeout vt="8"&gt;00:01:00&lt;/SendTimeout&gt;
+  &lt;CloseTimeout vt="8"&gt;00:01:00&lt;/CloseTimeout&gt;
+  &lt;Identity vt="8"&gt;&amp;lt;identity&amp;gt;
+  &amp;lt;userPrincipalName value="WS03_OFFICE07\Administrator" /&amp;gt;
+&amp;lt;/identity&amp;gt;&lt;/Identity&gt;
+&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2000-01-01T00:00:00</FromTime>
+        <ToTime>2000-01-01T23:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </PrimaryTransport>
+      <ReceivePipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLReceive" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLReceive, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="1" />
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName xsi:nil="true" />
+    </SendPort>
+  </SendPortCollection>
+</BindingInfo>

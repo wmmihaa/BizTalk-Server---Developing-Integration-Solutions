@@ -1,0 +1,376 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="6da2b49a-2e8d-4b3c-ad68-6a1c72e57897" LowerBound="1.1" HigherBound="71.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="TravelService" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="1bc88303-1d96-46aa-92ff-5c4e755fb802" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="TravelServicePortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="74641904-a8fc-45a4-8a32-62ee0725f452" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SubmitTravelRequest" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="1d6c3c0f-94ba-4381-8071-9bdb0b7843a0" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.26">
+                    <om:Property Name="Ref" Value="TravelService.TravelRequest" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="3741f49a-7887-4459-8e27-36c2a436afe4" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="8.28" HigherBound="8.42">
+                    <om:Property Name="Ref" Value="TravelService.TravelResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="410ffe58-7a95-42b3-a336-ee75985a6652" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="70.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="TravelServiceOrchestration" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="7079e983-93c5-4d42-ac53-08dbcaf7e614" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="d27c9dba-f8f1-488d-8ae7-d84b502bb65d" ParentLink="ServiceBody_Statement" LowerBound="28.1" HigherBound="30.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="TravelBookingService" />
+                    <om:Property Name="MessageName" Value="msgTravelRequest" />
+                    <om:Property Name="OperationName" Value="SubmitTravelRequest" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive TravelRequest" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Parallel" OID="9f173dd6-13b5-4ea1-a88c-939528a50854" ParentLink="ServiceBody_Statement" LowerBound="30.1" HigherBound="60.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ParallelActions_1" />
+                    <om:Property Name="Signal" Value="False" />
+                    <om:Element Type="ParallelBranch" OID="63f403d3-b7c6-4475-a14a-a1d6cd5cb5a1" ParentLink="ReallyComplexStatement_Branch" LowerBound="35.1" HigherBound="45.1">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="ParallelBranch_1" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Construct" OID="cb9d3774-0cbc-4b8d-b890-8bbcbcd5907c" ParentLink="ComplexStatement_Statement" LowerBound="35.1" HigherBound="41.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Construct Hotel Request" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Transform" OID="c8a0fe13-180a-4a67-af30-4aab679c9d68" ParentLink="ComplexStatement_Statement" LowerBound="38.1" HigherBound="40.1">
+                                <om:Property Name="ClassName" Value="TravelService.TravelRequest_to_HotelBookingRequest" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Transform_3" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessagePartRef" OID="ea8cda3f-5f8b-46a2-a1ae-383cd130251a" ParentLink="Transform_InputMessagePartRef" LowerBound="39.125" HigherBound="39.141">
+                                    <om:Property Name="MessageRef" Value="msgTravelRequest" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_5" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="789d8513-11ed-4c67-af4f-6117b5a46652" ParentLink="Transform_OutputMessagePartRef" LowerBound="39.36" HigherBound="39.69">
+                                    <om:Property Name="MessageRef" Value="msgHotelBookingRequest" />
+                                    <om:Property Name="PartRef" Value="parameters" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_6" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="821a9fac-38c7-407e-8f01-3aa15806b7b7" ParentLink="Construct_MessageRef" LowerBound="36.31" HigherBound="36.53">
+                                <om:Property Name="Ref" Value="msgHotelBookingRequest" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Send" OID="0c33fdd9-dd9c-4d38-852a-66ce68f9febe" ParentLink="ComplexStatement_Statement" LowerBound="41.1" HigherBound="43.1">
+                            <om:Property Name="PortName" Value="HotelBookingService" />
+                            <om:Property Name="MessageName" Value="msgHotelBookingRequest" />
+                            <om:Property Name="OperationName" Value="SendHotelBookingRequest" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Send_1" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Receive" OID="88f444ca-4739-4929-9cac-f9979221b9ac" ParentLink="ComplexStatement_Statement" LowerBound="43.1" HigherBound="45.1">
+                            <om:Property Name="Activate" Value="False" />
+                            <om:Property Name="PortName" Value="HotelBookingService" />
+                            <om:Property Name="MessageName" Value="msgHotelBookingResponse" />
+                            <om:Property Name="OperationName" Value="SendHotelBookingRequest" />
+                            <om:Property Name="OperationMessageName" Value="Response" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Receive_1" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="ParallelBranch" OID="1ecd5e02-f5fb-4ccb-83f8-e06bb766052c" ParentLink="ReallyComplexStatement_Branch" LowerBound="48.1" HigherBound="58.1">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="ParallelBranch_2" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Construct" OID="9a20fe81-e9da-40ee-b1b2-c62e4b7882e4" ParentLink="ComplexStatement_Statement" LowerBound="48.1" HigherBound="54.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Construct Flight Request" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Transform" OID="45a2aa85-0890-4918-b9ea-26d84eb095a5" ParentLink="ComplexStatement_Statement" LowerBound="51.1" HigherBound="53.1">
+                                <om:Property Name="ClassName" Value="TravelService.TravelRequest_to_FlightRequest" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Transform_1" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessagePartRef" OID="21f6c34b-ab3a-4984-acbe-9c4ed8785a52" ParentLink="Transform_InputMessagePartRef" LowerBound="52.113" HigherBound="52.129">
+                                    <om:Property Name="MessageRef" Value="msgTravelRequest" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_1" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="47cc6bea-bd31-4bf0-a31b-84c49e20b4bb" ParentLink="Transform_OutputMessagePartRef" LowerBound="52.36" HigherBound="52.63">
+                                    <om:Property Name="MessageRef" Value="msgFlightRequest" />
+                                    <om:Property Name="PartRef" Value="parameters" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_2" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="fc225556-3e25-4940-a91f-76df9c4bf459" ParentLink="Construct_MessageRef" LowerBound="49.31" HigherBound="49.47">
+                                <om:Property Name="Ref" Value="msgFlightRequest" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Send" OID="b93251e9-26cb-4b71-9fd5-037e4c26509f" ParentLink="ComplexStatement_Statement" LowerBound="54.1" HigherBound="56.1">
+                            <om:Property Name="PortName" Value="FlightBookingService" />
+                            <om:Property Name="MessageName" Value="msgFlightRequest" />
+                            <om:Property Name="OperationName" Value="SendFlightBookingRequest" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Send TravelResponse" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Receive" OID="7000a42a-ffe4-40b6-ade8-d03f27b75f1c" ParentLink="ComplexStatement_Statement" LowerBound="56.1" HigherBound="58.1">
+                            <om:Property Name="Activate" Value="False" />
+                            <om:Property Name="PortName" Value="FlightBookingService" />
+                            <om:Property Name="MessageName" Value="msgFlightResponse" />
+                            <om:Property Name="OperationName" Value="SendFlightBookingRequest" />
+                            <om:Property Name="OperationMessageName" Value="Response" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Receive FlightRequest" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Construct" OID="754cb2b5-89f6-4c11-98df-34015a0a2e7f" ParentLink="ServiceBody_Statement" LowerBound="60.1" HigherBound="66.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct Travel Response" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="5ab25d45-719a-4e21-8869-ce8d7e49c8b7" ParentLink="ComplexStatement_Statement" LowerBound="63.1" HigherBound="65.1">
+                        <om:Property Name="ClassName" Value="TravelService.Transform_2" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Transform_2" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="11ecff23-1e86-461e-8523-1aa1013a5360" ParentLink="Transform_InputMessagePartRef" LowerBound="64.76" HigherBound="64.104">
+                            <om:Property Name="MessageRef" Value="msgFlightResponse" />
+                            <om:Property Name="PartRef" Value="parameters" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_3" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="562a47e6-6648-4ccd-81a0-650df086c0a6" ParentLink="Transform_InputMessagePartRef" LowerBound="64.106" HigherBound="64.140">
+                            <om:Property Name="MessageRef" Value="msgHotelBookingResponse" />
+                            <om:Property Name="PartRef" Value="parameters" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_4" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="aae419ea-7a0e-4897-a102-3d237d599b34" ParentLink="Transform_OutputMessagePartRef" LowerBound="64.28" HigherBound="64.45">
+                            <om:Property Name="MessageRef" Value="msgTravelResponse" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_7" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="2c00c977-0f50-42f0-ab60-6c8f4a29fff4" ParentLink="Construct_MessageRef" LowerBound="61.23" HigherBound="61.40">
+                        <om:Property Name="Ref" Value="msgTravelResponse" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="c7c7023f-da2c-45f9-b095-a4d24bd68cbc" ParentLink="ServiceBody_Statement" LowerBound="66.1" HigherBound="68.1">
+                    <om:Property Name="PortName" Value="TravelBookingService" />
+                    <om:Property Name="MessageName" Value="msgTravelResponse" />
+                    <om:Property Name="OperationName" Value="SubmitTravelRequest" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send FlightResponse" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="619c2eb3-b371-4625-9bfd-8b4996f39c29" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="14.1" HigherBound="16.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="3" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="TravelService.TravelServicePortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="TravelBookingService" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="bdc5caa9-a649-418b-afe7-1345ce19b761" ParentLink="PortDeclaration_CLRAttribute" LowerBound="14.1" HigherBound="15.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="55c47822-b70c-411e-9e0d-d15cf231f98e" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="16.1" HigherBound="18.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="15" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="TravelService.IHotelBookingService" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="HotelBookingService" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="40d04c6c-54f3-4a7a-ad69-e58fa62827f9" ParentLink="PortDeclaration_CLRAttribute" LowerBound="16.1" HigherBound="17.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="5efcaf58-d8d7-4319-906d-1b286b49b2db" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="18.1" HigherBound="20.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="22" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="TravelService.IFlightBookingService" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="FlightBookingService" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="a5c0cb2d-c291-46f9-a3e7-55c9b1a3368a" ParentLink="PortDeclaration_CLRAttribute" LowerBound="18.1" HigherBound="19.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="e9755556-a222-4f61-973f-aeb9130549c8" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="20.1" HigherBound="21.1">
+                <om:Property Name="Type" Value="TravelService.TravelRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgTravelRequest" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="a8324799-e647-437d-adc9-5c3957e5bddb" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="21.1" HigherBound="22.1">
+                <om:Property Name="Type" Value="TravelService.TravelResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgTravelResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="1e5962f9-bd48-4864-8846-84a3c094ba28" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="22.1" HigherBound="23.1">
+                <om:Property Name="Type" Value="TravelService.IFlightBookingService_SendFlightBookingRequest_InputMessage" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgFlightRequest" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="3f9d264f-88c7-4639-a2bf-e6d9e3d43354" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="23.1" HigherBound="24.1">
+                <om:Property Name="Type" Value="TravelService.IFlightBookingService_SendFlightBookingRequest_OutputMessage" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgFlightResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="33511591-8a53-4d04-a919-0595dcea08f5" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="24.1" HigherBound="25.1">
+                <om:Property Name="Type" Value="TravelService.IHotelBookingService_SendHotelBookingRequest_OutputMessage" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgHotelBookingResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="30935c59-315d-4e76-a3ee-2264c7a53d19" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="Type" Value="TravelService.IHotelBookingService_SendHotelBookingRequest_InputMessage" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgHotelBookingRequest" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module TravelService
+{
+    public porttype TravelServicePortType
+    {
+        requestresponse SubmitTravelRequest
+        {
+            TravelRequest, TravelResponse
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service TravelServiceOrchestration
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements TravelServicePortType TravelBookingService;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses IHotelBookingService HotelBookingService;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses IFlightBookingService FlightBookingService;
+        message TravelRequest msgTravelRequest;
+        message TravelResponse msgTravelResponse;
+        message IFlightBookingService_SendFlightBookingRequest_InputMessage msgFlightRequest;
+        message IFlightBookingService_SendFlightBookingRequest_OutputMessage msgFlightResponse;
+        message IHotelBookingService_SendHotelBookingRequest_OutputMessage msgHotelBookingResponse;
+        message IHotelBookingService_SendHotelBookingRequest_InputMessage msgHotelBookingRequest;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("d27c9dba-f8f1-488d-8ae7-d84b502bb65d")]
+            activate receive (TravelBookingService.SubmitTravelRequest, msgTravelRequest);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("9f173dd6-13b5-4ea1-a88c-939528a50854")]
+            parallel
+            {
+                task
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("cb9d3774-0cbc-4b8d-b890-8bbcbcd5907c")]
+                    construct msgHotelBookingRequest
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("c8a0fe13-180a-4a67-af30-4aab679c9d68")]
+                        transform (msgHotelBookingRequest.parameters) = TravelService.TravelRequest_to_HotelBookingRequest (msgTravelRequest);
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("0c33fdd9-dd9c-4d38-852a-66ce68f9febe")]
+                    send (HotelBookingService.SendHotelBookingRequest, msgHotelBookingRequest);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("88f444ca-4739-4929-9cac-f9979221b9ac")]
+                    receive (HotelBookingService.SendHotelBookingRequest, msgHotelBookingResponse);
+                }
+                task
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("9a20fe81-e9da-40ee-b1b2-c62e4b7882e4")]
+                    construct msgFlightRequest
+                    {
+                        [Microsoft.XLANGs.BaseTypes.DesignerPosition("45a2aa85-0890-4918-b9ea-26d84eb095a5")]
+                        transform (msgFlightRequest.parameters) = TravelService.TravelRequest_to_FlightRequest (msgTravelRequest);
+                    }
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("b93251e9-26cb-4b71-9fd5-037e4c26509f")]
+                    send (FlightBookingService.SendFlightBookingRequest, msgFlightRequest);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("7000a42a-ffe4-40b6-ade8-d03f27b75f1c")]
+                    receive (FlightBookingService.SendFlightBookingRequest, msgFlightResponse);
+                }
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("754cb2b5-89f6-4c11-98df-34015a0a2e7f")]
+            construct msgTravelResponse
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("5ab25d45-719a-4e21-8869-ce8d7e49c8b7")]
+                transform (msgTravelResponse) = TravelService.Transform_2 (msgFlightResponse.parameters, msgHotelBookingResponse.parameters);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("c7c7023f-da2c-45f9-b095-a4d24bd68cbc")]
+            send (TravelBookingService.SubmitTravelRequest, msgTravelResponse);
+        }
+    }
+}
+

@@ -1,0 +1,4 @@
+PO 56745,John Callaway,2005-10-05
+1 Microsoft Way          Redmond        WA98052
+Overnight delivery requested
+BOOKS,BOOK0-672-32598-5|Microsoft BizTalk Server Unleashed|1|49.99,BOOK0-672-32616-7|Microsoft SharePoint 2003 Unleashed|1|39.99

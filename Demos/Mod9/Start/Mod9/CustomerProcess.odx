@@ -1,0 +1,34 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="222c7ad9-12e3-4012-aadd-cc5abaf74346" LowerBound="1.1" HigherBound="12.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="Mod9" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="ServiceDeclaration" OID="c6c7c084-eb07-4ca2-860a-f44756284fea" ParentLink="Module_ServiceDeclaration" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="CustomerProcess" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="ef0dacb4-6a15-4741-8272-df84e6d47ff5" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module Mod9
+{
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service CustomerProcess
+    {
+        body ()
+        {
+        }
+    }
+}
+

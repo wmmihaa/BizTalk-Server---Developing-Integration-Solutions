@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WorkFlowDemo1.Service" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WorkFlowDemo1.Service" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Document">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Done" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Document" nillable="true" type="tns:Document" />
+  <xs:complexType name="DocumentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocumentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentResponse" nillable="true" type="tns:DocumentResponse" />
+</xs:schema>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XmlBridgeConfiguration xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WindowsAzureServiceBus/Bridge">
+  <XmlBridge i:type="XmlOneWayBridge">
+    <RequestPostTrfmEnrichStage>
+      <IsEnabled>true</IsEnabled>
+      <OnEnterInspector i:nil="true" />
+      <OnExitInspector i:nil="true" />
+      <XmlEnrich>
+        <Properties />
+      </XmlEnrich>
+    </RequestPostTrfmEnrichStage>
+    <RequestPreTrfmEnrichStage>
+      <IsEnabled>true</IsEnabled>
+      <OnEnterInspector i:nil="true" />
+      <OnExitInspector i:nil="true" />
+      <XmlEnrich>
+        <Properties>
+          <PropertyDefinition i:type="XpathPropertyDefinition">
+            <DataTypeString>string</DataTypeString>
+            <PropertyName>receiver</PropertyName>
+            <MessageType>
+              <FilePath>AMessage.xsd</FilePath>
+              <Namespace>http://Demo3.AMessage</Namespace>
+              <NodeName>AMessage</NodeName>
+            </MessageType>
+            <XpathExpression>/*[local-name()='AMessage' and namespace-uri()='http://Demo3.AMessage']/*[local-name()='To' and namespace-uri()='']</XpathExpression>
+          </PropertyDefinition>
+        </Properties>
+      </XmlEnrich>
+    </RequestPreTrfmEnrichStage>
+    <TransformStage>
+      <IsEnabled>true</IsEnabled>
+      <OnEnterInspector i:nil="true" />
+      <OnExitInspector i:nil="true" />
+      <XmlTransform>
+        <SelectedMaps xmlns:d5p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      </XmlTransform>
+    </TransformStage>
+    <ValidateStage>
+      <IsEnabled>true</IsEnabled>
+      <OnEnterInspector i:nil="true" />
+      <OnExitInspector i:nil="true" />
+      <XmlValidate>
+        <WarningsAsErrors>false</WarningsAsErrors>
+      </XmlValidate>
+    </ValidateStage>
+    <DecodeStage>
+      <FlatFileDecode />
+      <OnEnterInspector i:nil="true" />
+      <OnExitInspector i:nil="true" />
+    </DecodeStage>
+    <EncodeStage>
+      <IsEnabled>true</IsEnabled>
+      <FlatFileEncode>
+        <SelectedSchemas />
+      </FlatFileEncode>
+      <OnEnterInspector i:nil="true" />
+      <OnExitInspector i:nil="true" />
+    </EncodeStage>
+    <IncomingMessageTypes>
+      <XmlSchemaInfo>
+        <FilePath>AMessage.xsd</FilePath>
+        <RootNodeName>AMessage</RootNodeName>
+        <SchemaNamespace>http://Demo3.AMessage</SchemaNamespace>
+      </XmlSchemaInfo>
+    </IncomingMessageTypes>
+  </XmlBridge>
+</XmlBridgeConfiguration>

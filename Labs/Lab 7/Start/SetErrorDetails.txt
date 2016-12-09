@@ -1,0 +1,5 @@
+markup = "<errorDetails><div xmlns=\"http://www.w3.org/1999/xhtml\"><strong>Error code:</strong> " + FailedMessage(ErrorReport.FailureCode) + "</div>" +
+         "<div xmlns=\"http://www.w3.org/1999/xhtml\"><strong>Description:</strong> " + FailedMessage(ErrorReport.Description) + "</div>" +
+         "<div xmlns=\"http://www.w3.org/1999/xhtml\"><strong>Receive port:</strong> " + FailedMessage(ErrorReport.ReceivePortName) + "</div>" + 
+         "<div xmlns=\"http://www.w3.org/1999/xhtml\"><strong>Receive location URI:</strong> " + FailedMessage(ErrorReport.InboundTransportLocation) + "</div></errorDetails>"; 
+XMLDoc.LoadXml(markup);

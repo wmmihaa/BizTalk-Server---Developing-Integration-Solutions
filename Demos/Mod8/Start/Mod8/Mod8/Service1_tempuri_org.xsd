@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation=".\Service1_mod8_customers.xsd" namespace="http://Mod8.Customers" />
+  <xs:element name="SendCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://Mod8.Customers" minOccurs="0" name="customers" nillable="true" type="q1:Customers" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

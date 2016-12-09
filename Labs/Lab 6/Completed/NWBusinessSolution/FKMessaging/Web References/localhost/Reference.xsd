@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SuppOrder" nillable="true" type="tns:SuppOrder" />
+  <xs:complexType name="SuppOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="customerPONumber" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ItemId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Quantity" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Priority" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="OrderDate" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

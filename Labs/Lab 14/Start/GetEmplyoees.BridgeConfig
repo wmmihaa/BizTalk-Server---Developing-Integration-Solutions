@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XmlBridgeConfiguration xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WindowsAzureServiceBus/Bridge">
+  <XmlBridge i:type="XmlRequestReplyBridge">
+    <RequestPostTrfmEnrichStage>
+      <IsEnabled>true</IsEnabled>
+      <OnEnterInspector i:nil="true" />
+      <OnExitInspector i:nil="true" />
+      <XmlEnrich>
+        <Properties />
+      </XmlEnrich>
+    </RequestPostTrfmEnrichStage>
+    <RequestPreTrfmEnrichStage>
+      <IsEnabled>true</IsEnabled>
+      <OnEnterInspector i:nil="true" />
+      <OnExitInspector i:nil="true" />
+      <XmlEnrich>
+        <Properties />
+      </XmlEnrich>
+    </RequestPreTrfmEnrichStage>
+    <TransformStage>
+      <IsEnabled>true</IsEnabled>
+      <OnEnterInspector i:nil="true" />
+      <OnExitInspector i:nil="true" />
+      <XmlTransform>
+        <SelectedMaps xmlns:d5p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      </XmlTransform>
+    </TransformStage>
+    <ValidateStage>
+      <IsEnabled>true</IsEnabled>
+      <OnEnterInspector i:nil="true" />
+      <OnExitInspector i:nil="true" />
+      <XmlValidate>
+        <WarningsAsErrors>false</WarningsAsErrors>
+      </XmlValidate>
+    </ValidateStage>
+    <MessageTypeMappings>
+      <MessageTypeMapping>
+        <IncomingMessageType>
+          <FilePath>LOB Schemas\blogical_employees_all_TypedProcedure.dbo.xsd</FilePath>
+          <RootNodeName>sp_GetEmployees</RootNodeName>
+          <SchemaNamespace>http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo</SchemaNamespace>
+        </IncomingMessageType>
+        <ResponseMessageType>
+          <FilePath>LOB Schemas\blogical_employees_all_TypedProcedure.dbo.xsd</FilePath>
+          <RootNodeName>sp_GetEmployeesResponse</RootNodeName>
+          <SchemaNamespace>http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo</SchemaNamespace>
+        </ResponseMessageType>
+      </MessageTypeMapping>
+    </MessageTypeMappings>
+    <ResponsePostTrfmEnrichStage>
+      <IsEnabled>true</IsEnabled>
+      <OnEnterInspector i:nil="true" />
+      <OnExitInspector i:nil="true" />
+      <XmlEnrich>
+        <Properties />
+      </XmlEnrich>
+    </ResponsePostTrfmEnrichStage>
+    <ResponsePreTrfmEnrichStage>
+      <IsEnabled>true</IsEnabled>
+      <OnEnterInspector i:nil="true" />
+      <OnExitInspector i:nil="true" />
+      <XmlEnrich>
+        <Properties />
+      </XmlEnrich>
+    </ResponsePreTrfmEnrichStage>
+    <ResponseTransformStage>
+      <IsEnabled>true</IsEnabled>
+      <OnEnterInspector i:nil="true" />
+      <OnExitInspector i:nil="true" />
+      <XmlTransform>
+        <SelectedMaps xmlns:d5p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      </XmlTransform>
+    </ResponseTransformStage>
+    <SendStage>
+      <IsEnabled>true</IsEnabled>
+      <Send>
+        <Properties />
+      </Send>
+    </SendStage>
+  </XmlBridge>
+</XmlBridgeConfiguration>

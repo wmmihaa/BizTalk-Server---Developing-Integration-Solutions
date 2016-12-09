@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <PublishUrlHistory>
+    </PublishUrlHistory>
+    <InstallUrlHistory>
+    </InstallUrlHistory>
+    <SupportUrlHistory>
+    </SupportUrlHistory>
+    <UpdateUrlHistory>
+    </UpdateUrlHistory>
+    <BootstrapperUrlHistory>
+    </BootstrapperUrlHistory>
+    <ErrorReportUrlHistory>
+    </ErrorReportUrlHistory>
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>true</VerifyUploadedFiles>
+    <ProjectView>ProjectFiles</ProjectView>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Server>.</Server>
+    <ConfigurationDatabase>BizTalkMgmtDb</ConfigurationDatabase>
+    <ApplicationName>Lab10</ApplicationName>
+    <Redeploy>True</Redeploy>
+    <Register>True</Register>
+    <RestartHostInstances>False</RestartHostInstances>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Server>WS03_OFFICE07</Server>
+    <ConfigurationDatabase>BizTalkMgmtDb</ConfigurationDatabase>
+    <ApplicationName>
+    </ApplicationName>
+    <Redeploy>True</Redeploy>
+    <Register>True</Register>
+    <RestartHostInstances>False</RestartHostInstances>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{EF7E3281-CD33-11D4-8326-00C04FA0CE8D}">
+        <Files>
+		<File Path="DistributorService_northwind_com_services_DistributorService.xsd">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+		<File Path="Order_to_Distribution.btm">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+		<File Path="Order_to_StaffRequest.btm">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+		<File Path="Order_to_StockRequest.btm">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+		<File Path="Order_to_WarehouseResponse.btm">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+		<File Path="StaffService_northwind_com_services_StaffService.xsd">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+		<File Path="StockService_northwind_com_services_StockService.xsd">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>0</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>0</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+	</Files>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

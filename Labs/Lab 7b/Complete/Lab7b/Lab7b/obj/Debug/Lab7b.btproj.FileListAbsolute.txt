@@ -1,0 +1,7 @@
+C:\Labs\Lab 7b\Complete\Lab7b\Lab7b\bin\Debug\Lab7b.dll
+C:\Labs\Lab 7b\Complete\Lab7b\Lab7b\bin\Debug\Lab7b.pdb
+C:\Labs\Lab 7b\Complete\Lab7b\Lab7b\bin\Debug\Microsoft.BizTalk.Pipeline.dll
+C:\Labs\Lab 7b\Complete\Lab7b\Lab7b\bin\Debug\Microsoft.BizTalk.TestTools.dll
+C:\Labs\Lab 7b\Complete\Lab7b\Lab7b\bin\Debug\Microsoft.XLANGs.BaseTypes.dll
+C:\Labs\Lab 7b\Complete\Lab7b\Lab7b\obj\Debug\Lab7b.dll
+C:\Labs\Lab 7b\Complete\Lab7b\Lab7b\obj\Debug\Lab7b.pdb

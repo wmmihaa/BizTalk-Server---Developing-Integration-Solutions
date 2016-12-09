@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:a="http://www.w3.org/2005/08/addressing" xmlns:s="http://www.w3.org/2003/05/soap-envelope" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.w3.org/2003/05/soap-envelope" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics" />
+  <xs:import namespace="http://www.w3.org/2005/08/addressing" />
+  <xs:import namespace="http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo" />
+  <xs:element name="Envelope">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Header">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element xmlns:q1="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics" ref="q1:ActivityId" />
+              <xs:element ref="a:RelatesTo" />
+              <xs:element ref="a:Action" />
+              <xs:element ref="a:To" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Body">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element xmlns:q2="http://schemas.microsoft.com/Sql/2008/05/TypedProcedures/dbo" ref="q2:sp_GetEmployeesResponse" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:attribute name="mustUnderstand" type="xs:unsignedByte" />
+</xs:schema>

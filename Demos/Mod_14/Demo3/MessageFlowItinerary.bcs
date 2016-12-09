@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bridgeConfiguration xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="cc0b5aae-c574-4966-84f9-32e65095ea40" biztalkServiceUrl="https://a372wabs.biztalk.windows.net" xmlns="http://schemas.microsoft.com/dsltools/BridgeConfiguration">
+  <entities>
+    <bridgeConfigurationModelHasEntities Id="92a4df75-56cb-4d26-bcab-08ebdf9c9550">
+      <oneWayBridge Id="3a6479fe-9f91-4132-9ad2-a3b0bc1363c6" entityName="SendMessage" address="SendMessage" pipelineTemplateName="oneWayXmlPipeline" trackingOptions="" displayName="Xml One-Way Bridge">
+        <oneWayBridgeInPort>
+          <oneWayBridgeHasOneWayBridgeInPort Id="ba479805-4a94-4f93-9f15-237100df459f">
+            <oneWayBridgeInPort Id="bd671344-8c70-458e-a598-cc20503e62d7" name="OneWayBridgeInPort" />
+          </oneWayBridgeHasOneWayBridgeInPort>
+        </oneWayBridgeInPort>
+        <oneWayRoutePort>
+          <oneWayBridgeHasOneWayRoutePort Id="79a3dab7-cb03-4b2d-8477-fd0622caf4ab">
+            <oneWayRoutePort Id="7025f421-467c-4f82-b103-8bbcdf9ae34e" name="OneWayRoutePort">
+              <pushInPorts>
+                <oneWayRouteConnection Id="f49852f8-2060-40c4-96ef-429abdcae038" filterCondition="receiver='Jerry'">
+                  <queueInPortMoniker Id="4e753f34-f333-41a6-b4ba-49eccb650730" />
+                  <routeAction />
+                </oneWayRouteConnection>
+                <oneWayRouteConnection Id="75032197-fb3c-4659-8bc5-e77b8b177b66" filterCondition="receiver = 'George'">
+                  <queueInPortMoniker Id="62a1e298-16ba-4e56-82bc-d50235d6b2b9" />
+                  <routeAction />
+                </oneWayRouteConnection>
+                <oneWayRouteConnection Id="9b40e463-22b3-4f75-b0fe-797015697fc4" filterCondition="receiver = 'Elaine'">
+                  <queueInPortMoniker Id="aadf99b2-89ad-416e-b2a1-107525cb0e83" />
+                  <routeAction />
+                </oneWayRouteConnection>
+                <oneWayRouteConnection Id="5dcd19f2-8d38-40e9-8591-bc095a770ef9" filterCondition="receiver = 'Cosmo'">
+                  <queueInPortMoniker Id="52bf7c74-3eee-4b1c-8e6c-6fde6c2fa365" />
+                  <routeAction />
+                </oneWayRouteConnection>
+              </pushInPorts>
+            </oneWayRoutePort>
+          </oneWayBridgeHasOneWayRoutePort>
+        </oneWayRoutePort>
+      </oneWayBridge>
+    </bridgeConfigurationModelHasEntities>
+    <bridgeConfigurationModelHasEntities Id="529c00ef-546a-456e-8404-24846b8c2403">
+      <queue Id="c8fb83de-d403-486f-8a44-9637bc123609" entityName="Jerry" endpointConfigName="TextEncodedMessageBody">
+        <queueInPort>
+          <queueHasQueueInPort Id="1a6d9f27-5866-4bee-b423-d33c11276cfc">
+            <queueInPort Id="4e753f34-f333-41a6-b4ba-49eccb650730" name="QueueInPort" />
+          </queueHasQueueInPort>
+        </queueInPort>
+      </queue>
+    </bridgeConfigurationModelHasEntities>
+    <bridgeConfigurationModelHasEntities Id="cfa34eb8-30ff-420d-8738-bbc0006f3757">
+      <queue Id="969a64e2-6cbe-4f84-8c71-aad38d93a6fd" entityName="George" endpointConfigName="TextEncodedMessageBody">
+        <queueInPort>
+          <queueHasQueueInPort Id="8b9dcdd3-5a13-444b-a4c2-e70c026e892f">
+            <queueInPort Id="62a1e298-16ba-4e56-82bc-d50235d6b2b9" name="QueueInPort" />
+          </queueHasQueueInPort>
+        </queueInPort>
+      </queue>
+    </bridgeConfigurationModelHasEntities>
+    <bridgeConfigurationModelHasEntities Id="2c73495f-c265-4ac1-bae5-5561d95aa366">
+      <queue Id="59dd116b-43e7-4ce6-9fba-0ae616f925ad" entityName="Elaine" endpointConfigName="TextEncodedMessageBody">
+        <queueInPort>
+          <queueHasQueueInPort Id="ed848c1f-7a2f-499b-9221-99a7a57ef4e7">
+            <queueInPort Id="aadf99b2-89ad-416e-b2a1-107525cb0e83" name="QueueInPort" />
+          </queueHasQueueInPort>
+        </queueInPort>
+      </queue>
+    </bridgeConfigurationModelHasEntities>
+    <bridgeConfigurationModelHasEntities Id="8239e4f1-ae0a-4401-b4b2-bb05c35ddd18">
+      <queue Id="97b2c161-b7aa-4203-ae25-747a4cd6c8cd" entityName="Cosmo" endpointConfigName="TextEncodedMessageBody">
+        <queueInPort>
+          <queueHasQueueInPort Id="24bb672b-b691-4c05-970d-8e4e33973046">
+            <queueInPort Id="52bf7c74-3eee-4b1c-8e6c-6fde6c2fa365" name="QueueInPort" />
+          </queueHasQueueInPort>
+        </queueInPort>
+      </queue>
+    </bridgeConfigurationModelHasEntities>
+  </entities>
+</bridgeConfiguration>

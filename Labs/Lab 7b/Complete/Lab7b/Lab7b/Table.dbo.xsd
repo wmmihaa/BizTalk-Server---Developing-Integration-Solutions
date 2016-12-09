@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns3="http://schemas.microsoft.com/Sql/2008/05/Types/Tables/dbo" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/Sql/2008/05/Types/Tables/dbo" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo>
+      <fileNameHint xmlns="http://schemas.microsoft.com/servicemodel/adapters/metadata/xsd">Table.dbo</fileNameHint>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:complexType name="Tweets">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Author" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Tweet" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Tweets" nillable="true" type="ns3:Tweets" />
+  <xs:complexType name="ArrayOfTweets">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Tweets" type="ns3:Tweets" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTweets" nillable="true" type="ns3:ArrayOfTweets" />
+</xs:schema>

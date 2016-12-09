@@ -1,0 +1,109 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="6141b617-d4e5-48b3-a38f-5865a1b94605">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="NWBusinessProcesses" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="1d391259-bc9a-4151-9508-e566a76be00c" ParentLink="Module_PortType">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:portType name=&quot;IStaffService&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IStaffService" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="84c5fe25-32dc-4430-aac9-2ea832a9102d" ParentLink="PortType_OperationDeclaration">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:operation name=&quot;ReserveStaff&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="ReserveStaff" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="c9caba20-7713-4947-bf9a-081a3eddb3eb" ParentLink="OperationDeclaration_RequestMessageRef">
+                    <om:Property Name="Ref" Value="NWBusinessProcesses.IStaffService_ReserveStaff_InputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:input message=&quot;http://northwind.com/services/StaffService:IStaffService_ReserveStaff_InputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://northwind.com/services/StaffService/IStaffService/ReserveStaff&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="a0173520-b4ab-4d68-a4c1-73345ba0ed8e" ParentLink="OperationDeclaration_ResponseMessageRef">
+                    <om:Property Name="Ref" Value="NWBusinessProcesses.IStaffService_ReserveStaff_OutputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:output message=&quot;http://northwind.com/services/StaffService:IStaffService_ReserveStaff_OutputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://northwind.com/services/StaffService/IStaffService/ReserveStaffResponse&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="4eb36339-a31e-4935-85dc-0f2fbcf6732a" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;IStaffService_ReserveStaff_InputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IStaffService_ReserveStaff_InputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="e532c276-675f-439c-975e-df793fab65a8" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="NWBusinessProcesses.StaffService_northwind_com_services_StaffService.ReserveStaff" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="f5286ed5-dabc-4a96-abba-60c686dd916f" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;IStaffService_ReserveStaff_OutputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IStaffService_ReserveStaff_OutputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="efce1c24-b34b-42a4-949d-1f44cf650744" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="NWBusinessProcesses.StaffService_northwind_com_services_StaffService.ReserveStaffResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="804d2c41-3973-4767-90c7-118df9d7b650" ParentLink="Module_ServiceDeclaration">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:service name=&quot;StaffService&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="StaffServiceClient" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="5d63332d-5c19-4b75-8e51-a55043be7469" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module NWBusinessProcesses
+{
+    internal messagetype IStaffService_ReserveStaff_InputMessage
+    {
+        body StaffService_northwind_com_services_StaffService.ReserveStaff parameters;
+    };
+    internal messagetype IStaffService_ReserveStaff_OutputMessage
+    {
+        body StaffService_northwind_com_services_StaffService.ReserveStaffResponse parameters;
+    };
+    internal porttype IStaffService
+    {
+        requestresponse ReserveStaff
+        {
+            IStaffService_ReserveStaff_InputMessage, IStaffService_ReserveStaff_OutputMessage
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service StaffServiceClient
+    {
+        body ()
+        {
+        }
+    }
+}
+

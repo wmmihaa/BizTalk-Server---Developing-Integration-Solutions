@@ -1,0 +1,7 @@
+﻿<ns0:Customer xmlns:ns0="http://Mod6.Customer">
+	<FirstName>Nick</FirstName>
+	<MiddleName>John</MiddleName>
+	<LastName>Jones</LastName>
+	<ContactNo>312-222-9876</ContactNo>
+	<Category>Silver</Category>
+</ns0:Customer>

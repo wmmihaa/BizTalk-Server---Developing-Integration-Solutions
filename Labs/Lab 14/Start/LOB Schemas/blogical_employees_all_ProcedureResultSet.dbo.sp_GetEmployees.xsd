@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns4="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:ns3="http://schemas.microsoft.com/Sql/2008/05/ProceduresResultSets/dbo/sp_GetEmployees" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/Sql/2008/05/ProceduresResultSets/dbo/sp_GetEmployees" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation=".\blogical_employees_all_Serialization.xsd" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:annotation>
+    <xs:appinfo>
+      <fileNameHint xmlns="http://schemas.microsoft.com/servicemodel/adapters/metadata/xsd">ProcedureResultSet.dbo.sp_GetEmployees</fileNameHint>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:complexType name="StoredProcedureResultSet0">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="ID" nillable="true" type="ns4:guid" />
+      <xs:element minOccurs="0" maxOccurs="1" name="EmployeeNumber" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Department" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Role" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StoredProcedureResultSet0" nillable="true" type="ns3:StoredProcedureResultSet0" />
+  <xs:complexType name="ArrayOfStoredProcedureResultSet0">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StoredProcedureResultSet0" type="ns3:StoredProcedureResultSet0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStoredProcedureResultSet0" nillable="true" type="ns3:ArrayOfStoredProcedureResultSet0" />
+</xs:schema>

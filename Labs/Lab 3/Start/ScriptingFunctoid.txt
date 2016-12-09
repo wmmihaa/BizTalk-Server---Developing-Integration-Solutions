@@ -1,0 +1,17 @@
+Public Function PriorityConversion(ByVal param1 As String) _
+      As String
+
+ dim priority as string = ""
+
+ Select  param1
+  Case “1”
+    priority = “High”
+  Case “2”
+    priority = “Medium”
+  Case “3”
+   priority = “Low”
+ 
+ End Select
+
+ Return priority
+End Function

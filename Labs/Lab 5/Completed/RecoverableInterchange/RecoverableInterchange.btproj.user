@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <PublishUrlHistory>
+    </PublishUrlHistory>
+    <InstallUrlHistory>
+    </InstallUrlHistory>
+    <SupportUrlHistory>
+    </SupportUrlHistory>
+    <UpdateUrlHistory>
+    </UpdateUrlHistory>
+    <BootstrapperUrlHistory>
+    </BootstrapperUrlHistory>
+    <ErrorReportUrlHistory>
+    </ErrorReportUrlHistory>
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>true</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Deployment|AnyCPU' ">
+    <Server>BIZTALKVM</Server>
+    <ConfigurationDatabase>BizTalkMgmtDb</ConfigurationDatabase>
+    <ApplicationName>Lab5</ApplicationName>
+    <Redeploy>True</Redeploy>
+    <Register>True</Register>
+    <RestartHostInstances>False</RestartHostInstances>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Server>.</Server>
+    <ConfigurationDatabase>BizTalkMgmtDb</ConfigurationDatabase>
+    <ApplicationName>Lab5</ApplicationName>
+    <Redeploy>True</Redeploy>
+    <Register>True</Register>
+    <RestartHostInstances>False</RestartHostInstances>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Server>WS03_OFFICE07</Server>
+    <ConfigurationDatabase>BizTalkMgmtDb</ConfigurationDatabase>
+    <ApplicationName>Lab5</ApplicationName>
+    <Redeploy>True</Redeploy>
+    <Register>True</Register>
+    <RestartHostInstances>False</RestartHostInstances>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{EF7E3281-CD33-11D4-8326-00C04FA0CE8D}">
+        <Files>
+		<File Path="FFOrder.xsd">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename>C:\Projects\lab5\OrderFF.txt</EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>1</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>1</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+		<File Path="Header.xsd">
+			<ValidateTestMapInput>True</ValidateTestMapInput>
+			<ValidateTestMapOutput>True</ValidateTestMapOutput>
+			<TestMapInputInstanceFilename></TestMapInputInstanceFilename>
+			<TestMapOutputInstanceFilename></TestMapOutputInstanceFilename>
+			<TestMapSourceType>0</TestMapSourceType>
+			<TestMapTargetType>0</TestMapTargetType>
+			<EditorOutputInstanceFilename></EditorOutputInstanceFilename>
+			<EditorInputInstanceFilename></EditorInputInstanceFilename>
+			<GenerateInstanceOutputType>1</GenerateInstanceOutputType>
+			<ValidateInstanceInputType>1</ValidateInstanceInputType>
+			<PropertySchemaFileName>PropertySchema.xsd</PropertySchemaFileName>
+			<AutoRefreshSchema>0</AutoRefreshSchema>
+		</File>
+	</Files>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

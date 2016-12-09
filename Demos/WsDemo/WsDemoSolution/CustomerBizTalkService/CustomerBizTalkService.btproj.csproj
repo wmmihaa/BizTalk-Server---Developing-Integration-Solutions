@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FB624B13-3FFA-4989-8401-EB1B91B9D3C8}</ProjectGuid>
+    <ProjectTypeGuids>{EF7E3281-CD33-11D4-8326-00C04FA0CE8D};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>library</OutputType>
+    <GenericProcessing>true</GenericProcessing>
+    <RootNamespace>CustomerBizTalkService</RootNamespace>
+    <AssemblyName>CustomerBizTalkService</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <BpelCompliance>True</BpelCompliance>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Name>System.Configuration</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Pipeline">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.DefaultPipelines">
+      <Name>Microsoft.BizTalk.DefaultPipelines</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.GlobalPropertySchemas">
+      <Name>Microsoft.BizTalk.GlobalPropertySchemas</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.TestTools">
+      <Name>Microsoft.BizTalk.TestTools</Name>
+    </Reference>
+    <Reference Include="Microsoft.XLANGs.BaseTypes">
+      <Name>Microsoft.XLANGs.BaseTypes</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="GetCustomerNumerRequest.xsd">
+      <TypeName>GetCustomerNumerRequest</TypeName>
+      <Namespace>CustomerBizTalkService</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="GetCustomerNumerResponse.xsd">
+      <TypeName>GetCustomerNumerResponse</TypeName>
+      <Namespace>CustomerBizTalkService</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="CustomerBizTalkService.odx">
+      <TypeName>CustomerBizTalkService</TypeName>
+      <Namespace>CustomerBizTalkService</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="CreateResponseTransformation.btm">
+      <TypeName>CreateResponseTransformation</TypeName>
+      <Namespace>CustomerBizTalkService</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="key.snk" />
+    <Schema Include="CustomerBizTalkService2\ProcedureResultSet.dbo.sp_GetCustomerNumber.xsd">
+      <TypeName>ProcedureResultSet_dbo_sp_GetCustomerNumber</TypeName>
+      <Namespace>CustomerBizTalkService</Namespace>
+    </Schema>
+    <Schema Include="CustomerBizTalkService2\TypedProcedure.dbo.xsd">
+      <TypeName>TypedProcedure_dbo</TypeName>
+      <Namespace>CustomerBizTalkService</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CustomerAPI\CustomerAPI.csproj">
+      <Project>{26EDC569-4F24-430F-970D-CD3784C19229}</Project>
+      <Name>CustomerAPI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="CustomerBizTalkService2\CustomerBizTalkService2.odx">
+      <TypeName>CustomerBizTalkService2</TypeName>
+      <Namespace>CustomerBizTalkService.CustomerBizTalkService2</Namespace>
+    </XLang>
+    <Map Include="CustomerBizTalkService2\SQLResponse_to_WsResponse.btm">
+      <TypeName>SQLResponse_to_WsResponse</TypeName>
+      <Namespace>CustomerBizTalkService.CustomerBizTalkService2</Namespace>
+    </Map>
+    <Content Include="CustomerBizTalkService2\WcfSendPort_SqlAdapterBinding_Custom.bindinginfo.xml" />
+    <Map Include="CustomerBizTalkService2\WsRequest_to_SQLRequest.btm">
+      <TypeName>WsRequest_to_SQLRequest</TypeName>
+      <Namespace>CustomerBizTalkService.CustomerBizTalkService2</Namespace>
+    </Map>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
+</Project>

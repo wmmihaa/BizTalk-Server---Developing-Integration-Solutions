@@ -1,0 +1,280 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="df337553-ea6a-4e68-92b1-a8e3a17fdb80" LowerBound="1.1" HigherBound="54.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="Eval.Orchestrations" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="7601380b-a027-4e82-a408-270512a9dee1" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_2" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="1d0474d7-69b0-480a-a0dd-16520fcabd32" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SubmitEval" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="4b1cf4f7-704e-4e5e-b333-76b467eeae2f" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.36">
+                    <om:Property Name="Ref" Value="Eval.Schemas.Evaluation" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="1954d070-8d5f-4035-ab5b-7729fd7adc0e" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="8.38" HigherBound="8.68">
+                    <om:Property Name="Ref" Value="Eval.Schemas.EvaluationRespnse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="31c647df-3d4b-4bf2-b09e-f1c1621645a9" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="AddEvalType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="234818f2-4152-4dc2-8bdf-423707b4c392" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="sp_AddEval" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="fc72d3e2-65c0-414a-aa91-009b47c24ef2" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="15.57" HigherBound="15.107">
+                    <om:Property Name="Ref" Value="Eval.Schemas.TypedProcedure_dbo.sp_AddEvalResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="6e22f07b-1ea4-422a-a78a-7579d3bc6f36" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.55">
+                    <om:Property Name="Ref" Value="Eval.Schemas.TypedProcedure_dbo.sp_AddEval" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="1345a935-66e4-4465-a3a8-310c86ad9e17" ParentLink="Module_ServiceDeclaration" LowerBound="18.1" HigherBound="53.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ProcessEvals" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="9050702b-fa0e-4c18-b9d6-019691aec730" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="05651f93-02fd-4aea-819f-30574fd12f4d" ParentLink="ServiceBody_Statement" LowerBound="31.1" HigherBound="33.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="EvalService" />
+                    <om:Property Name="MessageName" Value="SubmitEval" />
+                    <om:Property Name="OperationName" Value="SubmitEval" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="cdca902a-baa1-4295-9188-7df6498074ff" ParentLink="ServiceBody_Statement" LowerBound="33.1" HigherBound="39.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructMessage_1" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="1efa0b4a-d954-40ad-85fa-8867522509c7" ParentLink="ComplexStatement_Statement" LowerBound="36.1" HigherBound="38.1">
+                        <om:Property Name="ClassName" Value="Eval.Orchestrations.Transform_1" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Transform_1" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="3440669b-a18a-4d72-a0a7-eb9ca96cd618" ParentLink="Transform_InputMessagePartRef" LowerBound="37.74" HigherBound="37.84">
+                            <om:Property Name="MessageRef" Value="SubmitEval" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="23a5fecf-5d7d-4f02-bc5e-6a943c0c3f1f" ParentLink="Transform_OutputMessagePartRef" LowerBound="37.28" HigherBound="37.37">
+                            <om:Property Name="MessageRef" Value="spAddEval" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="316b9395-a760-447c-a8b2-61fa6d9256c4" ParentLink="Construct_MessageRef" LowerBound="34.23" HigherBound="34.32">
+                        <om:Property Name="Ref" Value="spAddEval" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="d9ea0808-5553-4103-a3ed-fb087d4e6b8d" ParentLink="ServiceBody_Statement" LowerBound="39.1" HigherBound="41.1">
+                    <om:Property Name="PortName" Value="AddEval" />
+                    <om:Property Name="MessageName" Value="spAddEval" />
+                    <om:Property Name="OperationName" Value="sp_AddEval" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_2" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Receive" OID="d43222cd-750a-4623-b1de-f54e65500eed" ParentLink="ServiceBody_Statement" LowerBound="41.1" HigherBound="43.1">
+                    <om:Property Name="Activate" Value="False" />
+                    <om:Property Name="PortName" Value="AddEval" />
+                    <om:Property Name="MessageName" Value="spAddEvalResponse" />
+                    <om:Property Name="OperationName" Value="sp_AddEval" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_2" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="98a4bb76-c059-4ab2-bace-cb0fbd5b360d" ParentLink="ServiceBody_Statement" LowerBound="43.1" HigherBound="49.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructMessage_2" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="520d3279-4cb4-4140-8f72-77a549960ca3" ParentLink="ComplexStatement_Statement" LowerBound="46.1" HigherBound="48.1">
+                        <om:Property Name="ClassName" Value="Eval.Orchestrations.Transform_2" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Transform_2" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="83b66468-22fe-45c0-aee3-f12ba749b8a2" ParentLink="Transform_InputMessagePartRef" LowerBound="47.83" HigherBound="47.93">
+                            <om:Property Name="MessageRef" Value="SubmitEval" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_3" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="d3411ebf-7b11-431b-b40e-e9e947d4c160" ParentLink="Transform_OutputMessagePartRef" LowerBound="47.28" HigherBound="47.46">
+                            <om:Property Name="MessageRef" Value="SubmitEvalResponse" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_4" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="07e9965c-e416-4bfe-b0b9-01357a292933" ParentLink="Construct_MessageRef" LowerBound="44.23" HigherBound="44.41">
+                        <om:Property Name="Ref" Value="SubmitEvalResponse" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="1bc75501-b7aa-4598-8d7a-e25b1146c06c" ParentLink="ServiceBody_Statement" LowerBound="49.1" HigherBound="51.1">
+                    <om:Property Name="PortName" Value="EvalService" />
+                    <om:Property Name="MessageName" Value="SubmitEvalResponse" />
+                    <om:Property Name="OperationName" Value="SubmitEval" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="0f8fdb1b-142f-48c9-a1c1-519c6549bcdc" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="21.1" HigherBound="23.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Eval.Orchestrations.PortType_2" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="EvalService" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="7ab01d0c-8913-44d8-9843-00c1effef2ec" ParentLink="PortDeclaration_CLRAttribute" LowerBound="21.1" HigherBound="22.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="07695c11-fa8f-46ba-91a1-ceaa6e8c1dea" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="23.1" HigherBound="25.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Eval.Orchestrations.AddEvalType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="AddEval" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="3618ef5e-fe96-4c07-98fc-1cb4095bb897" ParentLink="PortDeclaration_CLRAttribute" LowerBound="23.1" HigherBound="24.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="590201c2-ddb7-4dd3-ae39-9a07e787ae09" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="Type" Value="Eval.Schemas.TypedProcedure_dbo.sp_AddEval" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="spAddEval" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="ff0cec66-4e02-4a7a-b59b-ce32947d4a5d" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="Type" Value="Eval.Schemas.Evaluation" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SubmitEval" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="06ac90af-97cb-42f5-aa16-ebc95fe4b95e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="27.1" HigherBound="28.1">
+                <om:Property Name="Type" Value="Eval.Schemas.TypedProcedure_dbo.sp_AddEvalResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="spAddEvalResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="77a38d34-ea07-4ded-b606-11d686e296e3" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="28.1" HigherBound="29.1">
+                <om:Property Name="Type" Value="Eval.Schemas.EvaluationRespnse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SubmitEvalResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module Eval.Orchestrations
+{
+    public porttype PortType_2
+    {
+        requestresponse SubmitEval
+        {
+            Eval.Schemas.Evaluation, Eval.Schemas.EvaluationRespnse
+        };
+    };
+    internal porttype AddEvalType
+    {
+        requestresponse sp_AddEval
+        {
+            Eval.Schemas.TypedProcedure_dbo.sp_AddEval, Eval.Schemas.TypedProcedure_dbo.sp_AddEvalResponse
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service ProcessEvals
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements PortType_2 EvalService;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses AddEvalType AddEval;
+        message Eval.Schemas.TypedProcedure_dbo.sp_AddEval spAddEval;
+        message Eval.Schemas.Evaluation SubmitEval;
+        message Eval.Schemas.TypedProcedure_dbo.sp_AddEvalResponse spAddEvalResponse;
+        message Eval.Schemas.EvaluationRespnse SubmitEvalResponse;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("05651f93-02fd-4aea-819f-30574fd12f4d")]
+            activate receive (EvalService.SubmitEval, SubmitEval);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("cdca902a-baa1-4295-9188-7df6498074ff")]
+            construct spAddEval
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("1efa0b4a-d954-40ad-85fa-8867522509c7")]
+                transform (spAddEval) = Eval.Orchestrations.Transform_1 (SubmitEval);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("d9ea0808-5553-4103-a3ed-fb087d4e6b8d")]
+            send (AddEval.sp_AddEval, spAddEval);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("d43222cd-750a-4623-b1de-f54e65500eed")]
+            receive (AddEval.sp_AddEval, spAddEvalResponse);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("98a4bb76-c059-4ab2-bace-cb0fbd5b360d")]
+            construct SubmitEvalResponse
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("520d3279-4cb4-4140-8f72-77a549960ca3")]
+                transform (SubmitEvalResponse) = Eval.Orchestrations.Transform_2 (SubmitEval);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("1bc75501-b7aa-4598-8d7a-e25b1146c06c")]
+            send (EvalService.SubmitEval, SubmitEvalResponse);
+        }
+    }
+}
+

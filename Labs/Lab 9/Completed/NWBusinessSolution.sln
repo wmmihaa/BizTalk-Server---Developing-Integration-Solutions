@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWMessaging", "NWMessaging\NWMessaging.btproj", "{E1396F40-A0C7-4D4A-B0EA-92FE2D4C5923}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWBusinessProcesses", "NWBusinessProcesses\NWBusinessProcesses.btproj", "{60742B15-B963-4EBF-8B5C-2A0E608CE93E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1396F40-A0C7-4D4A-B0EA-92FE2D4C5923}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1396F40-A0C7-4D4A-B0EA-92FE2D4C5923}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1396F40-A0C7-4D4A-B0EA-92FE2D4C5923}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E1396F40-A0C7-4D4A-B0EA-92FE2D4C5923}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1396F40-A0C7-4D4A-B0EA-92FE2D4C5923}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1396F40-A0C7-4D4A-B0EA-92FE2D4C5923}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{60742B15-B963-4EBF-8B5C-2A0E608CE93E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60742B15-B963-4EBF-8B5C-2A0E608CE93E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60742B15-B963-4EBF-8B5C-2A0E608CE93E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{60742B15-B963-4EBF-8B5C-2A0E608CE93E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60742B15-B963-4EBF-8B5C-2A0E608CE93E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60742B15-B963-4EBF-8B5C-2A0E608CE93E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

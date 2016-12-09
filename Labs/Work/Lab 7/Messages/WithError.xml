@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><?mso-infoPathSolution PIVersion="1.0.0.0" href="http://localhost/Expense%20Reports/Forms/template.xsn" name="urn:schemas-microsoft-com:office:infopath:Expense-Reports:http---ExpenseReports-ExpenseReport" language="en-us" solutionVersion="1.0.0.1" productVersion="12.0.0" ?><?mso-application progid="InfoPath.Document"?><ns1:ExpenseReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:ns1="http://ExpenseReports.ExpenseReport" xmlns:ns0="http://ExpenseReports.PropertySchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2005-07-23T04:24:38" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+	<ns1:Header>
+		<ns1:Reference></ns1:Reference>
+		<ns1:Status>New</ns1:Status>
+		<ns1:SubmissionDate>2004-10-31</ns1:SubmissionDate>
+		<ns1:PeriodFrom xsi:nil="true"></ns1:PeriodFrom>
+		<ns1:PeriodTo xsi:nil="true"></ns1:PeriodTo>
+		<ns1:CostCenter></ns1:CostCenter>
+		<ns1:Purpose>Business Trip to Cambodia</ns1:Purpose>
+	</ns1:Header>
+	<ns1:Employee>
+		<ns1:EmployeeID>1722</ns1:EmployeeID>
+		<ns1:FirstName>Mike</ns1:FirstName>
+		<ns1:LastName>Harrison</ns1:LastName>
+		<ns1:Email>mh@northwind</ns1:Email>
+		<ns1:JobTitle>Hair Brush Salesman</ns1:JobTitle>
+		<ns1:Department>Grooming</ns1:Department>
+		<ns1:Phone>301-555-6253</ns1:Phone>
+	</ns1:Employee>
+	<ns1:Manager>
+		<ns1:EmployeeID>5285</ns1:EmployeeID>
+		<ns1:FirstName>Carl</ns1:FirstName>
+		<ns1:LastName>Sanderson</ns1:LastName>
+		<ns1:Email>cs@northwind.com</ns1:Email>
+		<ns1:JobTitle>Head of Hair Brush Sales</ns1:JobTitle>
+		<ns1:Department>Grooming</ns1:Department>
+		<ns1:Phone>301-555-6352</ns1:Phone>
+	</ns1:Manager>
+	<ns1:Items>
+		<ns1:Item>
+			<ns1:ExpenseDate>2005-10-05</ns1:ExpenseDate>
+			<ns1:Description>Car Rental</ns1:Description>
+			<ns1:Category>Other</ns1:Category>
+			<ns1:Cost>95</ns1:Cost>
+			<ns1:Currency>USD</ns1:Currency>
+			<ns1:Rate>1</ns1:Rate>
+			<ns1:Total>95</ns1:Total>
+		</ns1:Item>
+	</ns1:Items>
+	<ns1:SubTotal>1</ns1:SubTotal>
+	<ns1:CashAdvance>1</ns1:CashAdvance>
+	<ns1:TotalExpenses>12</ns1:TotalExpenses>
+	<ns1:Errors></ns1:Errors>
+</ns1:ExpenseReport>

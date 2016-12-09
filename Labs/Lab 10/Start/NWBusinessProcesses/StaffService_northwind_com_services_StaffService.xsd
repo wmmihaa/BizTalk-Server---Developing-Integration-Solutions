@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:tns="http://northwind.com/services/StaffService" elementFormDefault="qualified" targetNamespace="http://northwind.com/services/StaffService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ReserveStaff">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="msg" nillable="true" type="tns:StaffRequestData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="StaffRequestData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Items" nillable="true" type="tns:ArrayOfItemData" />
+      <xs:element minOccurs="0" name="OrderId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StaffRequestData" nillable="true" type="tns:StaffRequestData" />
+  <xs:complexType name="ArrayOfItemData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ItemData" nillable="true" type="tns:ItemData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfItemData" nillable="true" type="tns:ArrayOfItemData" />
+  <xs:complexType name="ItemData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemData" nillable="true" type="tns:ItemData" />
+  <xs:element name="ReserveStaffResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReserveStaffResult" nillable="true" type="tns:StaffResponseData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="StaffResponseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StaffResponseData" nillable="true" type="tns:StaffResponseData" />
+</xs:schema>

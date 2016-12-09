@@ -1,0 +1,109 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="44b00424-3f56-4c11-a048-127a082efe7f">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="NWBusinessProcesses" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="69b66157-2e85-4018-8e54-d9d886c1bf7c" ParentLink="Module_PortType">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:portType name=&quot;IStockService&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IStockService" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="70a94468-ebbe-4f1a-a7a2-38d23ed88de3" ParentLink="PortType_OperationDeclaration">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:operation name=&quot;ReserveStock&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="ReserveStock" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="cc0465a3-1158-4dc7-af4b-7bd2e057c364" ParentLink="OperationDeclaration_RequestMessageRef">
+                    <om:Property Name="Ref" Value="NWBusinessProcesses.IStockService_ReserveStock_InputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:input message=&quot;http://northwind.com/services/StockService:IStockService_ReserveStock_InputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://northwind.com/services/StockService/IStockService/ReserveStock&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="48b9f160-aefb-407f-af1f-e166f4515edb" ParentLink="OperationDeclaration_ResponseMessageRef">
+                    <om:Property Name="Ref" Value="NWBusinessProcesses.IStockService_ReserveStock_OutputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:output message=&quot;http://northwind.com/services/StockService:IStockService_ReserveStock_OutputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://northwind.com/services/StockService/IStockService/ReserveStockResponse&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="1ed99c95-8f9d-4cf6-a19a-551465b1b896" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;IStockService_ReserveStock_InputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IStockService_ReserveStock_InputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="8c20e1b5-3b30-4622-9d20-df9d0f469c65" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="NWBusinessProcesses.StockService_northwind_com_services_StockService.ReserveStock" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="a1ef842d-d425-4340-a11d-477862ddadfc" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;IStockService_ReserveStock_OutputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IStockService_ReserveStock_OutputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="a08abd65-e60e-401f-b069-e9d7c99fedd5" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="NWBusinessProcesses.StockService_northwind_com_services_StockService.ReserveStockResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="8fa8066e-7c18-41cf-9a7b-7e39f94ff068" ParentLink="Module_ServiceDeclaration">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:service name=&quot;StockService&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="StockServiceClient" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="07af9923-97e5-435f-8f80-9c4fcbfb5058" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module NWBusinessProcesses
+{
+    internal messagetype IStockService_ReserveStock_InputMessage
+    {
+        body StockService_northwind_com_services_StockService.ReserveStock parameters;
+    };
+    internal messagetype IStockService_ReserveStock_OutputMessage
+    {
+        body StockService_northwind_com_services_StockService.ReserveStockResponse parameters;
+    };
+    internal porttype IStockService
+    {
+        requestresponse ReserveStock
+        {
+            IStockService_ReserveStock_InputMessage, IStockService_ReserveStock_OutputMessage
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service StockServiceClient
+    {
+        body ()
+        {
+        }
+    }
+}
+

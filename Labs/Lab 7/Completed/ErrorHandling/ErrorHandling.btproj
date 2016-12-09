@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3A15D62E-BDEA-4746-AE5D-A74070B9EDE8}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>ErrorHandling</AssemblyName>
+    <OutputType>library</OutputType>
+    <RootNamespace>ErrorHandling</RootNamespace>
+    <AssemblyOriginatorKeyFile>ErrorHandling_key.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>False</DelaySign>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <ProjectTypeGuids>{EF7E3281-CD33-11D4-8326-00C04FA0CE8D};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <GenericProcessing>true</GenericProcessing>
+    <SignAssembly>true</SignAssembly>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ModifySolutionConfiguration>true</ModifySolutionConfiguration>
+    <BpelCompliance>True</BpelCompliance>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <ErrorReport>prompt</ErrorReport>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <ErrorReport>prompt</ErrorReport>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Deployment|AnyCPU'">
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.BizTalk.DefaultPipelines">
+      <Name>Microsoft.BizTalk.DefaultPipelines</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.GlobalPropertySchemas">
+      <Name>Microsoft.BizTalk.GlobalPropertySchemas</Name>
+      <HintPath>..\..\..\Program Files\Microsoft BizTalk Server 2005\Microsoft.BizTalk.GlobalPropertySchemas.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Pipeline, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.BizTalk.Pipeline.Components">
+      <Name>Microsoft.BizTalk.Pipeline.Components</Name>
+      <HintPath>..\..\..\Program Files\Microsoft BizTalk Server 2005\Pipeline Components\Microsoft.BizTalk.Pipeline.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.TestTools, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.XLANGs.BaseTypes, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="ApprovalProcess.odx">
+      <TypeName>ApprovalProcess</TypeName>
+      <Namespace>ErrorHandling</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="ExpenseReport.xsd">
+      <Namespace>ErrorHandling</Namespace>
+      <TypeName>ExpenseReportMessageType</TypeName>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="ExpenseReport_to_ProcessedExpenses.btm">
+      <Namespace>ErrorHandling</Namespace>
+      <TypeName>ExpenseReport_to_ProcessedExpenses</TypeName>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="FailedMessagePISend.btp">
+      <Namespace>ErrorHandling</Namespace>
+      <TypeName>SendError</TypeName>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="PIXMLSendPipeline.btp">
+      <Namespace>ErrorHandling</Namespace>
+      <TypeName>PIXMLSendPipeline</TypeName>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="ProcessedExpenses.xsd">
+      <Namespace>ErrorHandling</Namespace>
+      <TypeName>ProcessedExpenses</TypeName>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="PropertySchema.xsd">
+      <Namespace>ErrorHandling.PropertySchema</Namespace>
+      <TypeName>PropertySchema</TypeName>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="XMLValidateReceivePipe.btp">
+      <Namespace>ErrorHandling</Namespace>
+      <TypeName>XMLValidateReceivePipe</TypeName>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="ErrorHandler.odx">
+      <TypeName>ErrorHandler</TypeName>
+      <Namespace>ErrorHandling</Namespace>
+    </XLang>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

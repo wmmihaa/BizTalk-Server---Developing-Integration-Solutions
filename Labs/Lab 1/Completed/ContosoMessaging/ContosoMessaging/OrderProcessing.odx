@@ -1,0 +1,195 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="492339dd-d3fa-4a5f-89e0-dccd4c652546" LowerBound="1.1" HigherBound="42.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="ContosoMessaging" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="75393118-c356-4c77-9d73-d68037d6fde9" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="OrderPortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="e39b8124-23f1-4f64-aecf-38974826b843" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="b2518db9-3969-4bd2-8b86-49c6f2b6a856" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.18">
+                    <om:Property Name="Ref" Value="ContosoMessaging.Order" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="9a3e236b-b5e0-4b7f-b487-0c38ed1e2596" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="CustomerPortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="fc2183ae-d5e4-4b9c-b0d6-d7e91cf00ea0" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="7abe4518-5159-46c1-91c9-44eac21c6de1" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.34">
+                    <om:Property Name="Ref" Value="ContosoMessaging.CustomerOrderFlatFile" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="1efe194a-2439-4040-8bcb-c43cc55932e5" ParentLink="Module_ServiceDeclaration" LowerBound="18.1" HigherBound="41.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="OrderProcessing" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="6098c0b1-52d3-4c76-aeed-4573aa4f94c2" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="b69c0049-c9dc-4eaf-a534-6513a0f776af" ParentLink="ServiceBody_Statement" LowerBound="29.1" HigherBound="31.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="OrderPort" />
+                    <om:Property Name="MessageName" Value="OrderMessage" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="70e5895c-18c3-4df7-a092-bc8e32cb92a2" ParentLink="ServiceBody_Statement" LowerBound="31.1" HigherBound="37.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructMessage_1" />
+                    <om:Property Name="Signal" Value="False" />
+                    <om:Element Type="Transform" OID="5f14a696-4139-4ed4-a428-a9d769d8fb58" ParentLink="ComplexStatement_Statement" LowerBound="34.1" HigherBound="36.1">
+                        <om:Property Name="ClassName" Value="ContosoMessaging.MapOrderToCustomer" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Transform_1" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="6010fc48-928f-4820-ab3a-7e4881f993a4" ParentLink="Transform_InputMessagePartRef" LowerBound="35.84" HigherBound="35.96">
+                            <om:Property Name="MessageRef" Value="OrderMessage" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="dc9df1cd-d956-4754-9e7e-3856fe1dfe88" ParentLink="Transform_OutputMessagePartRef" LowerBound="35.28" HigherBound="35.43">
+                            <om:Property Name="MessageRef" Value="CustomerMessage" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="7efd84a0-a67b-4885-af4e-77d44d8821c9" ParentLink="Construct_MessageRef" LowerBound="32.23" HigherBound="32.38">
+                        <om:Property Name="Ref" Value="CustomerMessage" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="162b671a-b3ed-42a8-b615-cf3ed0ac66aa" ParentLink="ServiceBody_Statement" LowerBound="37.1" HigherBound="39.1">
+                    <om:Property Name="PortName" Value="CustomerPort" />
+                    <om:Property Name="MessageName" Value="CustomerMessage" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="a74b0eec-7f79-44a6-8b7c-5a43ebf256ae" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="21.1" HigherBound="23.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="4" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="ContosoMessaging.OrderPortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="OrderPort" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="f7419238-affc-4825-b6b1-1f9c05c920ed" ParentLink="PortDeclaration_CLRAttribute" LowerBound="21.1" HigherBound="22.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="9dd3d0ae-d7d7-4eda-8a6f-fb7311df0297" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="23.1" HigherBound="25.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="5" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="ContosoMessaging.CustomerPortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CustomerPort" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="fa4ca80c-66d6-41a9-8021-040d1c451713" ParentLink="PortDeclaration_CLRAttribute" LowerBound="23.1" HigherBound="24.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="82010e24-b629-4f1e-b833-56b07726a516" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="Type" Value="ContosoMessaging.Order" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="OrderMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="4f3bcdc2-a47f-4791-9c75-e2e3fb03f1a3" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="Type" Value="ContosoMessaging.CustomerOrderFlatFile" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CustomerMessage" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module ContosoMessaging
+{
+    internal porttype OrderPortType
+    {
+        oneway Operation_1
+        {
+            Order
+        };
+    };
+    internal porttype CustomerPortType
+    {
+        oneway Operation_1
+        {
+            CustomerOrderFlatFile
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service OrderProcessing
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements OrderPortType OrderPort;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses CustomerPortType CustomerPort;
+        message Order OrderMessage;
+        message CustomerOrderFlatFile CustomerMessage;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b69c0049-c9dc-4eaf-a534-6513a0f776af")]
+            activate receive (OrderPort.Operation_1, OrderMessage);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("70e5895c-18c3-4df7-a092-bc8e32cb92a2")]
+            construct CustomerMessage
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("5f14a696-4139-4ed4-a428-a9d769d8fb58")]
+                transform (CustomerMessage) = ContosoMessaging.MapOrderToCustomer (OrderMessage);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("162b671a-b3ed-42a8-b615-cf3ed0ac66aa")]
+            send (CustomerPort.Operation_1, CustomerMessage);
+        }
+    }
+}
+

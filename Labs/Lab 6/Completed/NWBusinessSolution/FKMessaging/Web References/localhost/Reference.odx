@@ -1,0 +1,65 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="5569a4b8-b745-4fa3-8f2a-9113a925e1a8" LowerBound="1.1" HigherBound="23.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="FKMessaging.localhost.SuppService_" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="MethodMessageType" OID="00000000-0000-0000-0000-000000000000" ParentLink="Module_MessageType">
+            <om:Property Name="Url" Value="http://localhost/supplierservice/service1.asmx" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="FKMessaging.localhost.SuppService" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="MethodMessageOperation" OID="e090c4fd-a058-45dc-b0b7-8cccbf50be95" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="PostOrder" />
+                <om:Property Name="OperationDirection" Value="Request" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PostOrder_request" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="WebOperationPart" OID="4b30c431-6ef6-4b4a-ba5f-7441010c7e6e" ParentLink="MethodMessageOperation_WebOperationPart">
+                    <om:Property Name="ClassName" Value="FKMessaging.localhost.Reference" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="order" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MethodMessageOperation" OID="42f9824e-275a-4a74-ac0b-c7d72737b9cc" ParentLink="MethodMessageType_MethodMessageOperation">
+                <om:Property Name="OperationName" Value="PostOrder" />
+                <om:Property Name="OperationDirection" Value="Response" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PostOrder_response" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="TargetXMLNamespaceAttribute" OID="52f78da8-c542-4cde-969f-b5eba67697f1" ParentLink="Module_CLRAttribute" LowerBound="2.1" HigherBound="3.1">
+            <om:Property Name="TargetXMLNamespace" Value="http://tempuri.org/" />
+            <om:Property Name="Signal" Value="False" />
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(true)]
+[Microsoft.XLANGs.BaseTypes.TargetXmlNamespaceAttribute("http://tempuri.org/")]
+module FKMessaging.localhost.SuppService_
+{
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(FKMessaging.localhost.SuppService), "PostOrder", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eRequest)]
+    public messagetype PostOrder_request
+    {
+        body FKMessaging.localhost.Reference order;
+    };
+    [Microsoft.XLANGs.BaseTypes.WebPortBinding(typeof(FKMessaging.localhost.SuppService), "PostOrder", Microsoft.XLANGs.BaseTypes.EXLangSMessageInfo.eResponse)]
+    public messagetype PostOrder_response
+    {
+    };
+    [Microsoft.XLANGs.BaseTypes.WSDLProxyName(typeof(FKMessaging.localhost.SuppService))]
+    public porttype SuppService
+    {
+        requestresponse PostOrder
+        {
+            FKMessaging.localhost.SuppService_.PostOrder_request, FKMessaging.localhost.SuppService_.PostOrder_response
+        };
+    };
+}
+

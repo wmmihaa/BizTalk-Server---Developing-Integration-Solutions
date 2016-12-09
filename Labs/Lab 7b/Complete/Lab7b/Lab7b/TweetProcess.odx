@@ -1,0 +1,221 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="2e0a95ad-82bd-41c8-aef6-17d7849c23d7" LowerBound="1.1" HigherBound="45.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="Lab7b" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="4de7076f-46a8-4835-93c7-630a6d9e42ed" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_1" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="7af1b231-31d4-48bb-be9f-b8d71445f856" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="3b8de169-c99e-4950-89f2-3057b31d0466" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.18">
+                    <om:Property Name="Ref" Value="Lab7b.Tweet" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="3b637a50-17bc-4baa-9200-4bf1d2e47eb5" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="SndDemoDBType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="7d637d2b-b73a-4074-9b7e-fd7908cc9621" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Insert" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="5b1d3820-8844-4026-bdb5-5f9b829fdc82" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.45">
+                    <om:Property Name="Ref" Value="Lab7b.TableOperation_dbo_Tweets.Insert" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="db97f348-a59e-4609-83ab-5d2f3eeec3d7" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="15.47" HigherBound="15.87">
+                    <om:Property Name="Ref" Value="Lab7b.TableOperation_dbo_Tweets.InsertResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="baa58c1d-af3a-47c9-9cbf-239b2c57c1c4" ParentLink="Module_ServiceDeclaration" LowerBound="18.1" HigherBound="44.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="TweetProcess" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="1e6bcd64-74f9-4710-b9a9-d7a2bffc9cdb" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="88714cd5-d2b9-425d-88bd-73ea5aa0c8d6" ParentLink="ServiceBody_Statement" LowerBound="30.1" HigherBound="32.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="RcvTweet" />
+                    <om:Property Name="MessageName" Value="msgTweet" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive Tweet" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="c64ac906-3240-4ae2-803c-5c337eb2694e" ParentLink="ServiceBody_Statement" LowerBound="32.1" HigherBound="38.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructMessage_1" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="c0cd51cf-b805-4850-8f7e-daf6f6bdbd8d" ParentLink="ComplexStatement_Statement" LowerBound="35.1" HigherBound="37.1">
+                        <om:Property Name="ClassName" Value="Lab7b.Tweet_to_Insert" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Transform_1" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="ac56d81e-99a9-4356-b1f8-8d56c5124b3c" ParentLink="Transform_InputMessagePartRef" LowerBound="36.64" HigherBound="36.72">
+                            <om:Property Name="MessageRef" Value="msgTweet" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="80339885-d158-40f8-8457-fcd675f4df74" ParentLink="Transform_OutputMessagePartRef" LowerBound="36.28" HigherBound="36.37">
+                            <om:Property Name="MessageRef" Value="msgInsert" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="965405b9-89d8-442c-ab24-ee029b116f02" ParentLink="Construct_MessageRef" LowerBound="33.23" HigherBound="33.32">
+                        <om:Property Name="Ref" Value="msgInsert" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="4c8fa51f-3b4f-4291-9d6b-055152cbac9a" ParentLink="ServiceBody_Statement" LowerBound="38.1" HigherBound="40.1">
+                    <om:Property Name="PortName" Value="SndDemoDB" />
+                    <om:Property Name="MessageName" Value="msgInsert" />
+                    <om:Property Name="OperationName" Value="Insert" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Receive" OID="2e216566-1a44-4621-87c4-3208bc9c30c6" ParentLink="ServiceBody_Statement" LowerBound="40.1" HigherBound="42.1">
+                    <om:Property Name="Activate" Value="False" />
+                    <om:Property Name="PortName" Value="SndDemoDB" />
+                    <om:Property Name="MessageName" Value="msgInsertResponse" />
+                    <om:Property Name="OperationName" Value="Insert" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_1" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="6b2ade4b-59da-4a82-8b8b-3824ee3bc495" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="21.1" HigherBound="23.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Lab7b.PortType_1" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="RcvTweet" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="7b3a69d5-f221-4ec7-9de4-e9e532841ab1" ParentLink="PortDeclaration_CLRAttribute" LowerBound="21.1" HigherBound="22.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="07dd01da-4c11-4ad3-94bf-fc9938e990ed" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="23.1" HigherBound="25.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Lab7b.SndDemoDBType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SndDemoDB" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="d034a933-7501-4846-8ea3-a1d6943cf8df" ParentLink="PortDeclaration_CLRAttribute" LowerBound="23.1" HigherBound="24.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="4ed29c62-af3f-434d-b865-74611f2a6f73" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="Type" Value="Lab7b.Tweet" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgTweet" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="63c72eee-d624-4d08-b587-a2d8a13abce2" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="Type" Value="Lab7b.TableOperation_dbo_Tweets.Insert" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgInsert" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="76b523fa-fe0c-4019-9598-5b80f2c85d90" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="27.1" HigherBound="28.1">
+                <om:Property Name="Type" Value="Lab7b.TableOperation_dbo_Tweets.InsertResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgInsertResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module Lab7b
+{
+    internal porttype PortType_1
+    {
+        oneway Operation_1
+        {
+            Tweet
+        };
+    };
+    internal porttype SndDemoDBType
+    {
+        requestresponse Insert
+        {
+            TableOperation_dbo_Tweets.Insert, TableOperation_dbo_Tweets.InsertResponse
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service TweetProcess
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements PortType_1 RcvTweet;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses SndDemoDBType SndDemoDB;
+        message Tweet msgTweet;
+        message TableOperation_dbo_Tweets.Insert msgInsert;
+        message TableOperation_dbo_Tweets.InsertResponse msgInsertResponse;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("88714cd5-d2b9-425d-88bd-73ea5aa0c8d6")]
+            activate receive (RcvTweet.Operation_1, msgTweet);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("c64ac906-3240-4ae2-803c-5c337eb2694e")]
+            construct msgInsert
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("c0cd51cf-b805-4850-8f7e-daf6f6bdbd8d")]
+                transform (msgInsert) = Lab7b.Tweet_to_Insert (msgTweet);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("4c8fa51f-3b4f-4291-9d6b-055152cbac9a")]
+            send (SndDemoDB.Insert, msgInsert);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("2e216566-1a44-4621-87c4-3208bc9c30c6")]
+            receive (SndDemoDB.Insert, msgInsertResponse);
+        }
+    }
+}
+

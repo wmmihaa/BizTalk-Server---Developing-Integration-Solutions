@@ -1,0 +1,6 @@
+<ns0:Customer ID="ID_0" xmlns:ns0="http://Mod9.Customers">
+  <FirstName>John</FirstName>
+  <MiddleName>Michael</MiddleName>
+  <LastName>Jones</LastName>
+  <ContactNo>555-1234</ContactNo>
+</ns0:Customer>

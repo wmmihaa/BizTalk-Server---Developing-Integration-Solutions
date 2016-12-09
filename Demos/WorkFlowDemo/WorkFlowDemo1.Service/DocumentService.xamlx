@@ -1,0 +1,122 @@
+﻿<WorkflowService mc:Ignorable="sap" ConfigurationName="Service1" sap:VirtualizedContainerService.HintSize="609,1317" Name="Service1" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/servicemodel" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=System" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://tempuri.org/" xmlns:p1="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:s1="clr-namespace:System;assembly=System" xmlns:s2="clr-namespace:System;assembly=System.Xml" xmlns:s3="clr-namespace:System;assembly=System.Core" xmlns:s4="clr-namespace:System;assembly=System.ServiceModel" xmlns:sa="clr-namespace:System.Activities;assembly=System.Activities" xmlns:sad="clr-namespace:System.Activities.Debugger;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System" xmlns:scg1="clr-namespace:System.Collections.Generic;assembly=System.ServiceModel" xmlns:scg2="clr-namespace:System.Collections.Generic;assembly=System.Core" xmlns:scg3="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sl="clr-namespace:System.Linq;assembly=System.Core" xmlns:ssa="clr-namespace:System.ServiceModel.Activities;assembly=System.ServiceModel.Activities" xmlns:ssx="clr-namespace:System.ServiceModel.XamlIntegration;assembly=System.ServiceModel" xmlns:st="clr-namespace:System.Text;assembly=mscorlib" xmlns:ws="clr-namespace:WorkFlowDemo1.Service;assembly=WorkFlowDemo1.Service" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <p1:Sequence DisplayName="Document Service" sad:XamlDebuggerXmlReader.FileName="C:\Users\Administrator\Documents\Visual Studio 2010\Projects\WorkFlowDemo\WorkFlowDemo1.Service\DocumentService.xamlx" sap:VirtualizedContainerService.HintSize="579,1287" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+    <p1:Sequence.Variables>
+      <p1:Variable x:TypeArguments="CorrelationHandle" Name="handle" />
+      <p1:Variable x:TypeArguments="x:Int32" Name="data" />
+      <p1:Variable x:TypeArguments="ws:Document" Name="document" />
+      <p1:Variable x:TypeArguments="ws:DocumentResponse" Name="docResponse" />
+    </p1:Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg3:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <p1:Sequence DisplayName="Receive Document" sap:VirtualizedContainerService.HintSize="557,435">
+      <p1:Sequence.Variables>
+        <p1:Variable x:TypeArguments="x:String" Name="variable1" />
+      </p1:Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg3:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Receive x:Name="__ReferenceID0" CanCreateInstance="True" DisplayName="ReceiveRequest" sap:VirtualizedContainerService.HintSize="255,86" OperationName="CreateDocument" ServiceContractName="p:IDocumentService">
+        <Receive.CorrelationInitializers>
+          <RequestReplyCorrelationInitializer CorrelationHandle="[handle]" />
+        </Receive.CorrelationInitializers>
+        <ReceiveMessageContent DeclaredMessageType="ws:Document">
+          <p1:OutArgument x:TypeArguments="ws:Document">[document]</p1:OutArgument>
+        </ReceiveMessageContent>
+      </Receive>
+      <p1:Assign sap:VirtualizedContainerService.HintSize="255,59">
+        <p1:Assign.To>
+          <p1:OutArgument x:TypeArguments="ws:DocumentResponse">[docResponse]</p1:OutArgument>
+        </p1:Assign.To>
+        <p1:Assign.Value>
+          <p1:InArgument x:TypeArguments="ws:DocumentResponse" xml:space="preserve">[DocumentResponse.Create(document.DocumentId,
+                        String.Format("The document was sucessfully created at {0}", DateTime.Now.ToString()))]</p1:InArgument>
+        </p1:Assign.Value>
+      </p1:Assign>
+      <SendReply Request="{x:Reference __ReferenceID0}" DisplayName="SendResponse" sap:VirtualizedContainerService.HintSize="255,86">
+        <SendReply.CorrelationInitializers>
+          <QueryCorrelationInitializer CorrelationHandle="[handle]">
+            <XPathMessageQuery x:Key="key1">
+              <XPathMessageQuery.Namespaces>
+                <ssx:XPathMessageContextMarkup>
+                  <x:String x:Key="xg0">http://schemas.datacontract.org/2004/07/WorkFlowDemo1.Service</x:String>
+                </ssx:XPathMessageContextMarkup>
+              </XPathMessageQuery.Namespaces>sm:body()/xg0:DocumentResponse/xg0:DocumentId</XPathMessageQuery>
+          </QueryCorrelationInitializer>
+        </SendReply.CorrelationInitializers>
+        <SendMessageContent DeclaredMessageType="ws:DocumentResponse">
+          <p1:InArgument x:TypeArguments="ws:DocumentResponse">[docResponse]</p1:InArgument>
+        </SendMessageContent>
+      </SendReply>
+    </p1:Sequence>
+    <p1:While sap:VirtualizedContainerService.HintSize="557,688">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg3:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <p1:While.Condition>[document.Done = False]</p1:While.Condition>
+      <p1:Sequence DisplayName="ReceiveUpdate" sap:VirtualizedContainerService.HintSize="531,577">
+        <p1:Sequence.Variables>
+          <p1:Variable x:TypeArguments="CorrelationHandle" Name="__handle1" />
+        </p1:Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg3:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg3:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Receive x:Name="__ReferenceID1" CorrelatesWith="[handle]" sap:VirtualizedContainerService.HintSize="509,86" OperationName="UpdateDocument" ServiceContractName="p:IDocumentService">
+          <Receive.CorrelatesOn>
+            <XPathMessageQuery x:Key="key1">
+              <XPathMessageQuery.Namespaces>
+                <ssx:XPathMessageContextMarkup>
+                  <x:String x:Key="xg0">http://schemas.datacontract.org/2004/07/WorkFlowDemo1.Service</x:String>
+                </ssx:XPathMessageContextMarkup>
+              </XPathMessageQuery.Namespaces>sm:body()/xg0:Document/xg0:DocumentId</XPathMessageQuery>
+          </Receive.CorrelatesOn>
+          <Receive.CorrelationInitializers>
+            <RequestReplyCorrelationInitializer CorrelationHandle="[__handle1]" />
+          </Receive.CorrelationInitializers>
+          <ReceiveMessageContent DeclaredMessageType="ws:Document">
+            <p1:OutArgument x:TypeArguments="ws:Document">[document]</p1:OutArgument>
+          </ReceiveMessageContent>
+        </Receive>
+        <p1:If Condition="[document.Done]" sap:VirtualizedContainerService.HintSize="509,201">
+          <p1:If.Then>
+            <p1:Assign sap:VirtualizedContainerService.HintSize="242,100">
+              <p1:Assign.To>
+                <p1:OutArgument x:TypeArguments="ws:DocumentResponse">[docResponse]</p1:OutArgument>
+              </p1:Assign.To>
+              <p1:Assign.Value>
+                <p1:InArgument x:TypeArguments="ws:DocumentResponse" xml:space="preserve">[DocumentResponse.Create(document.DocumentId,
+                        String.Format("The final version of document was sucessfully received at {0}", DateTime.Now.ToString()))]</p1:InArgument>
+              </p1:Assign.Value>
+            </p1:Assign>
+          </p1:If.Then>
+          <p1:If.Else>
+            <p1:Assign sap:VirtualizedContainerService.HintSize="242,100">
+              <p1:Assign.To>
+                <p1:OutArgument x:TypeArguments="ws:DocumentResponse">[docResponse]</p1:OutArgument>
+              </p1:Assign.To>
+              <p1:Assign.Value>
+                <p1:InArgument x:TypeArguments="ws:DocumentResponse" xml:space="preserve">[DocumentResponse.Create(document.DocumentId,
+                        String.Format("The document was sucessfully UPDATED at {0}", DateTime.Now.ToString()))]</p1:InArgument>
+              </p1:Assign.Value>
+            </p1:Assign>
+          </p1:If.Else>
+        </p1:If>
+        <SendReply Request="{x:Reference __ReferenceID1}" DisplayName="SendReplyToReceive" sap:VirtualizedContainerService.HintSize="509,86">
+          <SendMessageContent DeclaredMessageType="ws:DocumentResponse">
+            <p1:InArgument x:TypeArguments="ws:DocumentResponse">[docResponse]</p1:InArgument>
+          </SendMessageContent>
+        </SendReply>
+      </p1:Sequence>
+    </p1:While>
+  </p1:Sequence>
+</WorkflowService>

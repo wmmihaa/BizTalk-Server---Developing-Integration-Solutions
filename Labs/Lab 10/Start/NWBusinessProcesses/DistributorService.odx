@@ -1,0 +1,109 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="37300cf4-319a-4d52-95d7-6221a2de5b71">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="NWBusinessProcesses" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="39962065-ab26-4e17-ac39-f257af15b765" ParentLink="Module_PortType">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:portType name=&quot;IDistributorService&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IDistributorService" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="665b40f6-85a0-4d66-875d-077b59307be1" ParentLink="PortType_OperationDeclaration">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:operation name=&quot;ReserveDistributor&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="ReserveDistributor" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="5495f0a6-f37c-4218-bfbc-9eb4e7e3a8d2" ParentLink="OperationDeclaration_RequestMessageRef">
+                    <om:Property Name="Ref" Value="NWBusinessProcesses.IDistributorService_ReserveDistributor_InputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:input message=&quot;http://northwind.com/services/DistributorService:IDistributorService_ReserveDistributor_InputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://northwind.com/services/DistributorService/IDistributorService/ReserveDistributor&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="e47e2717-9959-47a7-b393-6179bf07a2be" ParentLink="OperationDeclaration_ResponseMessageRef">
+                    <om:Property Name="Ref" Value="NWBusinessProcesses.IDistributorService_ReserveDistributor_OutputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:output message=&quot;http://northwind.com/services/DistributorService:IDistributorService_ReserveDistributor_OutputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://northwind.com/services/DistributorService/IDistributorService/ReserveDistributorResponse&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="a5a46b45-d81e-4353-b54c-14942deb1a5c" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;IDistributorService_ReserveDistributor_InputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IDistributorService_ReserveDistributor_InputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="0de38e91-cb90-496a-a21d-f2a58b590ff3" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="NWBusinessProcesses.DistributorService_northwind_com_services_DistributorService.ReserveDistributor" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="41b29b28-8612-4404-aa02-b52d011225f2" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;IDistributorService_ReserveDistributor_OutputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IDistributorService_ReserveDistributor_OutputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="9a459acf-e0d4-43d1-b461-351c57057a0f" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="NWBusinessProcesses.DistributorService_northwind_com_services_DistributorService.ReserveDistributorResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="4c58721a-4495-4010-8ba5-4fe9907349e7" ParentLink="Module_ServiceDeclaration">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:service name=&quot;DistributorService&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="DistributorServiceClient" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="5904d656-74c4-4f85-a943-6481fc893ce9" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module NWBusinessProcesses
+{
+    internal messagetype IDistributorService_ReserveDistributor_InputMessage
+    {
+        body DistributorService_northwind_com_services_DistributorService.ReserveDistributor parameters;
+    };
+    internal messagetype IDistributorService_ReserveDistributor_OutputMessage
+    {
+        body DistributorService_northwind_com_services_DistributorService.ReserveDistributorResponse parameters;
+    };
+    internal porttype IDistributorService
+    {
+        requestresponse ReserveDistributor
+        {
+            IDistributorService_ReserveDistributor_InputMessage, IDistributorService_ReserveDistributor_OutputMessage
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service DistributorServiceClient
+    {
+        body ()
+        {
+        }
+    }
+}
+

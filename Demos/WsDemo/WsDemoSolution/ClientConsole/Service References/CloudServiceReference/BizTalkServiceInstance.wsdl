@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BizTalkServiceInstance" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation>
+    <CreationInfo Created="2011-08-30 16:22:52Z" />
+  </wsdl:documentation>
+  <wsdl:types>
+    <xs:schema xmlns="http://CustomerBizTalkService.GetCustomerNumerRequest" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://CustomerBizTalkService.GetCustomerNumerRequest" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="GetCustomerNumerRequest">
+        <xs:annotation>
+          <xs:appinfo />
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="name" type="xs:string" />
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns="http://CustomerBizTalkService.GetCustomerNumerResponse" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://CustomerBizTalkService.GetCustomerNumerResponse" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="GetCustomerNumerResponse">
+        <xs:annotation>
+          <xs:appinfo />
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="CustomerNumber" type="xs:int" />
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="WcfService_CustomerBizTalkService_Operation_1_InputMessage">
+    <wsdl:part xmlns:q1="http://CustomerBizTalkService.GetCustomerNumerRequest" name="part" element="q1:GetCustomerNumerRequest" />
+  </wsdl:message>
+  <wsdl:message name="WcfService_CustomerBizTalkService_Operation_1_OutputMessage">
+    <wsdl:part xmlns:q2="http://CustomerBizTalkService.GetCustomerNumerResponse" name="part" element="q2:GetCustomerNumerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WcfService_CustomerBizTalkService">
+    <wsdl:documentation>service "*" port "*"</wsdl:documentation>
+    <wsdl:operation name="Operation_1">
+      <wsdl:documentation>operation "Operation_1"</wsdl:documentation>
+      <wsdl:input message="tns:WcfService_CustomerBizTalkService_Operation_1_InputMessage" />
+      <wsdl:output message="tns:WcfService_CustomerBizTalkService_Operation_1_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RelayEndpoint" type="tns:WcfService_CustomerBizTalkService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Operation_1">
+      <wsdl:documentation>operation "Operation_1"</wsdl:documentation>
+      <soap:operation soapAction="Operation_1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_ITwoWayAsync" type="tns:WcfService_CustomerBizTalkService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Operation_1">
+      <wsdl:documentation>operation "Operation_1"</wsdl:documentation>
+      <soap:operation soapAction="Operation_1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BizTalkServiceInstance">
+    <wsdl:port name="RelayEndpoint" binding="tns:RelayEndpoint">
+      <soap:address location="https://blogical.servicebus.windows.net/CustomerBizTalkService/WcfService_CustomerBizTalkService.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_ITwoWayAsync" binding="tns:BasicHttpBinding_ITwoWayAsync">
+      <soap:address location="http://win2008r2/CustomerBizTalkService/WcfService_CustomerBizTalkService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

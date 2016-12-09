@@ -1,0 +1,5 @@
+<ns0:WarehouseResponse xmlns:ns0="http://NWMessaging.DistResp">
+  <CustomerPONumber>52346</CustomerPONumber> 
+  <Status>Shipped</Status> 
+  <DeliveryDate>2009-06-17</DeliveryDate> 
+  </ns0:WarehouseResponse>

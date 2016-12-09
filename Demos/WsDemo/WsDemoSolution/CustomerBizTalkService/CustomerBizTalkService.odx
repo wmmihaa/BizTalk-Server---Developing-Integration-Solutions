@@ -1,0 +1,200 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="a35dcdf7-bfbe-43b5-ab22-d69facf17985" LowerBound="1.1" HigherBound="42.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="CustomerBizTalkService" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="703eb1f3-fca2-48c7-9d43-7074a23e5236" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_GetCustomerNumber" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="4559e9c7-a876-4f87-8c17-6a4307c4dc73" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="98f76e97-11e9-4b65-9dc5-05b5cdd9ec5d" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.36">
+                    <om:Property Name="Ref" Value="CustomerBizTalkService.GetCustomerNumerRequest" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="d294b408-585a-4eca-be7c-696ee57940bd" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="8.38" HigherBound="8.62">
+                    <om:Property Name="Ref" Value="CustomerBizTalkService.GetCustomerNumerResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="84b8d90e-df55-491f-8b2b-3f82d4b2096a" ParentLink="Module_ServiceDeclaration" LowerBound="11.1" HigherBound="41.1">
+            <om:Property Name="InitializedTransactionType" Value="True" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="Orchestration_1" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="VariableDeclaration" OID="ea26c5c1-12ff-4b14-82cd-d82dc876bcac" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="19.1" HigherBound="20.1">
+                <om:Property Name="UseDefaultConstructor" Value="True" />
+                <om:Property Name="Type" Value="CustomerAPI" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="customerApi" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="c6ab104f-1a59-4bf8-bece-406584043b09" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="20.1" HigherBound="21.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.Int32" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="customerNo" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="AtomicTransaction" OID="81315b29-fb1c-4968-8ec7-750581f3a3e7" ParentLink="ServiceDeclaration_Transaction" LowerBound="13.21" HigherBound="13.40">
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Transaction_1" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="TransactionAttribute" OID="d5029b01-b51a-4f6e-a21b-984f6efcd9a0" ParentLink="ServiceDeclaration_CLRAttribute" LowerBound="12.1" HigherBound="13.1">
+                <om:Property Name="Batch" Value="True" />
+                <om:Property Name="Retry" Value="True" />
+                <om:Property Name="Timeout" Value="60" />
+                <om:Property Name="Isolation" Value="Serializable" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="190bc86d-9f35-47b0-afdd-a31bad482971" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="17.1" HigherBound="18.1">
+                <om:Property Name="Type" Value="CustomerBizTalkService.GetCustomerNumerRequest" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Request" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="a7709648-06a9-42ce-bcf6-0deea4c1261e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="18.1" HigherBound="19.1">
+                <om:Property Name="Type" Value="CustomerBizTalkService.GetCustomerNumerResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Response" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="d4222c92-4f02-487a-bff5-445455e6291e" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="0ec24462-85de-484e-ab10-05048904e323" ParentLink="ServiceBody_Statement" LowerBound="23.1" HigherBound="26.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="GetCustomerNumber" />
+                    <om:Property Name="MessageName" Value="Request" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="fe295bdb-8faf-4539-a82f-ce6e3c7610be" ParentLink="ServiceBody_Statement" LowerBound="26.1" HigherBound="37.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct Response" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="5c64949d-d04a-4244-9a99-e81ff61c934d" ParentLink="ComplexStatement_Statement" LowerBound="29.1" HigherBound="31.1">
+                        <om:Property Name="ClassName" Value="CustomerBizTalkService.CreateResponseTransformation" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Create Empty Response" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="9e673acb-f4f1-4323-9949-8aacbd730915" ParentLink="Transform_InputMessagePartRef" LowerBound="30.93" HigherBound="30.100">
+                            <om:Property Name="MessageRef" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="2176ad39-68ec-43f7-a930-58721893343a" ParentLink="Transform_OutputMessagePartRef" LowerBound="30.28" HigherBound="30.36">
+                            <om:Property Name="MessageRef" Value="Response" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageAssignment" OID="e9d1d779-a4d7-4077-a917-8bb1e2acecf3" ParentLink="ComplexStatement_Statement" LowerBound="31.1" HigherBound="36.1">
+                        <om:Property Name="Expression" Value="customerApi = new CustomerAPI();&#xD;&#xA;customerNo = customerApi.GetCustomerNumber(Request.name);&#xD;&#xA;&#xD;&#xA;Response.CustomerNumber = customerNo;" />
+                        <om:Property Name="ReportToAnalyst" Value="False" />
+                        <om:Property Name="Name" Value="MessageAssignment" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="41e1447f-c90f-4ddd-ae53-7228b643bd8d" ParentLink="Construct_MessageRef" LowerBound="27.23" HigherBound="27.31">
+                        <om:Property Name="Ref" Value="Response" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="b1f31ae9-d1ac-479f-8dfc-cc27bb827554" ParentLink="ServiceBody_Statement" LowerBound="37.1" HigherBound="39.1">
+                    <om:Property Name="PortName" Value="GetCustomerNumber" />
+                    <om:Property Name="MessageName" Value="Response" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send Response" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="53f40f6d-c1d1-469d-93a0-4d01d5b42592" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="15.1" HigherBound="17.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="7" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="CustomerBizTalkService.PortType_GetCustomerNumber" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="GetCustomerNumber" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="86e18775-7ddb-46b2-9851-21b4679d17af" ParentLink="PortDeclaration_CLRAttribute" LowerBound="15.1" HigherBound="16.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module CustomerBizTalkService
+{
+    public porttype PortType_GetCustomerNumber
+    {
+        requestresponse Operation_1
+        {
+            GetCustomerNumerRequest, GetCustomerNumerResponse
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    [Microsoft.XLANGs.BaseTypes.Transaction(Retry=true,Batch=true,Timeout=60,TranIsolationLevel=System.Data.IsolationLevel.Serializable)]
+    internal service atomic transaction Orchestration_1
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements PortType_GetCustomerNumber GetCustomerNumber;
+        message GetCustomerNumerRequest Request;
+        message GetCustomerNumerResponse Response;
+        CustomerAPI customerApi;
+        System.Int32 customerNo;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("0ec24462-85de-484e-ab10-05048904e323")]
+            activate receive (GetCustomerNumber.Operation_1, Request);
+            customerApi = new CustomerAPI();
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("fe295bdb-8faf-4539-a82f-ce6e3c7610be")]
+            construct Response
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("5c64949d-d04a-4244-9a99-e81ff61c934d")]
+                transform (Response) = CustomerBizTalkService.CreateResponseTransformation (Request);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("e9d1d779-a4d7-4077-a917-8bb1e2acecf3")]
+                customerApi = new CustomerAPI();
+                customerNo = customerApi.GetCustomerNumber(Request.name);
+                
+                Response.CustomerNumber = customerNo;
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b1f31ae9-d1ac-479f-8dfc-cc27bb827554")]
+            send (GetCustomerNumber.Operation_1, Response);
+        }
+    }
+}
+

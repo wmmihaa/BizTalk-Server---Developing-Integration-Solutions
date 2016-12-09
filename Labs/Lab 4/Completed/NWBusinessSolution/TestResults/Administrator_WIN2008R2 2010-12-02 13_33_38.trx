@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="19dcfa1f-69dd-4496-a8d0-d7c8f7aa6a23" name="Administrator@WIN2008R2 2010-12-02 13:33:38" runUser="WIN2008R2\Administrator" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="b2c30585-e1f3-4ab1-9669-2c13cc885da8">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Administrator_WIN2008R2 2010-12-02 13_33_38">
+      <DeploymentItem filename="C:\Labs\Lab 4\Start - Copy\NWBusinessSolution\NWMessaging\bin\Debug\NWMessaging.dll" />
+      <DeploymentItem filename="C:\Labs\Lab 4\Start - Copy\NWBusinessSolution\FKMessaging\bin\Debug\FKMessaging.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2010-12-02T13:33:38.1046199+01:00" queuing="2010-12-02T13:33:38.1236210+01:00" start="2010-12-02T13:33:38.1326215+01:00" finish="2010-12-02T13:33:39.1276785+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="NWCustomerOrder_To_FKSupplierPOConstructorTest" storage="c:\labs\lab 4\start - copy\nwbusinesssolution\nwtest\bin\debug\nwtest.dll" id="9f2ed73b-5e07-e1e1-60fd-fcce590802a2">
+      <Execution id="1c2bcc19-57d9-4720-b7bb-71c4cdae4956" />
+      <TestMethod codeBase="C:/Labs/Lab 4/Start - Copy/NWBusinessSolution/NWTest/bin/Debug/NWTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="NWTest.NWCustomerOrder_To_FKSupplierPOTest, NWTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NWCustomerOrder_To_FKSupplierPOConstructorTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="9f2ed73b-5e07-e1e1-60fd-fcce590802a2" executionId="1c2bcc19-57d9-4720-b7bb-71c4cdae4956" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="1c2bcc19-57d9-4720-b7bb-71c4cdae4956" testId="9f2ed73b-5e07-e1e1-60fd-fcce590802a2" testName="NWCustomerOrder_To_FKSupplierPOConstructorTest" computerName="WIN2008R2" duration="00:00:00.6071467" startTime="2010-12-02T13:33:38.1346217+01:00" endTime="2010-12-02T13:33:39.1016770+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1c2bcc19-57d9-4720-b7bb-71c4cdae4956">
+    </UnitTestResult>
+  </Results>
+</TestRun>

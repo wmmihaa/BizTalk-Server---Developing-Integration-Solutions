@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21107</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2FF1C565-20F5-466E-8D1F-6782BBA5AC61}</ProjectGuid>
+    <ProjectTypeGuids>{EF7E3281-CD33-11D4-8326-00C04FA0CE8D};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>library</OutputType>
+    <GenericProcessing>true</GenericProcessing>
+    <RootNamespace>TravelService</RootNamespace>
+    <AssemblyName>TravelService</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <BpelCompliance>True</BpelCompliance>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Name>System.Configuration</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Pipeline">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.DefaultPipelines">
+      <Name>Microsoft.BizTalk.DefaultPipelines</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.GlobalPropertySchemas">
+      <Name>Microsoft.BizTalk.GlobalPropertySchemas</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.TestTools">
+      <Name>Microsoft.BizTalk.TestTools</Name>
+    </Reference>
+    <Reference Include="Microsoft.XLANGs.BaseTypes">
+      <Name>Microsoft.XLANGs.BaseTypes</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="TravelRequest.xsd">
+      <TypeName>TravelRequest</TypeName>
+      <Namespace>TravelService</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="TravelResponse.xsd">
+      <TypeName>TravelResponse</TypeName>
+      <Namespace>TravelService</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="TravelServiceOrchestration.odx">
+      <TypeName>TravelServiceOrchestration</TypeName>
+      <Namespace>TravelService</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="FlightBookingService_schemas_datacontract_org_2004_07_FlightBookingService.xsd">
+      <Namespace>TravelService</Namespace>
+      <TypeName>FlightBookingService_schemas_datacontract_org_2004_07_FlightBookingService</TypeName>
+    </Schema>
+    <Schema Include="FlightBookingService_schemas_microsoft_com_2003_10_Serialization.xsd">
+      <Namespace>TravelService</Namespace>
+      <TypeName>FlightBookingService_schemas_microsoft_com_2003_10_Serialization</TypeName>
+    </Schema>
+    <Schema Include="FlightBookingService_tempuri_org.xsd">
+      <Namespace>TravelService</Namespace>
+      <TypeName>FlightBookingService_tempuri_org</TypeName>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FlightBookingService.BindingInfo.xml" />
+    <Content Include="HotelBookingService.BindingInfo.xml" />
+    <Map Include="Transform_2.btm">
+      <TypeName>Transform_2</TypeName>
+      <Namespace>TravelService</Namespace>
+    </Map>
+    <Map Include="TravelRequest_to_HotelBookingRequest.btm">
+      <TypeName>TravelRequest_to_HotelBookingRequest</TypeName>
+      <Namespace>TravelService</Namespace>
+    </Map>
+    <XLang Include="HotelBookingService.odx">
+      <TypeName>HotelBookingService</TypeName>
+      <Namespace>TravelService</Namespace>
+    </XLang>
+    <Content Include="HotelBookingService_Custom.BindingInfo.xml" />
+    <Map Include="FlightResponse_to_TravelResponse.btm">
+      <TypeName>FlightResponse_to_TravelResponse</TypeName>
+      <Namespace>TravelService</Namespace>
+    </Map>
+    <Map Include="TravelRequest_to_FlightRequest.btm">
+      <TypeName>TravelRequest_to_FlightRequest</TypeName>
+      <Namespace>TravelService</Namespace>
+    </Map>
+    <XLang Include="FlightBookingService.odx">
+      <TypeName>FlightBookingService</TypeName>
+      <Namespace>TravelService</Namespace>
+    </XLang>
+    <Content Include="FlightBookingService_Custom.BindingInfo.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="HotelBookingService_schemas_datacontract_org_2004_07_HotelBookingService.xsd">
+      <Namespace>TravelService</Namespace>
+      <TypeName>HotelBookingService_schemas_datacontract_org_2004_07_HotelBookingService</TypeName>
+    </Schema>
+    <Schema Include="HotelBookingService_schemas_microsoft_com_2003_10_Serialization.xsd">
+      <Namespace>TravelService</Namespace>
+      <TypeName>HotelBookingService_schemas_microsoft_com_2003_10_Serialization</TypeName>
+    </Schema>
+    <Schema Include="HotelBookingService_tempuri_org.xsd">
+      <Namespace>TravelService</Namespace>
+      <TypeName>HotelBookingService_tempuri_org</TypeName>
+    </Schema>
+    <None Include="Key.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
+</Project>

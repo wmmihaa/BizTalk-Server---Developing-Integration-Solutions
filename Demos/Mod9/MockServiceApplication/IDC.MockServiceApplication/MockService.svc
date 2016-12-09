@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="IDC.MockServiceApplication.MockService" CodeBehind="MockService.svc.cs" %>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindingInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Assembly="Microsoft.BizTalk.Deployment, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Version="3.5.1.0" BindingStatus="NoBindings" BoundEndpoints="0" TotalEndpoints="0">
+  <Timestamp>2010-02-02T23:05:17.3968256+01:00</Timestamp>
+  <ModuleRefCollection>
+    <ModuleRef Name="[Application:Mod8]" Version="" Culture="" PublicKeyToken="" FullName="[Application:Mod8], Version=, Culture=, PublicKeyToken=">
+      <Services />
+      <TrackedSchemas>
+        <Schema FullName="Mod8.Service1_tempuri_org" RootName="SendCustomer" AssemblyQualifiedName="Mod8.Service1_tempuri_org,Mod8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=098d47ecf4e754d0" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Mod8.Service1_mod8_customers" RootName="Customer" AssemblyQualifiedName="Mod8.Service1_mod8_customers,Mod8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=098d47ecf4e754d0" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+        <Schema FullName="Mod8.Service1_mod8_customers" RootName="Customers" AssemblyQualifiedName="Mod8.Service1_mod8_customers,Mod8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=098d47ecf4e754d0" AlwaysTrackAllProperties="false">
+          <TrackedPropertyNames />
+        </Schema>
+      </TrackedSchemas>
+    </ModuleRef>
+    <ModuleRef Name="Mod8" Version="1.0.0.0" Culture="neutral" PublicKeyToken="098d47ecf4e754d0" FullName="Mod8, Version=1.0.0.0, Culture=neutral, PublicKeyToken=098d47ecf4e754d0">
+      <Services />
+      <TrackedSchemas />
+    </ModuleRef>
+  </ModuleRefCollection>
+  <SendPortCollection>
+    <SendPort Name="Customers_NetTcp" IsStatic="true" IsTwoWay="false" BindingOption="0">
+      <Description xsi:nil="true" />
+      <TransmitPipeline Name="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.PassThruTransmit, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="2" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" />
+      <PrimaryTransport>
+        <Address>net.tcp://localhost:8731/Service1</Address>
+        <TransportType Name="WCF-NetTcp" Capabilities="907" ConfigurationClsid="7fd2dfcd-6a7b-44f9-8387-29457fd2eaaf" />
+        <TransportTypeData>&lt;CustomProps&gt;&lt;UseSSO vt="11"&gt;0&lt;/UseSSO&gt;&lt;InboundBodyLocation vt="8"&gt;UseBodyElement&lt;/InboundBodyLocation&gt;&lt;InboundBodyPathExpression vt="8" /&gt;&lt;MessageClientCredentialType vt="8"&gt;Windows&lt;/MessageClientCredentialType&gt;&lt;SendTimeout vt="8"&gt;00:01:00&lt;/SendTimeout&gt;&lt;OutboundXmlTemplate vt="8"&gt;&amp;lt;bts-msg-body xmlns="http://www.microsoft.com/schemas/bts2007" encoding="xml"/&amp;gt;&lt;/OutboundXmlTemplate&gt;&lt;OpenTimeout vt="8"&gt;00:01:00&lt;/OpenTimeout&gt;&lt;AlgorithmSuite vt="8"&gt;Basic256&lt;/AlgorithmSuite&gt;&lt;SecurityMode vt="8"&gt;Transport&lt;/SecurityMode&gt;&lt;TransportClientCredentialType vt="8"&gt;Windows&lt;/TransportClientCredentialType&gt;&lt;ClientCertificate vt="8" /&gt;&lt;TransactionProtocol vt="8"&gt;OleTransactions&lt;/TransactionProtocol&gt;&lt;MaxReceivedMessageSize vt="3"&gt;65536&lt;/MaxReceivedMessageSize&gt;&lt;StaticAction vt="8"&gt;http://tempuri.org/IService1/SendCustomer&lt;/StaticAction&gt;&lt;TransportProtectionLevel vt="8"&gt;EncryptAndSign&lt;/TransportProtectionLevel&gt;&lt;CloseTimeout vt="8"&gt;00:01:00&lt;/CloseTimeout&gt;&lt;EnableTransaction vt="11"&gt;0&lt;/EnableTransaction&gt;&lt;InboundNodeEncoding vt="8"&gt;Xml&lt;/InboundNodeEncoding&gt;&lt;PropagateFaultMessage vt="11"&gt;-1&lt;/PropagateFaultMessage&gt;&lt;OutboundBodyLocation vt="8"&gt;UseBodyElement&lt;/OutboundBodyLocation&gt;&lt;/CustomProps&gt;</TransportTypeData>
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2010-02-01T23:00:00</FromTime>
+        <ToTime>2010-02-02T22:59:59</ToTime>
+        <Primary>true</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler Name="BizTalkServerApplication" HostTrusted="false">
+          <TransportType Name="WCF-NetTcp" Capabilities="907" ConfigurationClsid="7fd2dfcd-6a7b-44f9-8387-29457fd2eaaf" />
+        </SendHandler>
+      </PrimaryTransport>
+      <SecondaryTransport>
+        <Address />
+        <RetryCount>3</RetryCount>
+        <RetryInterval>5</RetryInterval>
+        <ServiceWindowEnabled>false</ServiceWindowEnabled>
+        <FromTime>2010-02-01T23:00:00</FromTime>
+        <ToTime>2010-02-02T22:59:59</ToTime>
+        <Primary>false</Primary>
+        <OrderedDelivery>false</OrderedDelivery>
+        <DeliveryNotification>1</DeliveryNotification>
+        <SendHandler xsi:nil="true" />
+      </SecondaryTransport>
+      <ReceivePipelineData xsi:nil="true" />
+      <Tracking>0</Tracking>
+      <Filter>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;Filter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;Group&gt;
+    &lt;Statement Property="WCF.Action" Operator="0" Value="http://tempuri.org/IService1/SendCustomer" /&gt;
+  &lt;/Group&gt;
+&lt;/Filter&gt;</Filter>
+      <Transforms />
+      <OrderedDelivery>false</OrderedDelivery>
+      <Priority>5</Priority>
+      <StopSendingOnFailure>false</StopSendingOnFailure>
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>Mod8</ApplicationName>
+    </SendPort>
+  </SendPortCollection>
+  <DistributionListCollection />
+  <ReceivePortCollection>
+    <ReceivePort Name="Customers" IsTwoWay="false" BindingOption="0">
+      <Description xsi:nil="true" />
+      <ReceiveLocations>
+        <ReceiveLocation Name="Customers_NetTcp">
+          <Description xsi:nil="true" />
+          <Address>net.tcp://localhost:8730/Service1</Address>
+          <PublicAddress />
+          <Primary>true</Primary>
+          <ReceiveLocationServiceWindowEnabled>false</ReceiveLocationServiceWindowEnabled>
+          <ReceiveLocationFromTime>2010-02-01T23:00:00</ReceiveLocationFromTime>
+          <ReceiveLocationToTime>2010-02-02T22:59:59</ReceiveLocationToTime>
+          <ReceiveLocationStartDateEnabled>false</ReceiveLocationStartDateEnabled>
+          <ReceiveLocationStartDate>2010-02-02T00:00:00</ReceiveLocationStartDate>
+          <ReceiveLocationEndDateEnabled>false</ReceiveLocationEndDateEnabled>
+          <ReceiveLocationEndDate>2010-02-03T00:00:00</ReceiveLocationEndDate>
+          <ReceiveLocationTransportType Name="WCF-NetTcp" Capabilities="907" ConfigurationClsid="7fd2dfcd-6a7b-44f9-8387-29457fd2eaaf" />
+          <ReceiveLocationTransportTypeData>&lt;CustomProps&gt;&lt;ServiceCertificate vt="8" /&gt;&lt;InboundBodyLocation vt="8"&gt;UseBodyElement&lt;/InboundBodyLocation&gt;&lt;UseSSO vt="11"&gt;0&lt;/UseSSO&gt;&lt;MessageClientCredentialType vt="8"&gt;Windows&lt;/MessageClientCredentialType&gt;&lt;InboundBodyPathExpression vt="8"&gt;/*[local-name()='SendCustomer']/*[local-name()='customers']&lt;/InboundBodyPathExpression&gt;&lt;SendTimeout vt="8"&gt;00:01:00&lt;/SendTimeout&gt;&lt;OutboundXmlTemplate vt="8"&gt;&amp;lt;bts-msg-body xmlns="http://www.microsoft.com/schemas/bts2007" encoding="xml"/&amp;gt;&lt;/OutboundXmlTemplate&gt;&lt;OpenTimeout vt="8"&gt;00:01:00&lt;/OpenTimeout&gt;&lt;AlgorithmSuite vt="8"&gt;Basic256&lt;/AlgorithmSuite&gt;&lt;LeaseTimeout vt="8"&gt;00:05:00&lt;/LeaseTimeout&gt;&lt;SecurityMode vt="8"&gt;Transport&lt;/SecurityMode&gt;&lt;TransportClientCredentialType vt="8"&gt;Windows&lt;/TransportClientCredentialType&gt;&lt;TransactionProtocol vt="8"&gt;OleTransactions&lt;/TransactionProtocol&gt;&lt;MaxReceivedMessageSize vt="3"&gt;65536&lt;/MaxReceivedMessageSize&gt;&lt;TransportProtectionLevel vt="8"&gt;EncryptAndSign&lt;/TransportProtectionLevel&gt;&lt;CloseTimeout vt="8"&gt;00:01:00&lt;/CloseTimeout&gt;&lt;SuspendMessageOnFailure vt="11"&gt;-1&lt;/SuspendMessageOnFailure&gt;&lt;EnableTransaction vt="11"&gt;0&lt;/EnableTransaction&gt;&lt;InboundNodeEncoding vt="8"&gt;Xml&lt;/InboundNodeEncoding&gt;&lt;IncludeExceptionDetailInFaults vt="11"&gt;0&lt;/IncludeExceptionDetailInFaults&gt;&lt;MaxConcurrentCalls vt="3"&gt;200&lt;/MaxConcurrentCalls&gt;&lt;OutboundBodyLocation vt="8"&gt;UseBodyElement&lt;/OutboundBodyLocation&gt;&lt;/CustomProps&gt;</ReceiveLocationTransportTypeData>
+          <ReceivePipeline Name="Microsoft.BizTalk.DefaultPipelines.XMLReceive" FullyQualifiedName="Microsoft.BizTalk.DefaultPipelines.XMLReceive, Microsoft.BizTalk.DefaultPipelines, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Type="1" TrackingOption="ServiceStartEnd MessageSendReceive PipelineEvents" />
+          <ReceivePipelineData xsi:nil="true" />
+          <SendPipeline xsi:nil="true" />
+          <SendPipelineData xsi:nil="true" />
+          <Enable>true</Enable>
+          <ReceiveHandler Name="BizTalkServerApplication" HostTrusted="false">
+            <TransportType Name="WCF-NetTcp" Capabilities="907" ConfigurationClsid="7fd2dfcd-6a7b-44f9-8387-29457fd2eaaf" />
+          </ReceiveHandler>
+        </ReceiveLocation>
+      </ReceiveLocations>
+      <SendPipelineData xsi:nil="true" />
+      <Authentication>0</Authentication>
+      <Tracking>0</Tracking>
+      <Transforms />
+      <RouteFailedMessage>false</RouteFailedMessage>
+      <ApplicationName>Mod8</ApplicationName>
+    </ReceivePort>
+  </ReceivePortCollection>
+  <PartyCollection />
+</BindingInfo>

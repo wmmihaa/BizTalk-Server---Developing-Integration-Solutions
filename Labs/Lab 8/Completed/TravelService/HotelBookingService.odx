@@ -1,0 +1,109 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="19c2b6a0-8123-4d3b-8e93-e21b3f2165a9">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="TravelService" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="fb3806b4-ad19-4d89-8f9b-80cd2f54d71d" ParentLink="Module_PortType">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:portType name=&quot;IHotelBookingService&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IHotelBookingService" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="8f035057-8560-4a45-879b-a7ecf864b811" ParentLink="PortType_OperationDeclaration">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:operation name=&quot;SendHotelBookingRequest&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="SendHotelBookingRequest" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="1315e965-641f-4f1c-a4ee-274d1ef95e17" ParentLink="OperationDeclaration_RequestMessageRef">
+                    <om:Property Name="Ref" Value="TravelService.IHotelBookingService_SendHotelBookingRequest_InputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:input message=&quot;http://tempuri.org/:IHotelBookingService_SendHotelBookingRequest_InputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://tempuri.org/IHotelBookingService/SendHotelBookingRequest&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="a2b55ed3-aee7-4d9a-80d6-9b3214dc9f65" ParentLink="OperationDeclaration_ResponseMessageRef">
+                    <om:Property Name="Ref" Value="TravelService.IHotelBookingService_SendHotelBookingRequest_OutputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:output message=&quot;http://tempuri.org/:IHotelBookingService_SendHotelBookingRequest_OutputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://tempuri.org/IHotelBookingService/SendHotelBookingRequestResponse&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="8f7d1ee6-0080-4486-b64a-7fc29c5639d7" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;IHotelBookingService_SendHotelBookingRequest_InputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IHotelBookingService_SendHotelBookingRequest_InputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="d1df1260-2fed-484e-aedb-e3a4b8d8aae8" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="TravelService.HotelBookingService_tempuri_org.SendHotelBookingRequest" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="cda75afc-aaa1-493f-8114-53b34d6ac912" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;IHotelBookingService_SendHotelBookingRequest_OutputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IHotelBookingService_SendHotelBookingRequest_OutputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="f7363971-abea-4621-83ad-b7479c5d332d" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="TravelService.HotelBookingService_tempuri_org.SendHotelBookingRequestResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="25e0c4d6-d19d-40a4-84c7-becd0eda9c5f" ParentLink="Module_ServiceDeclaration">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:service name=&quot;HotelBookingService&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="HotelBookingServiceClient" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="277a5346-085d-4e68-ad1d-ff8394d35b98" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module TravelService
+{
+    internal messagetype IHotelBookingService_SendHotelBookingRequest_InputMessage
+    {
+        body HotelBookingService_tempuri_org.SendHotelBookingRequest parameters;
+    };
+    internal messagetype IHotelBookingService_SendHotelBookingRequest_OutputMessage
+    {
+        body HotelBookingService_tempuri_org.SendHotelBookingRequestResponse parameters;
+    };
+    internal porttype IHotelBookingService
+    {
+        requestresponse SendHotelBookingRequest
+        {
+            IHotelBookingService_SendHotelBookingRequest_InputMessage, IHotelBookingService_SendHotelBookingRequest_OutputMessage
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service HotelBookingServiceClient
+    {
+        body ()
+        {
+        }
+    }
+}
+

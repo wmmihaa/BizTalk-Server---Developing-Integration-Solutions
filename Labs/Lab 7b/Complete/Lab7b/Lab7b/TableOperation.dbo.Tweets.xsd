@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:array="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:ns3="http://schemas.microsoft.com/Sql/2008/05/Types/Tables/dbo" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/Sql/2008/05/TableOp/dbo/Tweets" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation=".\Table.dbo.xsd" namespace="http://schemas.microsoft.com/Sql/2008/05/Types/Tables/dbo" />
+  <xs:import schemaLocation=".\SimpleTypeArray.xsd" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:annotation>
+    <xs:appinfo>
+      <fileNameHint xmlns="http://schemas.microsoft.com/servicemodel/adapters/metadata/xsd">TableOperation.dbo.Tweets</fileNameHint>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Insert">
+    <xs:annotation>
+      <xs:documentation>
+        <doc:action xmlns:doc="http://schemas.microsoft.com/servicemodel/adapters/metadata/documentation">TableOp/Insert/dbo/Tweets</doc:action>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="Rows" nillable="true" type="ns3:ArrayOfTweets" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertResponse">
+    <xs:annotation>
+      <xs:documentation>
+        <doc:action xmlns:doc="http://schemas.microsoft.com/servicemodel/adapters/metadata/documentation">TableOp/Insert/dbo/Tweets/response</doc:action>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="InsertResult" nillable="true" type="array:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

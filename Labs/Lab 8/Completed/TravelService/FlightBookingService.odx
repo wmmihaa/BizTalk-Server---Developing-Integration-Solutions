@@ -1,0 +1,109 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="ce010ccf-2073-4791-837c-2c6c54777d8b">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="TravelService" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="55fdef3d-1488-4b39-9735-6eca567a6647" ParentLink="Module_PortType">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:portType name=&quot;IFlightBookingService&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IFlightBookingService" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="595c0751-b736-4f3f-bbd1-55d89ef6262b" ParentLink="PortType_OperationDeclaration">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:operation name=&quot;SendFlightBookingRequest&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="SendFlightBookingRequest" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="084be85b-97cb-48a6-bda0-5e4471efbbd2" ParentLink="OperationDeclaration_RequestMessageRef">
+                    <om:Property Name="Ref" Value="TravelService.IFlightBookingService_SendFlightBookingRequest_InputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:input message=&quot;http://tempuri.org/:IFlightBookingService_SendFlightBookingRequest_InputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://tempuri.org/IFlightBookingService/SendFlightBookingRequest&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="5dead5a2-f1d6-4d0d-ad75-5a36be184d95" ParentLink="OperationDeclaration_ResponseMessageRef">
+                    <om:Property Name="Ref" Value="TravelService.IFlightBookingService_SendFlightBookingRequest_OutputMessage" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="AnalystComments" Value="&lt;wsdl:output message=&quot;http://tempuri.org/:IFlightBookingService_SendFlightBookingRequest_OutputMessage&quot;/&gt;&#xD;&#xA;Action=&quot;http://tempuri.org/IFlightBookingService/SendFlightBookingRequestResponse&quot;&#xD;&#xA;" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="36cba2c3-01f1-4b45-8168-36f0c199e9d9" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;IFlightBookingService_SendFlightBookingRequest_InputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IFlightBookingService_SendFlightBookingRequest_InputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="319226c2-5c79-477f-9297-81c12f4b402b" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="TravelService.FlightBookingService_tempuri_org.SendFlightBookingRequest" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="9f56466d-a75f-4fce-a4ef-ac105effe1c3" ParentLink="Module_MessageType">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:message name=&quot;IFlightBookingService_SendFlightBookingRequest_OutputMessage&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="IFlightBookingService_SendFlightBookingRequest_OutputMessage" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="PartDeclaration" OID="ecc79e24-49fb-467b-bf9e-70395c41d829" ParentLink="MultipartMessageType_PartDeclaration">
+                <om:Property Name="ClassName" Value="TravelService.FlightBookingService_tempuri_org.SendFlightBookingRequestResponse" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="AnalystComments" Value="&lt;wsdl:part name=&quot;parameters&quot;/&gt;&#xD;&#xA;" />
+                <om:Property Name="Name" Value="parameters" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="95aefd04-c65f-4dfa-8aac-6630a6ef67c0" ParentLink="Module_ServiceDeclaration">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="AnalystComments" Value="&lt;wsdl:service name=&quot;FlightBookingService&quot;/&gt;&#xD;&#xA;" />
+            <om:Property Name="Name" Value="FlightBookingServiceClient" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="08a1290f-0fc0-4f72-9937-73cd0f8b01d2" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module TravelService
+{
+    internal messagetype IFlightBookingService_SendFlightBookingRequest_InputMessage
+    {
+        body FlightBookingService_tempuri_org.SendFlightBookingRequest parameters;
+    };
+    internal messagetype IFlightBookingService_SendFlightBookingRequest_OutputMessage
+    {
+        body FlightBookingService_tempuri_org.SendFlightBookingRequestResponse parameters;
+    };
+    internal porttype IFlightBookingService
+    {
+        requestresponse SendFlightBookingRequest
+        {
+            IFlightBookingService_SendFlightBookingRequest_InputMessage, IFlightBookingService_SendFlightBookingRequest_OutputMessage
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service FlightBookingServiceClient
+    {
+        body ()
+        {
+        }
+    }
+}
+

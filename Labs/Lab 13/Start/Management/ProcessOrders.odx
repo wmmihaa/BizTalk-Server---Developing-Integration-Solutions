@@ -1,0 +1,195 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="54bbf623-f446-424b-913e-001ab6b03e99" LowerBound="1.1" HigherBound="42.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="Management" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="3101380b-c75a-49ef-a380-2702c715c523" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ReceiveCustomerOrderType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="92186135-bc1c-4eda-ae26-62ffa94ef017" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="f5bddab6-2ce2-4a48-9009-6d5fd46ad5df" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.26">
+                    <om:Property Name="Ref" Value="Management.CustomerOrder" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="c15a29b9-2404-452d-9782-03c36fc9cfb0" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="SendProcessedOrderType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="0c9c862c-7b80-4379-90d9-bee728063434" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="478e8839-ffa9-4204-8f17-44821dc56101" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.25">
+                    <om:Property Name="Ref" Value="Management.ProcessOrder" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="b183fd26-d988-4aa2-a337-24a22f755bd2" ParentLink="Module_ServiceDeclaration" LowerBound="18.1" HigherBound="41.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ProcessOrders" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="ServiceBody" OID="62aacaf0-c6e5-449e-8eab-490b44b35e10" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="89f27fa1-b783-4c0d-9f78-2234803365dc" ParentLink="ServiceBody_Statement" LowerBound="29.1" HigherBound="31.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="ReceiveCustomerOrder" />
+                    <om:Property Name="MessageName" Value="CustOrder" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive CustOrder" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="c9c277eb-cc86-4b1f-aae0-9398e99ceb39" ParentLink="ServiceBody_Statement" LowerBound="31.1" HigherBound="37.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Construct ProcOrder" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="d83ddeca-54e5-4570-a30f-0da4f9eaa08c" ParentLink="ComplexStatement_Statement" LowerBound="34.1" HigherBound="36.1">
+                        <om:Property Name="ClassName" Value="Management.CustomerOrder_To_ProcessOrder" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Xform CustOrder to ProcOrder" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="MessagePartRef" OID="55db8713-baa5-4e43-b57e-fd99d202ba54" ParentLink="Transform_InputMessagePartRef" LowerBound="35.83" HigherBound="35.92">
+                            <om:Property Name="MessageRef" Value="CustOrder" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="c354f290-48de-4c45-89d3-8402d7482704" ParentLink="Transform_OutputMessagePartRef" LowerBound="35.28" HigherBound="35.37">
+                            <om:Property Name="MessageRef" Value="ProcOrder" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="6e174a9e-2310-4113-8afe-8d2cc069e5e5" ParentLink="Construct_MessageRef" LowerBound="32.23" HigherBound="32.32">
+                        <om:Property Name="Ref" Value="ProcOrder" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="5f629f49-ee07-4dc5-9809-79e20b134992" ParentLink="ServiceBody_Statement" LowerBound="37.1" HigherBound="39.1">
+                    <om:Property Name="PortName" Value="SendProcessedOrder" />
+                    <om:Property Name="MessageName" Value="ProcOrder" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send Processed Order" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="3086a921-3dbe-49d1-a708-5ade15f42bd0" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="21.1" HigherBound="23.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Management.ReceiveCustomerOrderType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ReceiveCustomerOrder" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="f2d7a69d-e3e1-4a42-a867-695b24182ba9" ParentLink="PortDeclaration_CLRAttribute" LowerBound="21.1" HigherBound="22.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="ad0680b1-222c-4cd2-b157-851dafc42318" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="23.1" HigherBound="25.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="15" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Management.SendProcessedOrderType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendProcessedOrder" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="efa3c340-79e0-4986-a436-613d7fde6198" ParentLink="PortDeclaration_CLRAttribute" LowerBound="23.1" HigherBound="24.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="79e8b4ed-88b7-4d4b-b236-877416419b26" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="Type" Value="Management.CustomerOrder" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="CustOrder" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="16ff40d7-72cf-463a-a51b-5972f2d25e3b" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="Type" Value="Management.ProcessOrder" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ProcOrder" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module Management
+{
+    internal porttype ReceiveCustomerOrderType
+    {
+        oneway Operation_1
+        {
+            CustomerOrder
+        };
+    };
+    internal porttype SendProcessedOrderType
+    {
+        oneway Operation_1
+        {
+            ProcessOrder
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service ProcessOrders
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements ReceiveCustomerOrderType ReceiveCustomerOrder;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses SendProcessedOrderType SendProcessedOrder;
+        message CustomerOrder CustOrder;
+        message ProcessOrder ProcOrder;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("89f27fa1-b783-4c0d-9f78-2234803365dc")]
+            activate receive (ReceiveCustomerOrder.Operation_1, CustOrder);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("c9c277eb-cc86-4b1f-aae0-9398e99ceb39")]
+            construct ProcOrder
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("d83ddeca-54e5-4570-a30f-0da4f9eaa08c")]
+                transform (ProcOrder) = Management.CustomerOrder_To_ProcessOrder (CustOrder);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("5f629f49-ee07-4dc5-9809-79e20b134992")]
+            send (SendProcessedOrder.Operation_1, ProcOrder);
+        }
+    }
+}
+

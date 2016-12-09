@@ -1,0 +1,505 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="158d225a-54e8-4b71-a794-8f69f482270f" LowerBound="1.1" HigherBound="102.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="ErrorHandling" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="b7c238b9-ce86-4735-9df4-283d4ca5f559" ParentLink="Module_PortType" LowerBound="8.1" HigherBound="15.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_3" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="6f974fa1-84f6-4c6f-bf94-c2df651d381d" ParentLink="PortType_OperationDeclaration" LowerBound="10.1" HigherBound="14.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="bc98e1a3-beab-4406-a5dc-e6be2ca71cca" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="12.13" HigherBound="12.31">
+                    <om:Property Name="Ref" Value="ErrorHandling.ExpenseMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="cc709ae1-b01a-45f6-b06f-dcb54e62ea4f" ParentLink="Module_PortType" LowerBound="15.1" HigherBound="22.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_4" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="02bcbed6-74cf-4278-97af-ee6edfa17ba9" ParentLink="PortType_OperationDeclaration" LowerBound="17.1" HigherBound="21.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendForApprovalDenial" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="93a27ad3-d650-4ec2-91a3-3c7aba94f5f2" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="19.13" HigherBound="19.31">
+                    <om:Property Name="Ref" Value="ErrorHandling.ExpenseMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="msgIn" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="541c0652-f25b-4331-a83c-317b49539255" ParentLink="Module_PortType" LowerBound="22.1" HigherBound="29.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_5" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="9b0244f0-6fcb-4940-900d-609d3bc86325" ParentLink="PortType_OperationDeclaration" LowerBound="24.1" HigherBound="28.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="GetApprovalDenial" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="879e15da-79c8-40a8-b5c0-f6e780e6b9c9" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="26.13" HigherBound="26.31">
+                    <om:Property Name="Ref" Value="ErrorHandling.ExpenseMessageType" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="msgResponse" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="aa72d4c0-e9d3-4027-af1b-7422e229aa88" ParentLink="Module_PortType" LowerBound="29.1" HigherBound="36.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="StatusToEmployeeType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="6e6e50d0-44c1-4f8f-9643-50421491039b" ParentLink="PortType_OperationDeclaration" LowerBound="31.1" HigherBound="35.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="ebc6472b-9820-4070-97cd-1f332b4abfdd" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="33.13" HigherBound="33.30">
+                    <om:Property Name="Ref" Value="ErrorHandling.ProcessedExpenses" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="c008deb9-53ee-48bb-a935-2ec2ec5549ce" ParentLink="Module_PortType" LowerBound="36.1" HigherBound="43.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="StatusToAccountingType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="ab1265dc-734e-4cf4-81d6-0585c579ca95" ParentLink="PortType_OperationDeclaration" LowerBound="38.1" HigherBound="42.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="6787ab4a-aef8-4119-8d7a-0126732a3ee5" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="40.13" HigherBound="40.30">
+                    <om:Property Name="Ref" Value="ErrorHandling.ProcessedExpenses" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="CorrelationType" OID="bd413f40-8650-4528-a91a-3d72ec913ff8" ParentLink="Module_CorrelationType" LowerBound="43.1" HigherBound="47.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ExpenseCorrType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PropertyRef" OID="918c74a0-6c63-454c-9ffd-9537adaf431b" ParentLink="CorrelationType_PropertyRef" LowerBound="45.9" HigherBound="45.34">
+                <om:Property Name="Ref" Value="ErrorHandling.PropertySchema.EmployeeID" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PropertyRef_1" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+            <om:Element Type="PropertyRef" OID="2f410ff6-62c5-45b4-a499-924b464a980f" ParentLink="CorrelationType_PropertyRef" LowerBound="45.36" HigherBound="45.65">
+                <om:Property Name="Ref" Value="ErrorHandling.PropertySchema.SubmissionDate" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="PropertyRef_1" />
+                <om:Property Name="Signal" Value="False" />
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="afe924a8-260f-46fa-a396-8e63a6e83a95" ParentLink="Module_ServiceDeclaration" LowerBound="47.1" HigherBound="101.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ApprovalProcess" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="CorrelationDeclaration" OID="88874c2a-a39e-4d55-8ad1-11fec5ad4699" ParentLink="ServiceDeclaration_CorrelationDeclaration" LowerBound="60.1" HigherBound="61.1">
+                <om:Property Name="Type" Value="ErrorHandling.ExpenseCorrType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ExpenseCorr" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="StatementRef" OID="0e6b71b1-0d71-4210-a67a-4c2daff46aff" ParentLink="CorrelationDeclaration_StatementRef" LowerBound="69.60" HigherBound="69.82">
+                    <om:Property Name="Initializes" Value="True" />
+                    <om:Property Name="Ref" Value="e9610d18-2dfc-44be-966d-ddc8f2d77067" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="StatementRef_1" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="StatementRef" OID="bc5ba31c-ea2c-4929-a64f-266825acaea8" ParentLink="CorrelationDeclaration_StatementRef" LowerBound="71.67" HigherBound="71.78">
+                    <om:Property Name="Initializes" Value="False" />
+                    <om:Property Name="Ref" Value="b378c19b-baf0-4797-8022-16158fda31c1" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="StatementRef_2" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="fdc00048-a55a-4a78-94d1-0039342e89de" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="61.1" HigherBound="62.1">
+                <om:Property Name="Type" Value="ErrorHandling.ExpenseMessageType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgIn" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="92707fc9-8aeb-42c8-b522-49bd3d24940c" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="62.1" HigherBound="63.1">
+                <om:Property Name="Type" Value="ErrorHandling.ExpenseMessageType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="ee83c9a1-41a4-431d-b663-03f891fba0c2" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="63.1" HigherBound="64.1">
+                <om:Property Name="Type" Value="ErrorHandling.ProcessedExpenses" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="msgFinal" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="2c07fd57-3a11-4523-8f00-ddcda78bd687" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="77d17398-7bfe-41e4-8fb5-c69445cd9e6f" ParentLink="ServiceBody_Statement" LowerBound="66.1" HigherBound="68.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="ExpenseReportIN" />
+                    <om:Property Name="MessageName" Value="msgIn" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ExpenseReport IN" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Send" OID="e9610d18-2dfc-44be-966d-ddc8f2d77067" ParentLink="ServiceBody_Statement" LowerBound="68.1" HigherBound="70.1">
+                    <om:Property Name="PortName" Value="ToApproval" />
+                    <om:Property Name="MessageName" Value="msgIn" />
+                    <om:Property Name="OperationName" Value="SendForApprovalDenial" />
+                    <om:Property Name="OperationMessageName" Value="msgIn" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send for Approval-Denial" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Receive" OID="b378c19b-baf0-4797-8022-16158fda31c1" ParentLink="ServiceBody_Statement" LowerBound="70.1" HigherBound="72.1">
+                    <om:Property Name="Activate" Value="False" />
+                    <om:Property Name="PortName" Value="FromApproval" />
+                    <om:Property Name="MessageName" Value="msgResponse" />
+                    <om:Property Name="OperationName" Value="GetApprovalDenial" />
+                    <om:Property Name="OperationMessageName" Value="msgResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Get Approval-Denial" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Decision" OID="8f013543-c7b9-41ab-a3b6-e050d949c3a3" ParentLink="ServiceBody_Statement" LowerBound="72.1" HigherBound="95.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Evaluate Status" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DecisionBranch" OID="ea274c9f-657b-4004-ba96-c6e6dffff0f6" ParentLink="ReallyComplexStatement_Branch" LowerBound="73.13" HigherBound="84.1">
+                        <om:Property Name="Expression" Value="msgResponse.expensePart.Header.Status == &quot;Declined&quot;" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Declined" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Construct" OID="35519bac-21de-487c-bb6c-62142b353d48" ParentLink="ComplexStatement_Statement" LowerBound="75.1" HigherBound="83.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Construct msgFinal Declined" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessageRef" OID="73036834-c437-4d9f-95a3-860c49067119" ParentLink="Construct_MessageRef" LowerBound="76.27" HigherBound="76.35">
+                                <om:Property Name="Ref" Value="msgFinal" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Transform" OID="e6d891a6-fc9f-43cf-89a5-5f039162679e" ParentLink="ComplexStatement_Statement" LowerBound="78.1" HigherBound="80.1">
+                                <om:Property Name="ClassName" Value="ErrorHandling.ExpenseReport_to_ProcessedExpenses" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Xform to Processed" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessagePartRef" OID="6b036222-f580-4053-be9e-763637091824" ParentLink="Transform_InputMessagePartRef" LowerBound="79.94" HigherBound="79.105">
+                                    <om:Property Name="MessageRef" Value="msgResponse" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_1" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="f9573e59-8fca-48e3-8603-83d6b95cb39c" ParentLink="Transform_OutputMessagePartRef" LowerBound="79.32" HigherBound="79.40">
+                                    <om:Property Name="MessageRef" Value="msgFinal" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_2" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="MessageAssignment" OID="2c883821-7a8a-4ec9-9dcf-80cd69d9e2cb" ParentLink="ComplexStatement_Statement" LowerBound="80.1" HigherBound="82.1">
+                                <om:Property Name="Expression" Value="msgFinal.Explaination=&quot;Your expense report submitted on &quot; + System.Convert.ToString(msgFinal.ProcessedExpenses.SubmissionDate) + &quot; has been denied. If you have questions about why your expense report has been denied please contact Rob Callaway in the accounting department.&quot;;" />
+                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                <om:Property Name="Name" Value="Add Denial Desciption" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="2a5711f5-1d76-47a0-a5f7-252c8b97e9d4" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Else" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Construct" OID="0a55553e-e1f0-4cd2-b5dc-68d53440e6af" ParentLink="ComplexStatement_Statement" LowerBound="86.1" HigherBound="94.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Construct msgFinal Approved" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessageRef" OID="9878bb43-09d7-4e0b-923c-b8b05725b543" ParentLink="Construct_MessageRef" LowerBound="87.27" HigherBound="87.35">
+                                <om:Property Name="Ref" Value="msgFinal" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                            <om:Element Type="Transform" OID="a372e39a-ce46-4f11-842b-806650e7ab44" ParentLink="ComplexStatement_Statement" LowerBound="89.1" HigherBound="91.1">
+                                <om:Property Name="ClassName" Value="ErrorHandling.ExpenseReport_to_ProcessedExpenses" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Xform to Processed" />
+                                <om:Property Name="Signal" Value="True" />
+                                <om:Element Type="MessagePartRef" OID="5e65eab6-139a-42cb-b4d4-8c2c46a403da" ParentLink="Transform_InputMessagePartRef" LowerBound="90.94" HigherBound="90.105">
+                                    <om:Property Name="MessageRef" Value="msgResponse" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_1" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="c5bc4b5a-aa7d-43a3-bef1-01be948b89ef" ParentLink="Transform_OutputMessagePartRef" LowerBound="90.32" HigherBound="90.40">
+                                    <om:Property Name="MessageRef" Value="msgFinal" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_2" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="MessageAssignment" OID="1894ad96-d3cf-4467-876a-6d0d126e6dd7" ParentLink="ComplexStatement_Statement" LowerBound="91.1" HigherBound="93.1">
+                                <om:Property Name="Expression" Value="msgFinal.Explaination=&quot;Your expense report submitted on &quot; + System.Convert.ToString(msgFinal.ProcessedExpenses.SubmissionDate) + &quot; has been approved. Please contact Rob Callaway in the accounting department for information regarding compensation.&quot;;" />
+                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                <om:Property Name="Name" Value="Add Approval Description" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="939c6973-5414-451d-a16f-b8df3e394c1f" ParentLink="ServiceBody_Statement" LowerBound="95.1" HigherBound="97.1">
+                    <om:Property Name="PortName" Value="StatusToEmployee" />
+                    <om:Property Name="MessageName" Value="msgFinal" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Status To Employee" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Send" OID="9b65e425-8d3c-4e17-ac01-0c82b92424e9" ParentLink="ServiceBody_Statement" LowerBound="97.1" HigherBound="99.1">
+                    <om:Property Name="PortName" Value="StatusToAccounting" />
+                    <om:Property Name="MessageName" Value="msgFinal" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Accounting Admin OUT" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="a44f04f3-2110-4201-8d7d-f845cc4c39c5" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="50.1" HigherBound="52.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="ErrorHandling.PortType_3" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ExpenseReportIN" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="998f6af8-bdba-4972-8e6d-04a44b571441" ParentLink="PortDeclaration_CLRAttribute" LowerBound="50.1" HigherBound="51.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="c35e6734-63c1-449d-84f0-8171fd2c34c8" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="52.1" HigherBound="54.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="35" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="ErrorHandling.StatusToEmployeeType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="StatusToEmployee" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="9d95c86d-082e-4584-9eef-df55f7a6fa30" ParentLink="PortDeclaration_CLRAttribute" LowerBound="52.1" HigherBound="53.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="7b9419b8-b1e1-4030-bc6c-8c13036d3632" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="54.1" HigherBound="56.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="43" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="ErrorHandling.StatusToAccountingType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="StatusToAccounting" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="3a80616a-2f2d-44a1-92f2-fd28117438af" ParentLink="PortDeclaration_CLRAttribute" LowerBound="54.1" HigherBound="55.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="ab5b8807-8bd1-4cfb-a983-2eb60a6f38e5" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="56.1" HigherBound="58.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="5" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="ErrorHandling.PortType_4" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ToApproval" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="7f1a5643-3e33-4d08-905f-aa3113101278" ParentLink="PortDeclaration_CLRAttribute" LowerBound="56.1" HigherBound="57.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="1a6bc193-aa32-4f44-991d-5dc749d86fa4" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="58.1" HigherBound="60.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="7" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="ErrorHandling.PortType_5" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="FromApproval" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="LogicalBindingAttribute" OID="e3643051-a791-4b1a-95be-cc6979116778" ParentLink="PortDeclaration_CLRAttribute" LowerBound="58.1" HigherBound="59.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="MultipartMessageType" OID="06283863-ab88-4a06-8067-11f58a0f5dc2" ParentLink="Module_MessageType" LowerBound="4.1" HigherBound="8.1">
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ExpenseMessageType" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="PartDeclaration" OID="80f656b8-9c7f-48a0-99fa-75a18f79c4f1" ParentLink="MultipartMessageType_PartDeclaration" LowerBound="6.1" HigherBound="7.1">
+                <om:Property Name="ClassName" Value="ErrorHandling.ExpenseReportMessageType.ExpenseReport" />
+                <om:Property Name="IsBodyPart" Value="True" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="expensePart" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module ErrorHandling
+{
+    internal messagetype ExpenseMessageType
+    {
+        body ExpenseReportMessageType.ExpenseReport expensePart;
+    };
+    internal porttype PortType_3
+    {
+        oneway Operation_1
+        {
+            ExpenseMessageType
+        };
+    };
+    internal porttype PortType_4
+    {
+        oneway SendForApprovalDenial
+        {
+            ExpenseMessageType
+        };
+    };
+    internal porttype PortType_5
+    {
+        oneway GetApprovalDenial
+        {
+            ExpenseMessageType
+        };
+    };
+    internal porttype StatusToEmployeeType
+    {
+        oneway Operation_1
+        {
+            ProcessedExpenses
+        };
+    };
+    internal porttype StatusToAccountingType
+    {
+        oneway Operation_1
+        {
+            ProcessedExpenses
+        };
+    };
+    internal correlationtype ExpenseCorrType
+    {
+        PropertySchema.EmployeeID, PropertySchema.SubmissionDate
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service ApprovalProcess
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements PortType_3 ExpenseReportIN;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses StatusToEmployeeType StatusToEmployee;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses StatusToAccountingType StatusToAccounting;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses PortType_4 ToApproval;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements PortType_5 FromApproval;
+        correlation ExpenseCorrType ExpenseCorr;
+        message ExpenseMessageType msgIn;
+        message ExpenseMessageType msgResponse;
+        message ProcessedExpenses msgFinal;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("77d17398-7bfe-41e4-8fb5-c69445cd9e6f")]
+            activate receive (ExpenseReportIN.Operation_1, msgIn);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("e9610d18-2dfc-44be-966d-ddc8f2d77067")]
+            send (ToApproval.SendForApprovalDenial, msgIn, initialize ExpenseCorr);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("b378c19b-baf0-4797-8022-16158fda31c1")]
+            receive (FromApproval.GetApprovalDenial, msgResponse, ExpenseCorr);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("8f013543-c7b9-41ab-a3b6-e050d949c3a3")]
+            if (msgResponse.expensePart.Header.Status == "Declined")
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("35519bac-21de-487c-bb6c-62142b353d48")]
+                construct msgFinal
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("e6d891a6-fc9f-43cf-89a5-5f039162679e")]
+                    transform (msgFinal) = ErrorHandling.ExpenseReport_to_ProcessedExpenses (msgResponse);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("2c883821-7a8a-4ec9-9dcf-80cd69d9e2cb")]
+                    msgFinal.Explaination="Your expense report submitted on " + System.Convert.ToString(msgFinal.ProcessedExpenses.SubmissionDate) + " has been denied. If you have questions about why your expense report has been denied please contact Rob Callaway in the accounting department.";
+                }
+            }
+            else 
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("0a55553e-e1f0-4cd2-b5dc-68d53440e6af")]
+                construct msgFinal
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("a372e39a-ce46-4f11-842b-806650e7ab44")]
+                    transform (msgFinal) = ErrorHandling.ExpenseReport_to_ProcessedExpenses (msgResponse);
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("1894ad96-d3cf-4467-876a-6d0d126e6dd7")]
+                    msgFinal.Explaination="Your expense report submitted on " + System.Convert.ToString(msgFinal.ProcessedExpenses.SubmissionDate) + " has been approved. Please contact Rob Callaway in the accounting department for information regarding compensation.";
+                }
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("939c6973-5414-451d-a16f-b8df3e394c1f")]
+            send (StatusToEmployee.Operation_1, msgFinal);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("9b65e425-8d3c-4e17-ac01-0c82b92424e9")]
+            send (StatusToAccounting.Operation_1, msgFinal);
+        }
+    }
+}
+

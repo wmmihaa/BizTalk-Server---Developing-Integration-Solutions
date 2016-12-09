@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bridgeConfiguration xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="70e92df0-2389-435b-a5f4-ea1569c37d3b" biztalkServiceUrl="https://blogical.biztalk.windows.net" xmlns="http://schemas.microsoft.com/dsltools/BridgeConfiguration">
+  <entities>
+    <bridgeConfigurationModelHasEntities Id="d67f21fe-3505-47e8-8a42-11c5ae08d868">
+      <sql Id="57fe0805-2fff-4f44-a046-123a0eae5797" entityName="employees_all" address="https://blogical.servicebus.windows.net/employees/all/" endpointConfigName="employees_all">
+        <sqlPushIn>
+          <sqlHasPushIn Id="f0794545-7e40-4de0-8977-45c8b5ffed0b">
+            <sqlPushIn Id="ceb3d893-693e-4c8b-aa0b-c2365639d9d5" />
+          </sqlHasPushIn>
+        </sqlPushIn>
+      </sql>
+    </bridgeConfigurationModelHasEntities>
+    <bridgeConfigurationModelHasEntities Id="7e010fc8-b453-4e3a-a5db-7a96ce6a43e3">
+      <requestReplyBridge Id="5bc8c5ce-bae3-4ce5-8643-ccc7e46c1e5e" entityName="GetEmplyoees" address="GetEmplyoees" pipelineTemplateName="xmlPipeline" trackingOptions="" displayName="Xml Request-Reply Bridge">
+        <twoWayBridgeInPort>
+          <requestReplyBridgeHasTwoWayBridgeInPort Id="1da23ea0-823d-48e1-a888-44f960ad048b">
+            <twoWayBridgeInPort Id="aa58dd54-04cb-48e6-a8c5-49d799bebaef" name="TwoWayBridgeInPort" />
+          </requestReplyBridgeHasTwoWayBridgeInPort>
+        </twoWayBridgeInPort>
+        <twoWayRoutePort>
+          <requestReplyBridgeHasTwoWayRoutePort Id="dba2e141-78a8-4f7b-8734-1dcade4aa66f">
+            <twoWayRoutePort Id="fd1af936-72fe-4dcf-a24b-b5283c877ff9" name="TwoWayRoutePort">
+              <twoWayPushInPorts>
+                <twoWayRouteConnection Id="7a33a233-a0cb-4682-b188-dc6dad8d2b4b" filterCondition="1=1">
+                  <sqlPushInMoniker Id="ceb3d893-693e-4c8b-aa0b-c2365639d9d5" />
+                  <routeAction>&lt;ArrayOfPropertyDefinition xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/WindowsAzureServiceBus/Bridge"&gt;&lt;PropertyDefinition i:type="SoapHeaderPropertyDefinition"&gt;&lt;DataTypeString&gt;&lt;/DataTypeString&gt;&lt;PropertyName i:nil="true" /&gt;&lt;PropertyValueExpression&gt;'TypedProcedure/dbo/sp_GetEmployees'&lt;/PropertyValueExpression&gt;&lt;HeaderName&gt;Action&lt;/HeaderName&gt;&lt;HeaderNamespace&gt;&lt;/HeaderNamespace&gt;&lt;/PropertyDefinition&gt;&lt;/ArrayOfPropertyDefinition&gt;</routeAction>
+                </twoWayRouteConnection>
+              </twoWayPushInPorts>
+            </twoWayRoutePort>
+          </requestReplyBridgeHasTwoWayRoutePort>
+        </twoWayRoutePort>
+      </requestReplyBridge>
+    </bridgeConfigurationModelHasEntities>
+  </entities>
+</bridgeConfiguration>

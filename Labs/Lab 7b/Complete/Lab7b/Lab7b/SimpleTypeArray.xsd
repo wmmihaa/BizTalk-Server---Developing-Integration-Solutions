@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:array="http://schemas.microsoft.com/2003/10/Serialization/Arrays" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:annotation>
+    <xs:appinfo>
+      <fileNameHint xmlns="http://schemas.microsoft.com/servicemodel/adapters/metadata/xsd">SimpleTypeArray</fileNameHint>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:complexType name="ArrayOflong">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="long" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOflong" nillable="true" type="array:ArrayOflong" />
+</xs:schema>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<brl xmlns="http://schemas.microsoft.com/businessruleslanguage/2002">
+  <ruleset name="OrderApprovalPolicy">
+    <version major="1" minor="0" description="" modifiedby="WIN2008R2\Administrator" date="2011-11-05T12:07:54.3317303+01:00" />
+    <configuration />
+    <bindings>
+      <xmldocument ref="xml_31" doctype="Lab12.Order" instances="16" selectivity="1" instance="0">
+        <selector>/*[local-name()='Order' and namespace-uri()='http://Lab12.Order']</selector>
+        <selectoralias>/Order</selectoralias>
+        <schema>C:\Labs\Lab 12\Start\Lab12\Order.xsd</schema>
+      </xmldocument>
+    </bindings>
+    <rule name="[2] EvaluateApproval" priority="0" active="true">
+      <if>
+        <compare operator="less than">
+          <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="1c177bf4-a970-4669-a768-a74d33af190d" />
+          <lhs>
+            <function>
+              <xmldocumentmember xmldocumentref="xml_31" type="int" sideeffects="false">
+                <field>*[local-name()='TotalSum' and namespace-uri()='']</field>
+                <fieldalias>TotalSum</fieldalias>
+              </xmldocumentmember>
+            </function>
+          </lhs>
+          <rhs>
+            <constant>
+              <int>100</int>
+            </constant>
+          </rhs>
+        </compare>
+      </if>
+      <then>
+        <function>
+          <xmldocumentmember xmldocumentref="xml_31" type="boolean" sideeffects="true">
+            <field>*[local-name()='Approved' and namespace-uri()='']</field>
+            <fieldalias>Approved</fieldalias>
+            <argument>
+              <constant>
+                <boolean>true</boolean>
+              </constant>
+            </argument>
+          </xmldocumentmember>
+        </function>
+      </then>
+    </rule>
+    <rule name="[1] DefaultApproval" priority="1" active="true">
+      <if>
+        <compare operator="equal">
+          <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="05703dd9-1111-40b8-890d-ad7bfc45a925" />
+          <lhs>
+            <constant>
+              <string>1</string>
+            </constant>
+          </lhs>
+          <rhs>
+            <constant>
+              <string>1</string>
+            </constant>
+          </rhs>
+        </compare>
+      </if>
+      <then>
+        <function>
+          <xmldocumentmember xmldocumentref="xml_31" type="boolean" sideeffects="true">
+            <field>*[local-name()='Approved' and namespace-uri()='']</field>
+            <fieldalias>Approved</fieldalias>
+            <argument>
+              <constant>
+                <boolean>false</boolean>
+              </constant>
+            </argument>
+          </xmldocumentmember>
+        </function>
+      </then>
+    </rule>
+  </ruleset>
+  <ruleset name="OrderApprovalPolicy">
+    <version major="1" minor="1" description="" modifiedby="WIN2008R2\Administrator" date="2011-11-05T13:30:14.29428+01:00" />
+    <configuration />
+    <bindings>
+      <datarow ref="db_32" server="WIN2008R2\SalesDetails" dataset="SalesDetails" table="CustomerSalesStatistics" instances="16" selectivity="1" isdataconnection="true" instance="0" />
+      <xmldocument ref="xml_31" doctype="Lab12.Order" instances="16" selectivity="1" instance="0">
+        <selector>/*[local-name()='Order' and namespace-uri()='http://Lab12.Order']</selector>
+        <selectoralias>/Order</selectoralias>
+        <schema>C:\Labs\Lab 12\Start\Lab12\Order.xsd</schema>
+      </xmldocument>
+    </bindings>
+    <rule name="[2] EvaluateApproval" priority="0" active="true">
+      <if>
+        <or>
+          <compare operator="less than">
+            <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="1c177bf4-a970-4669-a768-a74d33af190d" />
+            <lhs>
+              <function>
+                <xmldocumentmember xmldocumentref="xml_31" type="int" sideeffects="false">
+                  <field>*[local-name()='TotalSum' and namespace-uri()='']</field>
+                  <fieldalias>TotalSum</fieldalias>
+                </xmldocumentmember>
+              </function>
+            </lhs>
+            <rhs>
+              <constant>
+                <int>100</int>
+              </constant>
+            </rhs>
+          </compare>
+          <and>
+            <compare operator="equal">
+              <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="05703dd9-1111-40b8-890d-ad7bfc45a925" />
+              <lhs>
+                <function>
+                  <datarowmember datarowref="db_32" column="CustomerName" type="string" sideeffects="false" />
+                </function>
+              </lhs>
+              <rhs>
+                <function>
+                  <xmldocumentmember xmldocumentref="xml_31" type="string" sideeffects="false">
+                    <field>*[local-name()='CustomerName' and namespace-uri()='']</field>
+                    <fieldalias>CustomerName</fieldalias>
+                  </xmldocumentmember>
+                </function>
+              </rhs>
+            </compare>
+            <compare operator="greater than">
+              <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="b276a0f4-12d9-4380-b242-135bbfc5e287" />
+              <lhs>
+                <function>
+                  <datarowmember datarowref="db_32" column="TotalOrdersToDate" type="decimal" sideeffects="false" />
+                </function>
+              </lhs>
+              <rhs>
+                <constant>
+                  <decimal>2000</decimal>
+                </constant>
+              </rhs>
+            </compare>
+          </and>
+        </or>
+      </if>
+      <then>
+        <function>
+          <xmldocumentmember xmldocumentref="xml_31" type="boolean" sideeffects="true">
+            <field>*[local-name()='Approved' and namespace-uri()='']</field>
+            <fieldalias>Approved</fieldalias>
+            <argument>
+              <constant>
+                <boolean>true</boolean>
+              </constant>
+            </argument>
+          </xmldocumentmember>
+        </function>
+      </then>
+    </rule>
+    <rule name="[1] DefaultApproval" priority="1" active="true">
+      <if>
+        <compare operator="equal">
+          <vocabularylink uri="3f0e9bcc-6212-4e6a-853c-e517f157a626" element="05703dd9-1111-40b8-890d-ad7bfc45a925" />
+          <lhs>
+            <constant>
+              <string>1</string>
+            </constant>
+          </lhs>
+          <rhs>
+            <constant>
+              <string>1</string>
+            </constant>
+          </rhs>
+        </compare>
+      </if>
+      <then>
+        <function>
+          <xmldocumentmember xmldocumentref="xml_31" type="boolean" sideeffects="true">
+            <field>*[local-name()='Approved' and namespace-uri()='']</field>
+            <fieldalias>Approved</fieldalias>
+            <argument>
+              <constant>
+                <boolean>false</boolean>
+              </constant>
+            </argument>
+          </xmldocumentmember>
+        </function>
+      </then>
+    </rule>
+  </ruleset>
+</brl>

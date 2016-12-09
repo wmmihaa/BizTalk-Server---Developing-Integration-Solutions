@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3D84E684-E767-4D1C-AA5D-ADB65B69F8D7}</ProjectGuid>
+    <ProjectTypeGuids>{1F7D1AC1-BF0E-4353-B6C4-10EB48C97527};{00FAA771-69CC-4AB9-A83D-50B49A68BA3B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HOL_WABS</RootNamespace>
+    <AssemblyName>HOL WABS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <BridgeConfiguration Include="MessageFlowItinerary.bcs" />
+    <Bridge Include="GetEmplyoees.BridgeConfig">
+      <DependentUpon>MessageFlowItinerary.bcs</DependentUpon>
+    </Bridge>
+    <XmlSchema Include="LOB Schemas\blogical_employees_all_TypedProcedure.dbo.xsd">
+      <SubType>Designer</SubType>
+    </XmlSchema>
+    <XmlSchema Include="LOB Schemas\blogical_employees_all_ProcedureResultSet.dbo.sp_GetEmployees.xsd">
+      <SubType>Designer</SubType>
+    </XmlSchema>
+    <XmlSchema Include="LOB Schemas\blogical_employees_all_Serialization.xsd">
+      <SubType>Designer</SubType>
+    </XmlSchema>
+    <AppConfig Include="employees_all.config">
+      <DependentUpon>MessageFlowItinerary.bcs</DependentUpon>
+    </AppConfig>
+    <None Include="MessageFlowItinerary.bcs.diagram">
+      <DependentUpon>MessageFlowItinerary.bcs</DependentUpon>
+    </None>
+    <LookupProvider Include="LookupProviderConfigurations.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Windows Azure BizTalk Services SDK\Microsoft.ApplicationServer.Integration.MessageFlow.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildAction=".xsd:XmlSchema, .trfm:CompileTransform, .config:AppConfig, .BridgeConfig:Bridge, .bcs:BridgeConfiguration" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

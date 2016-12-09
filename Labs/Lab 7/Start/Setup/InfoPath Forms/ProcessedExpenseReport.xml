@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?mso-infoPathSolution solutionVersion="1.0.0.1" productVersion="12.0.0" PIVersion="1.0.0.0" href="http://localhost:13016/Processed%20Expense%20Reports/Forms/template.xsn" name="urn:schemas-microsoft-com:office:infopath:Processed-Expense-Reports:http---ErrorHandling-ProcessedExpenses" language="en-us" ?><?mso-application progid="InfoPath.Document"?><ns1:Expenses xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns1="http://ErrorHandling.ProcessedExpenses" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:my="http://schemas.microsoft.com/office/infopath/2003/myXSD/2005-10-17T19:08:39" xmlns:xd="http://schemas.microsoft.com/office/infopath/2003">
+	<ProcessedExpenses>
+		<Name></Name>
+		<Status></Status>
+		<SubmissionDate></SubmissionDate>
+	</ProcessedExpenses>
+	<TotalExpenses></TotalExpenses>
+	<Explaination></Explaination>
+</ns1:Expenses>

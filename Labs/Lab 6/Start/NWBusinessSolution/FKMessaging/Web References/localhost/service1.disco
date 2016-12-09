@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost/supplierservice/service1.asmx?wsdl" docRef="http://localhost/supplierservice/service1.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://localhost/supplierservice/service1.asmx" xmlns:q1="http://tempuri.org/" binding="q1:SuppServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

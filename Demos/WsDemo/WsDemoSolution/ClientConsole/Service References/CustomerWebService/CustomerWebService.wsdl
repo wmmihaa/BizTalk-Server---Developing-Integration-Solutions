@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetCustomerNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetCustomerNumberResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCustomerNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerNumberResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CustomerWebServiceSoap">
+    <wsdl:operation name="GetCustomerNumber">
+      <wsdl:input message="tns:GetCustomerNumberSoapIn" />
+      <wsdl:output message="tns:GetCustomerNumberSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CustomerWebServiceSoap" type="tns:CustomerWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCustomerNumber">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CustomerWebServiceSoap12" type="tns:CustomerWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCustomerNumber">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CustomerWebService">
+    <wsdl:port name="CustomerWebServiceSoap" binding="tns:CustomerWebServiceSoap">
+      <soap:address location="http://localhost:7708/WebSite/CustomerWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CustomerWebServiceSoap12" binding="tns:CustomerWebServiceSoap12">
+      <soap12:address location="http://localhost:7708/WebSite/CustomerWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
