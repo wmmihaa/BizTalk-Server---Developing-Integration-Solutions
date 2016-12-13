@@ -40,7 +40,7 @@ Extra modules:
 
 ## At course completion
 After completing this course, students will be able to:
-* Describe the message processing architecture and the development environment provided by BizTalk Server 2006.
+* Describe the message processing architecture and the development environment provided by BizTalk Server 2016.
 * Create XML and flat-file schemas.
 * Create a BizTalk map and use functoids to manipulate data in a map.
 * Deploy a BizTalk project and view deployed assemblies.
