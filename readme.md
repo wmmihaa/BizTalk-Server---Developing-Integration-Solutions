@@ -3,7 +3,10 @@
 ## Overview 
 The course is for system developers who will be working with Microsoft BizTalk Server. We’ll cover concepts and technologies in the context of integrations and provide an overview on the Microsoft integration landscape.
 
-The course is divided into thirteen modules:
+### Audience profile
+This course is intended for solution architects and developers who are responsible for developing Microsoft BizTalk Server 2016 business process and integration solutions.
+
+**The course is divided into thirteen modules:**
 
 ### Day 1 
 
@@ -34,6 +37,24 @@ Extra modules:
 * BizTalk Server and B2B
 * Installing and Configuring
 * "The Course Evaluation lab"
+
+## At course completion
+After completing this course, students will be able to:
+* Describe the message processing architecture and the development environment provided by BizTalk Server 2006.
+* Create XML and flat-file schemas.
+* Create a BizTalk map and use functoids to manipulate data in a map.
+* Deploy a BizTalk project and view deployed assemblies.
+* Route messages based on the contents of a received message.
+* Configure common adapters to enable BizTalk integration.
+* Create an orchestration to represent a business process.
+* Understand Azure ServiceBus and Azure Logic Apps
+* Use orchestration shapes to define a detailed business process.
+* Configure an orchestration for transactional business processing.
+* Create, deploy, and manage a BizTalk application.
+* Configure BizTalk to consume and publish Web services.
+* Configure business rules and call a business rule from within an orchestration.
+* Enable Business Activity Monitoring (BAM) functions for business users.
+* Integrate trading partners into a business process.
 
 # For instructor-led training in Sweden
 Please contact [AddSkills/Cornerstone](http://www.addskills.se/utbildningar/microsoft/biztalk/biztalk-2013-for-utvecklare).
