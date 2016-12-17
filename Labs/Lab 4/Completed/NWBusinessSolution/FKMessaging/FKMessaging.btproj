@@ -19,7 +19,7 @@
     <ProjectTypeGuids>{EF7E3281-CD33-11D4-8326-00C04FA0CE8D};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <GenericProcessing>true</GenericProcessing>
     <SignAssembly>true</SignAssembly>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <ModifySolutionConfiguration>true</ModifySolutionConfiguration>
     <BpelCompliance>True</BpelCompliance>
     <IsWebBootstrapper>true</IsWebBootstrapper>

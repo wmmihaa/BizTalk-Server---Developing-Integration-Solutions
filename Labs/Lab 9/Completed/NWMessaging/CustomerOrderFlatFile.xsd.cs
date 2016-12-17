@@ -2,6 +2,9 @@ namespace NWMessaging {
     using Microsoft.XLANGs.BaseTypes;
     
     
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.BizTalk.Schema.Compiler", "3.0.1.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [SchemaType(SchemaTypeEnum.Document)]
     [Schema(@"http://NWMessaging.CustomerOrderFlatFile",@"Customers")]
     [System.SerializableAttribute()]
@@ -13,7 +16,7 @@ namespace NWMessaging {
         
         [System.NonSerializedAttribute()]
         private const string _strSchema = @"<?xml version=""1.0"" encoding=""utf-16""?>
-<xs:schema xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" xmlns=""http://NWMessaging.CustomerOrderFlatFile"" targetNamespace=""http://NWMessaging.CustomerOrderFlatFile"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
+<xs:schema xmlns=""http://NWMessaging.CustomerOrderFlatFile"" xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" targetNamespace=""http://NWMessaging.CustomerOrderFlatFile"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
   <xs:annotation>
     <xs:appinfo>
       <b:schemaInfo count_positions_by_byte=""false"" standard=""Flat File"" root_reference=""Customers"" default_pad_char="" "" pad_char_type=""char"" parser_optimization=""speed"" lookahead_depth=""3"" suppress_empty_nodes=""false"" generate_empty_nodes=""true"" allow_early_termination=""false"" early_terminate_optional_fields=""false"" allow_message_breakup_of_infix_root=""false"" compile_parse_tables=""false"" />

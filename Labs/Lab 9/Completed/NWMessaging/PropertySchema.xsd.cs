@@ -2,6 +2,9 @@ namespace NWMessaging {
     using Microsoft.XLANGs.BaseTypes;
     
     
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.BizTalk.Schema.Compiler", "3.0.1.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [SchemaType(SchemaTypeEnum.Property)]
     [System.SerializableAttribute()]
     [SchemaRoots(new string[] {@"CustomerPONumber", @"TotalOrderAmount"})]
@@ -12,7 +15,7 @@ namespace NWMessaging {
         
         [System.NonSerializedAttribute()]
         private const string _strSchema = @"<?xml version=""1.0"" encoding=""utf-16""?>
-<xs:schema xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" xmlns=""http://NWMessaging.PropertySchema.PropertySchema"" targetNamespace=""http://NWMessaging.PropertySchema.PropertySchema"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
+<xs:schema xmlns=""http://NWMessaging.PropertySchema.PropertySchema"" xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" targetNamespace=""http://NWMessaging.PropertySchema.PropertySchema"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
   <xs:annotation>
     <xs:appinfo>
       <b:schemaInfo schema_type=""property"" xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" />
@@ -62,6 +65,9 @@ namespace NWMessaging {
         }
     }
     
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.BizTalk.Schema.Compiler", "3.0.1.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [System.SerializableAttribute()]
     [PropertyType(@"CustomerPONumber",@"http://NWMessaging.PropertySchema.PropertySchema","string","System.String")]
     [PropertyGuidAttribute(@"b207e5cd-14d1-4a73-9b9a-8b182915e31f")]
@@ -89,6 +95,9 @@ namespace NWMessaging {
         }
     }
     
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.BizTalk.Schema.Compiler", "3.0.1.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [System.SerializableAttribute()]
     [PropertyType(@"TotalOrderAmount",@"http://NWMessaging.PropertySchema.PropertySchema","double","System.Double")]
     [PropertyGuidAttribute(@"3da61ca3-9db9-4add-ac6a-0a782e999c99")]

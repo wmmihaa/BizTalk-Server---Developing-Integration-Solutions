@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo2.ForwardOnlyStreaming", "Demo2.ForwardOnlyStreaming\Demo2.ForwardOnlyStreaming.csproj", "{0C758DC7-CE06-4741-B17E-84496F2AEC0E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo2.BizTalkArchive", "Demo2.BizTalkArchive\Demo2.BizTalkArchive.btproj", "{A14989E3-E325-48DA-94DD-A2EB3592E395}"

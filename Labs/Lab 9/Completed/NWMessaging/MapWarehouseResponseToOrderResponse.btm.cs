@@ -1,9 +1,9 @@
 namespace NWMessaging {
     
     
-    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"NWMessaging.DistResp", typeof(NWMessaging.DistResp))]
-    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"NWMessaging.OrderResponse", typeof(NWMessaging.OrderResponse))]
-    public sealed class MapWarehouseResponseToOrderResponse : Microsoft.XLANGs.BaseTypes.TransformBase {
+    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"NWMessaging.DistResp", typeof(global::NWMessaging.DistResp))]
+    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"NWMessaging.OrderResponse", typeof(global::NWMessaging.OrderResponse))]
+    public sealed class MapWarehouseResponseToOrderResponse : global::Microsoft.XLANGs.BaseTypes.TransformBase {
         
         private const string _strMap = @"<?xml version=""1.0"" encoding=""UTF-16""?>
 <xsl:stylesheet xmlns:xsl=""http://www.w3.org/1999/XSL/Transform"" xmlns:msxsl=""urn:schemas-microsoft-com:xslt"" xmlns:var=""http://schemas.microsoft.com/BizTalk/2003/var"" exclude-result-prefixes=""msxsl var s0"" version=""1.0"" xmlns:s0=""http://NWMessaging.DistResp"" xmlns:ns0=""http://NWMessaging.OrderResponse"">
@@ -26,15 +26,27 @@ namespace NWMessaging {
   </xsl:template>
 </xsl:stylesheet>";
         
+        private const int _useXSLTransform = 0;
+        
         private const string _strArgList = @"<ExtensionObjects />";
         
         private const string _strSrcSchemasList0 = @"NWMessaging.DistResp";
         
+        private const global::NWMessaging.DistResp _srcSchemaTypeReference0 = null;
+        
         private const string _strTrgSchemasList0 = @"NWMessaging.OrderResponse";
+        
+        private const global::NWMessaging.OrderResponse _trgSchemaTypeReference0 = null;
         
         public override string XmlContent {
             get {
                 return _strMap;
+            }
+        }
+        
+        public override int UseXSLTransform {
+            get {
+                return _useXSLTransform;
             }
         }
         

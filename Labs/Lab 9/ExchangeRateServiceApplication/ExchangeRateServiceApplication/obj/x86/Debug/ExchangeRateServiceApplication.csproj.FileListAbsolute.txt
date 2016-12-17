@@ -1,0 +1,1 @@
+C:\Labs\Lab 9\ExchangeRateServiceApplication\ExchangeRateServiceApplication\bin\Debug\ExchangeRateServiceApplication.exe.config

@@ -33,7 +33,7 @@ namespace ContosoMessaging
 "1\" execMethod=\"All\" stageId=\"9d0e4108-4cce-4536-83fa-4a5040674ad6\" />      <Components />    </Stage"+
 ">  </Stages></Document>";
         
-        private const string _versionDependentGuid = "69a60de1-1f21-4c79-9d82-cafaba0aee23";
+        private const string _versionDependentGuid = "0bfc4501-bfd8-4868-aaef-89617a3478ef";
         
         public FlatFileSendPipeline()
         {

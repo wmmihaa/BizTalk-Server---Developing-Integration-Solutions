@@ -2,7 +2,7 @@
 #error Do not define __DESIGNER_DATA.
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
-    <om:Element Type="Module" OID="4b19109e-d897-44c2-acd5-37a6b5c96092" LowerBound="1.1" HigherBound="23.1">
+    <om:Element Type="Module" OID="3db402b5-f4c0-4131-bacd-168a41411486" LowerBound="1.1" HigherBound="23.1">
         <om:Property Name="ReportToAnalyst" Value="True" />
         <om:Property Name="Name" Value="FKMessaging.localhost.SuppService_" />
         <om:Property Name="Signal" Value="False" />
@@ -12,20 +12,20 @@
             <om:Property Name="ReportToAnalyst" Value="True" />
             <om:Property Name="Name" Value="FKMessaging.localhost.SuppService" />
             <om:Property Name="Signal" Value="False" />
-            <om:Element Type="MethodMessageOperation" OID="f65a4f58-e06c-4b78-b52b-c0f7e524f70e" ParentLink="MethodMessageType_MethodMessageOperation">
+            <om:Element Type="MethodMessageOperation" OID="85e2f7fb-8655-4e30-820f-5c0e094c4570" ParentLink="MethodMessageType_MethodMessageOperation">
                 <om:Property Name="OperationName" Value="PostOrder" />
                 <om:Property Name="OperationDirection" Value="Request" />
                 <om:Property Name="ReportToAnalyst" Value="True" />
                 <om:Property Name="Name" Value="PostOrder_request" />
                 <om:Property Name="Signal" Value="False" />
-                <om:Element Type="WebOperationPart" OID="6b71d94f-7062-4fe5-8b63-d24c3a8ca5e7" ParentLink="MethodMessageOperation_WebOperationPart">
+                <om:Element Type="WebOperationPart" OID="336c5267-a83a-4fe0-a6b1-693e31be2a86" ParentLink="MethodMessageOperation_WebOperationPart">
                     <om:Property Name="ClassName" Value="FKMessaging.localhost.Reference" />
                     <om:Property Name="ReportToAnalyst" Value="True" />
                     <om:Property Name="Name" Value="order" />
                     <om:Property Name="Signal" Value="False" />
                 </om:Element>
             </om:Element>
-            <om:Element Type="MethodMessageOperation" OID="46a5d701-89b9-4751-a5f9-db2cb834c903" ParentLink="MethodMessageType_MethodMessageOperation">
+            <om:Element Type="MethodMessageOperation" OID="d0546b99-ec5d-4437-890b-e6fb5ae25b55" ParentLink="MethodMessageType_MethodMessageOperation">
                 <om:Property Name="OperationName" Value="PostOrder" />
                 <om:Property Name="OperationDirection" Value="Response" />
                 <om:Property Name="ReportToAnalyst" Value="True" />
@@ -33,7 +33,7 @@
                 <om:Property Name="Signal" Value="False" />
             </om:Element>
         </om:Element>
-        <om:Element Type="TargetXMLNamespaceAttribute" OID="61fa60c1-cab3-4103-b2e6-7fc7a2dc7469" ParentLink="Module_CLRAttribute" LowerBound="2.1" HigherBound="3.1">
+        <om:Element Type="TargetXMLNamespaceAttribute" OID="fa503ed3-7fa8-4d79-8917-ddf36d43ffa9" ParentLink="Module_CLRAttribute" LowerBound="2.1" HigherBound="3.1">
             <om:Property Name="TargetXMLNamespace" Value="http://tempuri.org/" />
             <om:Property Name="Signal" Value="False" />
         </om:Element>

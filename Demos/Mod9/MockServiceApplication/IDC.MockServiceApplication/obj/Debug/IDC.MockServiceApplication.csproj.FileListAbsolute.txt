@@ -1,0 +1,6 @@
+C:\Demos\Mod9\MockServiceApplication\IDC.MockServiceApplication\bin\IDC.MockServiceApplication.dll.config
+C:\Demos\Mod9\MockServiceApplication\IDC.MockServiceApplication\bin\IDC.MockServiceApplication.dll
+C:\Demos\Mod9\MockServiceApplication\IDC.MockServiceApplication\bin\IDC.MockServiceApplication.pdb
+C:\Demos\Mod9\MockServiceApplication\IDC.MockServiceApplication\obj\Debug\IDC.MockServiceApplication.csprojResolveAssemblyReference.cache
+C:\Demos\Mod9\MockServiceApplication\IDC.MockServiceApplication\obj\Debug\IDC.MockServiceApplication.dll
+C:\Demos\Mod9\MockServiceApplication\IDC.MockServiceApplication\obj\Debug\IDC.MockServiceApplication.pdb

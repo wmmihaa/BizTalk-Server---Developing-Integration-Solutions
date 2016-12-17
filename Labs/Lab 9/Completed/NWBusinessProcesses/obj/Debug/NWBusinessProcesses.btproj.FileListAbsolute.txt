@@ -1,0 +1,8 @@
+C:\Labs\Lab 9\Completed\NWBusinessProcesses\bin\Debug\NWBusinessProcesses.dll
+C:\Labs\Lab 9\Completed\NWBusinessProcesses\bin\Debug\NWBusinessProcesses.pdb
+C:\Labs\Lab 9\Completed\NWBusinessProcesses\bin\Debug\Microsoft.BizTalk.Pipeline.dll
+C:\Labs\Lab 9\Completed\NWBusinessProcesses\bin\Debug\Microsoft.BizTalk.TestTools.dll
+C:\Labs\Lab 9\Completed\NWBusinessProcesses\bin\Debug\Microsoft.XLANGs.BaseTypes.dll
+C:\Labs\Lab 9\Completed\NWBusinessProcesses\bin\Debug\NWMessaging.dll
+C:\Labs\Lab 9\Completed\NWBusinessProcesses\obj\Debug\NWBusinessProcesses.dll
+C:\Labs\Lab 9\Completed\NWBusinessProcesses\obj\Debug\NWBusinessProcesses.pdb

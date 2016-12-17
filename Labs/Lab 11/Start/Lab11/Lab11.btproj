@@ -11,7 +11,7 @@
     <GenericProcessing>true</GenericProcessing>
     <RootNamespace>Lab11</RootNamespace>
     <AssemblyName>Lab11</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <BpelCompliance>True</BpelCompliance>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>

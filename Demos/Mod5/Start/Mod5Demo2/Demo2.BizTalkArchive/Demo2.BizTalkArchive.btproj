@@ -11,7 +11,7 @@
     <GenericProcessing>true</GenericProcessing>
     <RootNamespace>Demo2.BizTalkArchive</RootNamespace>
     <AssemblyName>Demo2.BizTalkArchive</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <BpelCompliance>True</BpelCompliance>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Kurs.snk</AssemblyOriginatorKeyFile>

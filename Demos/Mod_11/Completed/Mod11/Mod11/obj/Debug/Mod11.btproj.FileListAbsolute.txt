@@ -1,0 +1,7 @@
+C:\Demos\Mod_11\Completed\Mod11\Mod11\bin\Debug\Mod11.dll
+C:\Demos\Mod_11\Completed\Mod11\Mod11\bin\Debug\Mod11.pdb
+C:\Demos\Mod_11\Completed\Mod11\Mod11\bin\Debug\Microsoft.BizTalk.Pipeline.dll
+C:\Demos\Mod_11\Completed\Mod11\Mod11\bin\Debug\Microsoft.BizTalk.TestTools.dll
+C:\Demos\Mod_11\Completed\Mod11\Mod11\bin\Debug\Microsoft.XLANGs.BaseTypes.dll
+C:\Demos\Mod_11\Completed\Mod11\Mod11\obj\Debug\Mod11.dll
+C:\Demos\Mod_11\Completed\Mod11\Mod11\obj\Debug\Mod11.pdb

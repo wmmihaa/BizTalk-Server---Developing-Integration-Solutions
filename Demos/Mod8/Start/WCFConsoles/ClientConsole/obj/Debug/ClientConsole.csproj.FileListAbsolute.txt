@@ -1,0 +1,6 @@
+C:\Demos\Mod8\Start\WCFConsoles\ClientConsole\bin\Debug\ClientConsole.exe.config
+C:\Demos\Mod8\Start\WCFConsoles\ClientConsole\bin\Debug\ClientConsole.exe
+C:\Demos\Mod8\Start\WCFConsoles\ClientConsole\bin\Debug\ClientConsole.pdb
+C:\Demos\Mod8\Start\WCFConsoles\ClientConsole\obj\Debug\ClientConsole.exe
+C:\Demos\Mod8\Start\WCFConsoles\ClientConsole\obj\Debug\ClientConsole.pdb
+C:\Demos\Mod8\Start\WCFConsoles\ClientConsole\obj\Debug\ClientConsole.csprojResolveAssemblyReference.cache

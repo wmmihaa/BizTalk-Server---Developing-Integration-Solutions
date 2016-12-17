@@ -1,0 +1,6 @@
+C:\Demos\Mod9\MockServiceApplication\Client\bin\Debug\Client.exe.config
+C:\Demos\Mod9\MockServiceApplication\Client\bin\Debug\Client.exe
+C:\Demos\Mod9\MockServiceApplication\Client\bin\Debug\Client.pdb
+C:\Demos\Mod9\MockServiceApplication\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+C:\Demos\Mod9\MockServiceApplication\Client\obj\Debug\Client.exe
+C:\Demos\Mod9\MockServiceApplication\Client\obj\Debug\Client.pdb

@@ -35,6 +35,8 @@ public string StringConcat(string param0, string param1, string param2)
 ]]></msxsl:script>
 </xsl:stylesheet>";
         
+        private const int _useXSLTransform = 0;
+        
         private const string _strArgList = @"<ExtensionObjects />";
         
         private const string _strSrcSchemasList0 = @"ContosoMessaging.Order";
@@ -48,6 +50,12 @@ public string StringConcat(string param0, string param1, string param2)
         public override string XmlContent {
             get {
                 return _strMap;
+            }
+        }
+        
+        public override int UseXSLTransform {
+            get {
+                return _useXSLTransform;
             }
         }
         

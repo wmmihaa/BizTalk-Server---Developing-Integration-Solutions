@@ -2,6 +2,9 @@ namespace NWMessaging {
     using Microsoft.XLANGs.BaseTypes;
     
     
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.BizTalk.Schema.Compiler", "3.0.1.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [SchemaType(SchemaTypeEnum.Document)]
     [Schema(@"http://NWMessaging.AccountingInvoice",@"Invoice")]
     [System.SerializableAttribute()]
@@ -13,7 +16,7 @@ namespace NWMessaging {
         
         [System.NonSerializedAttribute()]
         private const string _strSchema = @"<?xml version=""1.0"" encoding=""utf-16""?>
-<xs:schema xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" xmlns=""http://NWMessaging.AccountingInvoice"" targetNamespace=""http://NWMessaging.AccountingInvoice"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
+<xs:schema xmlns=""http://NWMessaging.AccountingInvoice"" xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" targetNamespace=""http://NWMessaging.AccountingInvoice"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
   <xs:element name=""Invoice"">
     <xs:complexType />
   </xs:element>

@@ -1,0 +1,4 @@
+C:\Labs\Lab 10\WarehouseWCFServices\StaffService\bin\Debug\StaffService.exe
+C:\Labs\Lab 10\WarehouseWCFServices\StaffService\bin\Debug\StaffService.pdb
+C:\Labs\Lab 10\WarehouseWCFServices\StaffService\obj\Debug\StaffService.exe
+C:\Labs\Lab 10\WarehouseWCFServices\StaffService\obj\Debug\StaffService.pdb

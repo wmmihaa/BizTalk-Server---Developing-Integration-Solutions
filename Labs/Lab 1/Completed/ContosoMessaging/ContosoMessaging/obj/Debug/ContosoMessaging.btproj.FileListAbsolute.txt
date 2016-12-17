@@ -1,0 +1,6 @@
+C:\Labs\Lab 1\Completed\ContosoMessaging\ContosoMessaging\bin\Debug\ContosoMessaging.dll
+C:\Labs\Lab 1\Completed\ContosoMessaging\ContosoMessaging\bin\Debug\ContosoMessaging.pdb
+C:\Labs\Lab 1\Completed\ContosoMessaging\ContosoMessaging\bin\Debug\Microsoft.BizTalk.TestTools.dll
+C:\Labs\Lab 1\Completed\ContosoMessaging\ContosoMessaging\bin\Debug\Microsoft.XLANGs.BaseTypes.dll
+C:\Labs\Lab 1\Completed\ContosoMessaging\ContosoMessaging\obj\Debug\ContosoMessaging.dll
+C:\Labs\Lab 1\Completed\ContosoMessaging\ContosoMessaging\obj\Debug\ContosoMessaging.pdb

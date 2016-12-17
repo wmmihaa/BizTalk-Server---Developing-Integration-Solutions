@@ -2,11 +2,14 @@ namespace NWMessaging {
     using Microsoft.XLANGs.BaseTypes;
     
     
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.BizTalk.Schema.Compiler", "3.0.1.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [SchemaType(SchemaTypeEnum.Document)]
     [Schema(@"http://NWMessaging.CustomerOrder",@"CustomerOrder")]
     [System.SerializableAttribute()]
     [SchemaRoots(new string[] {@"CustomerOrder"})]
-    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"NWMessaging.ShippingAddress", typeof(NWMessaging.ShippingAddress))]
+    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"NWMessaging.ShippingAddress", typeof(global::NWMessaging.ShippingAddress))]
     public sealed class CustomerOrder : Microsoft.XLANGs.BaseTypes.SchemaBase {
         
         [System.NonSerializedAttribute()]
@@ -14,7 +17,7 @@ namespace NWMessaging {
         
         [System.NonSerializedAttribute()]
         private const string _strSchema = @"<?xml version=""1.0"" encoding=""utf-16""?>
-<xs:schema xmlns:ns0=""http://OrderSchemas.PropertySchema"" xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" xmlns=""http://NWMessaging.CustomerOrder"" xmlns:ns1=""http://NWMessaging.ShippingAddress"" targetNamespace=""http://NWMessaging.CustomerOrder"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
+<xs:schema xmlns=""http://NWMessaging.CustomerOrder"" xmlns:ns1=""http://NWMessaging.ShippingAddress"" xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" xmlns:ns0=""http://OrderSchemas.PropertySchema"" targetNamespace=""http://NWMessaging.CustomerOrder"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
   <xs:import schemaLocation=""NWMessaging.ShippingAddress"" namespace=""http://NWMessaging.ShippingAddress"" />
   <xs:annotation>
     <xs:appinfo>

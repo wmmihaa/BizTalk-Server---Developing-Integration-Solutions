@@ -1,0 +1,8 @@
+C:\Demos\Mod8\Start\WCFConsoles\ServiceConsole\bin\Debug\ServiceConsole.exe.config
+C:\Demos\Mod8\Start\WCFConsoles\ServiceConsole\bin\Debug\ServiceConsole.exe
+C:\Demos\Mod8\Start\WCFConsoles\ServiceConsole\bin\Debug\ServiceConsole.pdb
+C:\Demos\Mod8\Start\WCFConsoles\ServiceConsole\bin\Debug\CustomerLibrary.dll
+C:\Demos\Mod8\Start\WCFConsoles\ServiceConsole\bin\Debug\CustomerLibrary.pdb
+C:\Demos\Mod8\Start\WCFConsoles\ServiceConsole\obj\Debug\ServiceConsole.csprojResolveAssemblyReference.cache
+C:\Demos\Mod8\Start\WCFConsoles\ServiceConsole\obj\Debug\ServiceConsole.exe
+C:\Demos\Mod8\Start\WCFConsoles\ServiceConsole\obj\Debug\ServiceConsole.pdb

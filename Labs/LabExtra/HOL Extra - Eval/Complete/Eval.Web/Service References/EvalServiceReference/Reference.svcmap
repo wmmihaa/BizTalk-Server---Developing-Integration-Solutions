@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="78648afb-3ee0-4c48-af11-cae410d98865" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Eval.Orchestrations/Eval_Orchestrations_ProcessEvals_EvalService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Eval_Orchestrations_ProcessEvals_EvalService.xsd" MetadataType="Schema" ID="22895801-d742-4db3-9036-2296037becf5" SourceId="1" SourceUrl="http://win2008r2/Eval.Orchestrations/Eval_Orchestrations_ProcessEvals_EvalService.svc?xsd=xsd2" />
+    <MetadataFile FileName="Eval_Orchestrations_ProcessEvals_EvalService.disco" MetadataType="Disco" ID="06c8946d-6a94-4108-b0cb-9f80aa88148c" SourceId="1" SourceUrl="http://win2008r2/Eval.Orchestrations/Eval_Orchestrations_ProcessEvals_EvalService.svc?disco" />
+    <MetadataFile FileName="Eval_Orchestrations_ProcessEvals_EvalService1.xsd" MetadataType="Schema" ID="ad0f13b2-bf43-45cc-8b9f-3495644fcb20" SourceId="1" SourceUrl="http://win2008r2/Eval.Orchestrations/Eval_Orchestrations_ProcessEvals_EvalService.svc?xsd=xsd3" />
+    <MetadataFile FileName="BizTalkServiceInstance.wsdl" MetadataType="Wsdl" ID="febc942c-de57-4451-87b7-62763195f2db" SourceId="1" SourceUrl="http://win2008r2/Eval.Orchestrations/Eval_Orchestrations_ProcessEvals_EvalService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

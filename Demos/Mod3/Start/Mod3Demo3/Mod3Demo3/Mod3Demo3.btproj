@@ -11,7 +11,7 @@
     <GenericProcessing>true</GenericProcessing>
     <RootNamespace>Mod3Demo3</RootNamespace>
     <AssemblyName>Mod3Demo3</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <BpelCompliance>True</BpelCompliance>
     <FileUpgradeFlags>
     </FileUpgradeFlags>

@@ -11,7 +11,7 @@
     <GenericProcessing>true</GenericProcessing>
     <RootNamespace>Mod8</RootNamespace>
     <AssemblyName>Mod8</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <BpelCompliance>True</BpelCompliance>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
@@ -71,14 +71,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Key.snk" />
-    <Schema Include="Service1_mod8_customers.xsd">
-      <TypeName>Service1_mod8_customers</TypeName>
-      <Namespace>Mod8</Namespace>
-    </Schema>
-    <Schema Include="Service1_tempuri_org.xsd">
-      <TypeName>Service1_tempuri_org</TypeName>
-      <Namespace>Mod8</Namespace>
-    </Schema>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />

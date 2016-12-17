@@ -2,17 +2,20 @@ namespace NWMessaging {
     using Microsoft.XLANGs.BaseTypes;
     
     
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.BizTalk.Schema.Compiler", "3.0.1.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [SchemaType(SchemaTypeEnum.Document)]
     [Schema(@"http://NWMessaging.CustomerOrder",@"CustomerOrder")]
-    [Microsoft.XLANGs.BaseTypes.PropertyAttribute(typeof(NWMessaging.CustomerPONumber), XPath = @"/*[local-name()='CustomerOrder' and namespace-uri()='http://NWMessaging.CustomerOrder']/*[local-name()='CustomerPONumber' and namespace-uri()='']", XsdType = @"string")]
-    [Microsoft.XLANGs.BaseTypes.PropertyAttribute(typeof(NWMessaging.TotalOrderAmount), XPath = @"/*[local-name()='CustomerOrder' and namespace-uri()='http://NWMessaging.CustomerOrder']/*[local-name()='TotalOrderAmount' and namespace-uri()='']", XsdType = @"double")]
+    [Microsoft.XLANGs.BaseTypes.PropertyAttribute(typeof(global::NWMessaging.CustomerPONumber), XPath = @"/*[local-name()='CustomerOrder' and namespace-uri()='http://NWMessaging.CustomerOrder']/*[local-name()='CustomerPONumber' and namespace-uri()='']", XsdType = @"string")]
+    [Microsoft.XLANGs.BaseTypes.PropertyAttribute(typeof(global::NWMessaging.TotalOrderAmount), XPath = @"/*[local-name()='CustomerOrder' and namespace-uri()='http://NWMessaging.CustomerOrder']/*[local-name()='TotalOrderAmount' and namespace-uri()='']", XsdType = @"double")]
     [Microsoft.XLANGs.BaseTypes.DistinguishedFieldAttribute(typeof(System.String), "Status", XPath = @"/*[local-name()='CustomerOrder' and namespace-uri()='http://NWMessaging.CustomerOrder']/*[local-name()='Status' and namespace-uri()='']", XsdType = @"string")]
     [Microsoft.XLANGs.BaseTypes.DistinguishedFieldAttribute(typeof(System.String), "Comments", XPath = @"/*[local-name()='CustomerOrder' and namespace-uri()='http://NWMessaging.CustomerOrder']/*[local-name()='Comments' and namespace-uri()='']", XsdType = @"string")]
     [Microsoft.XLANGs.BaseTypes.DistinguishedFieldAttribute(typeof(System.String), "ReplyAddress", XPath = @"/*[local-name()='CustomerOrder' and namespace-uri()='http://NWMessaging.CustomerOrder']/*[local-name()='ReplyAddress' and namespace-uri()='']", XsdType = @"string")]
     [System.SerializableAttribute()]
     [SchemaRoots(new string[] {@"CustomerOrder"})]
-    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"NWMessaging.ShippingAddress", typeof(NWMessaging.ShippingAddress))]
-    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"NWMessaging.PropertySchema", typeof(NWMessaging.PropertySchema))]
+    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"NWMessaging.ShippingAddress", typeof(global::NWMessaging.ShippingAddress))]
+    [Microsoft.XLANGs.BaseTypes.SchemaReference(@"NWMessaging.PropertySchema", typeof(global::NWMessaging.PropertySchema))]
     public sealed class CustomerOrder : Microsoft.XLANGs.BaseTypes.SchemaBase {
         
         [System.NonSerializedAttribute()]
@@ -20,7 +23,7 @@ namespace NWMessaging {
         
         [System.NonSerializedAttribute()]
         private const string _strSchema = @"<?xml version=""1.0"" encoding=""utf-16""?>
-<xs:schema xmlns:ns0=""http://OrderSchemas.PropertySchema"" xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" xmlns:ns2=""http://NWMessaging.PropertySchema.PropertySchema"" xmlns=""http://NWMessaging.CustomerOrder"" xmlns:ns1=""http://NWMessaging.ShippingAddress"" targetNamespace=""http://NWMessaging.CustomerOrder"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
+<xs:schema xmlns:ns2=""http://NWMessaging.PropertySchema.PropertySchema"" xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" xmlns:ns0=""http://OrderSchemas.PropertySchema"" xmlns=""http://NWMessaging.CustomerOrder"" xmlns:ns1=""http://NWMessaging.ShippingAddress"" targetNamespace=""http://NWMessaging.CustomerOrder"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
   <xs:import schemaLocation=""NWMessaging.ShippingAddress"" namespace=""http://NWMessaging.ShippingAddress"" />
   <xs:annotation>
     <xs:appinfo>

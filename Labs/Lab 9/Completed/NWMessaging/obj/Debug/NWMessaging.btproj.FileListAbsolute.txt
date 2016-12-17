@@ -1,0 +1,7 @@
+C:\Labs\Lab 9\Completed\NWMessaging\bin\Debug\NWMessaging.dll
+C:\Labs\Lab 9\Completed\NWMessaging\bin\Debug\NWMessaging.pdb
+C:\Labs\Lab 9\Completed\NWMessaging\bin\Debug\Microsoft.BizTalk.Pipeline.dll
+C:\Labs\Lab 9\Completed\NWMessaging\bin\Debug\Microsoft.BizTalk.TestTools.dll
+C:\Labs\Lab 9\Completed\NWMessaging\bin\Debug\Microsoft.XLANGs.BaseTypes.dll
+C:\Labs\Lab 9\Completed\NWMessaging\obj\Debug\NWMessaging.dll
+C:\Labs\Lab 9\Completed\NWMessaging\obj\Debug\NWMessaging.pdb

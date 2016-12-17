@@ -71,6 +71,7 @@ namespace NWTest
         [TestMethod()]
         public void NWCustomerOrder_To_FKSupplierPOConstructorTest()
         {
+            
             NWCustomerOrder_To_FKSupplierPO target = new NWCustomerOrder_To_FKSupplierPO();
             string sourceFile = @"C:\Labs\Lab 4\Start\CustomerOrder.xml";
             string destFile = @"C:\Labs\Lab 4\Start\SupplierPO.xml";
@@ -81,6 +82,7 @@ namespace NWTest
             destFile, Microsoft.BizTalk.TestTools.Schema.OutputInstanceType.XML);
 
             Assert.IsTrue(File.Exists(destFile));
+            
         }
     }
 }

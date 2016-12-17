@@ -1,5 +1,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWMessaging", "NWMessaging\NWMessaging.btproj", "{E1396F40-A0C7-4D4A-B0EA-92FE2D4C5923}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NWBusinessProcesses", "NWBusinessProcesses\NWBusinessProcesses.btproj", "{60742B15-B963-4EBF-8B5C-2A0E608CE93E}"

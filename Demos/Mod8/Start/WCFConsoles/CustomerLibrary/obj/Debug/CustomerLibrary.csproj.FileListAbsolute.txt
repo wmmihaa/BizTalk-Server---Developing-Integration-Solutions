@@ -1,0 +1,5 @@
+C:\Demos\Mod8\Start\WCFConsoles\CustomerLibrary\bin\Debug\CustomerLibrary.dll
+C:\Demos\Mod8\Start\WCFConsoles\CustomerLibrary\bin\Debug\CustomerLibrary.pdb
+C:\Demos\Mod8\Start\WCFConsoles\CustomerLibrary\obj\Debug\CustomerLibrary.csprojResolveAssemblyReference.cache
+C:\Demos\Mod8\Start\WCFConsoles\CustomerLibrary\obj\Debug\CustomerLibrary.dll
+C:\Demos\Mod8\Start\WCFConsoles\CustomerLibrary\obj\Debug\CustomerLibrary.pdb

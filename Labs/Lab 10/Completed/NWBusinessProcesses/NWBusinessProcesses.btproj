@@ -16,7 +16,7 @@
     <ProjectTypeGuids>{EF7E3281-CD33-11D4-8326-00C04FA0CE8D};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <GenericProcessing>true</GenericProcessing>
     <SignAssembly>true</SignAssembly>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <ModifySolutionConfiguration>true</ModifySolutionConfiguration>
     <BpelCompliance>True</BpelCompliance>
     <IsWebBootstrapper>true</IsWebBootstrapper>
@@ -142,6 +142,11 @@
     </XLang>
   </ItemGroup>
   <ItemGroup>
+    <Map Include="Order_to_WarehouseResponse.btm">
+      <TypeName>Order_to_WarehouseResponse</TypeName>
+      <Namespace>NWBusinessProcesses</Namespace>
+      <SubType>Task</SubType>
+    </Map>
     <XLang Include="DistributorService.odx">
       <TypeName>DistributorService</TypeName>
       <Namespace>NWBusinessProcesses</Namespace>
@@ -164,10 +169,6 @@
     </Map>
     <Map Include="Order_to_StaffRequest.btm">
       <TypeName>Order_to_StaffRequest</TypeName>
-      <Namespace>NWBusinessProcesses</Namespace>
-    </Map>
-    <Map Include="Order_to_WarehouseResponse.btm">
-      <TypeName>Order_to_WarehouseResponse</TypeName>
       <Namespace>NWBusinessProcesses</Namespace>
     </Map>
   </ItemGroup>

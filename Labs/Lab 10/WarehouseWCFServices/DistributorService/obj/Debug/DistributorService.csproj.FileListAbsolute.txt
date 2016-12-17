@@ -1,0 +1,4 @@
+C:\Labs\Lab 10\WarehouseWCFServices\DistributorService\bin\Debug\DistributorService.exe
+C:\Labs\Lab 10\WarehouseWCFServices\DistributorService\bin\Debug\DistributorService.pdb
+C:\Labs\Lab 10\WarehouseWCFServices\DistributorService\obj\Debug\DistributorService.exe
+C:\Labs\Lab 10\WarehouseWCFServices\DistributorService\obj\Debug\DistributorService.pdb

@@ -1,0 +1,5 @@
+C:\Labs\Lab 10\WarehouseWCFServices\StockService\bin\Debug\StockService.exe
+C:\Labs\Lab 10\WarehouseWCFServices\StockService\bin\Debug\StockService.pdb
+C:\Labs\Lab 10\WarehouseWCFServices\StockService\obj\Debug\StockService.csprojResolveAssemblyReference.cache
+C:\Labs\Lab 10\WarehouseWCFServices\StockService\obj\Debug\StockService.exe
+C:\Labs\Lab 10\WarehouseWCFServices\StockService\obj\Debug\StockService.pdb

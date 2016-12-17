@@ -11,7 +11,7 @@
     <GenericProcessing>true</GenericProcessing>
     <RootNamespace>Mod4Demo1</RootNamespace>
     <AssemblyName>Mod4Demo1</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <BpelCompliance>True</BpelCompliance>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>
