@@ -1,0 +1,20 @@
+{
+  "Customers": [
+    {
+      "Customer": {
+        "firstName": "John",
+        "middleName": "Alan",
+        "lastName": "Doe",
+        "phoneNumber": "555-123-456"
+      }
+    },
+    {
+      "Customer": {
+        "firstName": "Jane",
+        "middleName": "Margaret",
+        "lastName": "Doe",
+        "phoneNumber": "555-987-654"
+      }
+    }
+  ]
+}
