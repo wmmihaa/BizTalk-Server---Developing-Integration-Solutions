@@ -1,0 +1,4 @@
+Create an Azure Service Bus namespace and relay
+Create a Azure Service Bus receive port and location.
+Create a Send port that subscribes, for example to a local file folder.
+Wait for students to submit their lunch requests.
