@@ -12,7 +12,7 @@ This course is intended for solution architects and developers who are responsib
 
 1. [Building your first BizTalk solution](https://github.com/wmmihaa/BizTalk-Server---Developing-Integration-Solutions/blob/master/Manuals/BTSHOL01%20Building%20your%20first%20BizTalk%20solution.docx)
 2. [Working with Schemas](https://github.com/wmmihaa/BizTalk-Server---Developing-Integration-Solutions/blob/master/Manuals/BTSHOL02%20Working%20with%20Schemas.docx)
-3. [Working with Maps](https://github.com/wmmihaa/BizTalk-Server---Developing-Integration-Solutions/blob/master/Manuals/BTSHOL02%20Working%20with%20Schemas.docx)
+3. [Working with Maps](https://github.com/wmmihaa/BizTalk-Server---Developing-Integration-Solutions/blob/master/Manuals/BTSHOL03%20Working%20with%20Maps.docx)
 
 ### Day 2 
 4. [UnitTest and Deployment](https://github.com/wmmihaa/BizTalk-Server---Developing-Integration-Solutions/blob/master/Manuals/BTSHOL04%20UnitTest%20and%20Deployment.docx)
